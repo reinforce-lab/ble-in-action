@@ -1,0 +1,25 @@
+# Chapter Ordering Manifest
+# List markdown files in the order they should appear in the book
+# One file per line, relative to manuscript/ directory
+# Lines starting with # are comments
+
+# Front Matter (optional)
+# front-matter/preface.md
+# front-matter/acknowledgments.md
+
+# Main Content
+chapters/01-introduction.md
+# chapters/02-ble-fundamentals.md
+# chapters/03-embedded-development.md
+# chapters/04-ios-development.md
+# chapters/05-android-development.md
+# chapters/06-advanced-topics.md
+# chapters/07-troubleshooting.md
+
+# Back Matter (optional)
+# back-matter/appendix-a.md
+# back-matter/glossary.md
+# back-matter/references.md
+
+# NOTE: Uncomment lines as chapters are created
+

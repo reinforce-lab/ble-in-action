@@ -1,0 +1,222 @@
+/* EPUB Styles for BLEInAction */
+
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Noto Sans CJK JP", sans-serif;
+  font-size: 1em;
+  line-height: 1.6;
+  text-align: justify;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Noto Sans CJK JP", sans-serif;
+  font-weight: bold;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  page-break-after: avoid;
+  break-after: avoid;
+}
+
+h1 {
+  font-size: 1.8em;
+  text-align: center;
+  margin-top: 2em;
+  margin-bottom: 1em;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+h3 {
+  font-size: 1.3em;
+}
+
+h4 {
+  font-size: 1.1em;
+}
+
+p {
+  margin-bottom: 1em;
+  text-indent: 1em;
+}
+
+/* First paragraph after heading should not be indented */
+h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p {
+  text-indent: 0;
+}
+
+/* Links */
+a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Code Blocks */
+pre {
+  background-color: #f5f5f5;
+  border: 1px solid #cccccc;
+  border-radius: 3px;
+  padding: 0.5em;
+  margin: 1em 0;
+  overflow-x: auto;
+  font-family: "Noto Sans Mono CJK JP", "Courier New", monospace;
+  font-size: 0.85em;
+  line-height: 1.4;
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+
+code {
+  font-family: "Noto Sans Mono CJK JP", "Courier New", monospace;
+  font-size: 0.9em;
+  background-color: #f5f5f5;
+  padding: 0.1em 0.3em;
+  border-radius: 2px;
+}
+
+pre code {
+  background-color: transparent;
+  padding: 0;
+  border-radius: 0;
+}
+
+/* Block Quotes */
+blockquote {
+  margin: 1em 2em;
+  padding: 0.5em 1em;
+  border-left: 3px solid #cccccc;
+  background-color: #f9f9f9;
+  font-style: italic;
+}
+
+/* Lists */
+ul, ol {
+  margin: 0.5em 0 1em 2em;
+}
+
+li {
+  margin-bottom: 0.3em;
+}
+
+/* Tables */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1em 0;
+  font-size: 0.9em;
+}
+
+th, td {
+  border: 1px solid #cccccc;
+  padding: 0.5em;
+  text-align: left;
+}
+
+th {
+  background-color: #f0f0f0;
+  font-weight: bold;
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1em auto;
+}
+
+/* Figure captions */
+figcaption {
+  text-align: center;
+  font-size: 0.9em;
+  font-style: italic;
+  margin-top: 0.5em;
+  margin-bottom: 1em;
+}
+
+/* Technical Terms (BLE, GATT, UUID, etc.) */
+.tech-term {
+  font-family: "Noto Sans Mono CJK JP", monospace;
+  font-weight: bold;
+}
+
+/* Page Breaks */
+.page-break {
+  page-break-after: always;
+  break-after: always;
+}
+
+/* Footnotes */
+.footnote {
+  font-size: 0.85em;
+  vertical-align: super;
+}
+
+.footnotes {
+  margin-top: 2em;
+  padding-top: 1em;
+  border-top: 1px solid #cccccc;
+  font-size: 0.9em;
+}
+
+/* Front Matter */
+.title-page {
+  text-align: center;
+  margin-top: 3em;
+}
+
+.author {
+  font-size: 1.2em;
+  margin-top: 2em;
+}
+
+.date {
+  margin-top: 1em;
+}
+
+/* Table of Contents */
+#TOC ul {
+  list-style-type: none;
+  margin-left: 0;
+}
+
+#TOC a {
+  text-decoration: none;
+}
+
+#TOC li {
+  margin-bottom: 0.5em;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  body {
+    font-size: 0.95em;
+  }
+  
+  h1 {
+    font-size: 1.6em;
+  }
+  
+  h2 {
+    font-size: 1.4em;
+  }
+  
+  pre, code {
+    font-size: 0.8em;
+  }
+}

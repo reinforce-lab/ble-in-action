@@ -9,6 +9,31 @@
     "chat.tools.terminal.autoApprove": {
         ".specify/scripts/bash/": true,
         ".specify/scripts/powershell/": true
-    }
+    },
+    "markdown.preview.breaks": true,
+    "markdown.preview.typographer": true,
+    "markdown-preview-enhanced.enableExtendedTableSyntax": true,
+    "markdown-preview-enhanced.codeBlockTheme": "github.css",
+    "files.encoding": "utf8",
+    "files.autoGuessEncoding": false,
+    "[markdown]": {
+        "editor.wordWrap": "on",
+        "editor.quickSuggestions": {
+            "comments": "off",
+            "strings": "off",
+            "other": "off"
+        },
+        "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+    },
+    "cSpell.language": "en,ja",
+    "cSpell.enabledLanguageIds": [
+        "markdown"
+    ],
+    "cSpell.ignoreWords": [
+        "BLE",
+        "GATT",
+        "UUID",
+        "Bluetooth"
+    ]
 }
 

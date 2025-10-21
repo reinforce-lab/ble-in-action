@@ -1,0 +1,36 @@
+# Git
+.git/
+.gitignore
+
+# Build outputs (will be generated in container)
+output/
+
+# VS Code
+.vscode/
+
+# macOS
+.DS_Store
+
+# Environment files
+.env
+.env.local
+
+# Documentation (not needed in build container)
+specs/
+.specify/
+.github/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+*.log
+
+# Node modules (if any)
+node_modules/

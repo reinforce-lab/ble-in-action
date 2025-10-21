@@ -1,0 +1,200 @@
+% LaTeX Preamble for BLEInAction Japanese PDF
+% This file is included in the PDF generation process via --include-in-header
+
+% ====================================================================
+% Japanese Font Configuration (LuaLaTeX)
+% ====================================================================
+
+% Use fontspec for font selection (compatible with lualatex)
+\usepackage{fontspec}
+
+% Use luatexja for Japanese text handling
+\usepackage{luatexja-fontspec}
+
+% Set main Japanese fonts (Noto CJK family)
+\setmainjfont{Noto Serif CJK JP}[
+  UprightFont = *-Regular,
+  BoldFont = *-Bold
+]
+
+\setsansjfont{Noto Sans CJK JP}[
+  UprightFont = *-Regular,
+  BoldFont = *-Bold
+]
+
+% Set monospace font for code
+\setmonofont{Noto Sans Mono CJK JP}[
+  Scale=0.9
+]
+
+% Set Latin fonts
+\setmainfont{Noto Sans}[
+  UprightFont = *-Regular,
+  BoldFont = *-Bold,
+  ItalicFont = *-Italic,
+  BoldItalicFont = *-BoldItalic
+]
+
+\setsansfont{Noto Sans}[
+  UprightFont = *-Regular,
+  BoldFont = *-Bold
+]
+
+% ====================================================================
+% Page Layout and Typography
+% ====================================================================
+
+% Improve line breaking for Japanese text
+\ltjsetparameter{jacharrange={-2}}
+
+% Adjust spacing for better readability
+\usepackage{setspace}
+\setstretch{1.2}
+
+% Better handling of long URLs
+\usepackage{url}
+\urlstyle{same}
+
+% ====================================================================
+% Code Highlighting and Listings
+% ====================================================================
+
+% Enhanced code block formatting
+\usepackage{listings}
+\usepackage{xcolor}
+
+% Define code block colors
+\definecolor{codebg}{RGB}{245,245,245}
+\definecolor{codeframe}{RGB}{204,204,204}
+\definecolor{commentcolor}{RGB}{0,128,0}
+\definecolor{stringcolor}{RGB}{196,26,22}
+\definecolor{keywordcolor}{RGB}{0,0,255}
+
+% Configure listings
+\lstset{
+  basicstyle=\ttfamily\small,
+  backgroundcolor=\color{codebg},
+  frame=single,
+  frameround=tttt,
+  rulecolor=\color{codeframe},
+  commentstyle=\color{commentcolor},
+  stringstyle=\color{stringcolor},
+  keywordstyle=\color{keywordcolor}\bfseries,
+  breaklines=true,
+  breakatwhitespace=false,
+  showstringspaces=false,
+  tabsize=2,
+  numbers=left,
+  numberstyle=\tiny\color{gray},
+  stepnumber=1,
+  xleftmargin=2em,
+  framexleftmargin=1.5em
+}
+
+% ====================================================================
+% Tables
+% ====================================================================
+
+% Better table support
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+
+% ====================================================================
+% Graphics and Figures
+% ====================================================================
+
+% Enhanced graphics support
+\usepackage{graphicx}
+\usepackage{grffile}
+
+% Set default figure placement
+\usepackage{float}
+\floatplacement{figure}{htbp}
+
+% ====================================================================
+% Hyperlinks and References
+% ====================================================================
+
+% Note: hyperref is loaded by Pandoc automatically
+% Additional hyperref settings (will be applied after hyperref loads)
+\AtBeginDocument{
+  \hypersetup{
+    unicode=true,
+    bookmarksnumbered=true,
+    bookmarksopen=true,
+    bookmarksopenlevel=2,
+    pdfstartview={FitH},
+    pdfpagemode=UseOutlines
+  }
+}
+
+% ====================================================================
+% Headers and Footers
+% ====================================================================
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,RO]{\thepage}
+\fancyhead[LO]{\nouppercase{\rightmark}}
+\fancyhead[RE]{\nouppercase{\leftmark}}
+\renewcommand{\headrulewidth}{0.4pt}
+
+% ====================================================================
+% Chapter and Section Formatting
+% ====================================================================
+
+% Adjust chapter/section spacing
+\usepackage{titlesec}
+
+\titleformat{\chapter}[display]
+  {\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter}{20pt}{\Huge}
+\titlespacing*{\chapter}{0pt}{-20pt}{40pt}
+
+\titleformat{\section}
+  {\normalfont\Large\bfseries}{\thesection}{1em}{}
+\titlespacing*{\section}{0pt}{3.5ex plus 1ex minus .2ex}{2.3ex plus .2ex}
+
+% ====================================================================
+% Technical Terms (BLE, GATT, UUID, etc.)
+% ====================================================================
+
+% Define command for technical terms (rendered in monospace)
+\newcommand{\techterm}[1]{\texttt{\textbf{#1}}}
+
+% Common BLE terms as macros for consistency
+\newcommand{\BLE}{\techterm{BLE}}
+\newcommand{\GATT}{\techterm{GATT}}
+\newcommand{\UUID}{\techterm{UUID}}
+\newcommand{\ATT}{\techterm{ATT}}
+
+% ====================================================================
+% Abstract Environment for Book Class
+% ====================================================================
+
+% Define abstract environment for book class (not available by default)
+\newenvironment{abstract}{%
+  \small
+  \begin{center}
+    \bfseries Abstract
+  \end{center}
+  \quotation
+}{%
+  \endquotation
+}
+
+% ====================================================================
+% Miscellaneous
+% ====================================================================
+
+% Better paragraph indentation
+\setlength{\parindent}{1em}
+\setlength{\parskip}{0.5em}
+
+% Prevent orphans and widows
+\widowpenalty=10000
+\clubpenalty=10000
+
+% Allow some flexibility in page breaks
+\raggedbottom

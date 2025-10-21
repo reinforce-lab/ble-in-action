@@ -1,0 +1,50 @@
+# Pandoc Defaults for PDF Build
+# Usage: pandoc --defaults=build/config/pdf.yml
+
+# Input format
+from: markdown+smart+footnotes+fenced_code_blocks+inline_code_attributes+pipe_tables
+
+# Output format
+to: latex
+standalone: true
+
+# Metadata
+metadata-file: manuscript/metadata.yml
+
+# Content processing
+number-sections: true
+toc: true
+toc-depth: 2
+file-scope: false
+
+# Code highlighting
+highlight-style: tango
+listings: true
+
+# PDF engine
+pdf-engine: lualatex
+
+# LaTeX template
+template: default.latex
+include-in-header: build/templates/latex-preamble.tex
+
+# LaTeX variables
+variables:
+  documentclass: book
+  papersize: a5
+  fontsize: 11pt
+  linestretch: 1.2
+  geometry:
+    - margin=2cm
+    - top=2.5cm
+    - bottom=2.5cm
+
+# Resource paths
+resource-path:
+  - .
+  - manuscript
+  - manuscript/images
+
+# Filters (if any)
+# filters:
+#   - pandoc-crossref

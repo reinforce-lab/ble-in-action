@@ -1,0 +1,72 @@
+---
+# Book Metadata
+title: "Bluetooth LE Practical Guide"
+subtitle: "From embedded devices to mobile apps"
+author:
+  - name: "Author Name"
+    affiliation: ""
+date: "2025"
+lang: ja
+
+# Publisher Information (placeholders)
+publisher: "TBD"
+isbn: "TBD"
+rights: "© 2025 Author Name. All rights reserved."
+
+# Content Description
+abstract: |
+  A comprehensive guide to Bluetooth Low Energy development,
+  covering embedded device firmware, iOS/Android mobile applications,
+  and real-world implementation patterns.
+
+keywords:
+  - Bluetooth Low Energy
+  - BLE
+  - GATT
+  - Embedded Systems
+  - iOS Development
+  - Android Development
+
+# Format-specific settings
+# EPUB configuration
+epub-cover-image: "images/cover.png"  # TODO: Create cover image
+epub-metadata: "metadata.xml"  # TODO: Create if needed
+
+# PDF configuration (Japanese support)
+pdf-engine: xelatex
+mainfont: "Noto Sans CJK JP"
+CJKmainfont: "Noto Serif CJK JP"
+monofont: "Noto Sans Mono CJK JP"
+documentclass: book
+classoption:
+  - oneside
+  - 11pt
+papersize: a5  # Amazon KDP compatible
+
+# LaTeX customization
+geometry:
+  - margin=2cm
+  - top=2.5cm
+  - bottom=2.5cm
+linestretch: 1.2
+
+# Table of contents
+toc: true
+toc-depth: 2
+lof: false  # List of figures
+lot: false  # List of tables
+
+# Code highlighting
+highlight-style: tango
+listings: true
+
+# Links and references
+colorlinks: true
+linkcolor: blue
+urlcolor: blue
+citecolor: green
+
+# Pandoc behavior
+standalone: true
+number-sections: true
+---
