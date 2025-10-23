@@ -294,10 +294,21 @@ $$
 
 ### 7.3 Webリソースの引用
 
-URL、タイトル、アクセス日を記載:
+**公式仕様書・ドキュメント**（アクセス日不要）:
 
 ```markdown
-[4] Bluetooth SIG, "GATT Specifications", https://www.bluetooth.com/specifications/gatt/  
+[4] Bluetooth SIG, "GATT Specifications",  
+    https://www.bluetooth.com/specifications/gatt/
+
+[5] Nordic Semiconductor, "nRF Connect SDK Documentation",  
+    https://developer.nordicsemi.com/nRF_Connect_SDK/doc/latest/nrf/index.html
+```
+
+**Wikiやブログなど変更可能性のあるリソース**（アクセス日必須）:
+
+```markdown
+[6] Stack Overflow, "How to scan BLE devices in iOS",  
+    https://stackoverflow.com/questions/12345678  
     （2025年10月23日アクセス）
 ```
 
