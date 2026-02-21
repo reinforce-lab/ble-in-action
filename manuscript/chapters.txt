@@ -4,11 +4,11 @@
 # Lines starting with # are comments
 
 # Front Matter (optional)
-# front-matter/preface.md
-# front-matter/acknowledgments.md
+preface.md
+# acknowledgments.md
 
 # Main Content
-chapters/01-introduction.md
+chapters/01-what-is-ble/index.md
 # chapters/02-ble-fundamentals.md
 # chapters/03-embedded-development.md
 # chapters/04-ios-development.md
