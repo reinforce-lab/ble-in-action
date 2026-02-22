@@ -60,6 +60,15 @@ chapters/06-peripheral-impl/6.5-notify.md
 chapters/06-peripheral-impl/6.6-connection.md
 chapters/06-peripheral-impl/6.7-summary.md
 
+# Chapter 7: 低消費電力設計
+chapters/07-low-power-design/7.1-power-basics.md
+chapters/07-low-power-design/7.2-sleep-mode.md
+chapters/07-low-power-design/7.3-adv-interval.md
+chapters/07-low-power-design/7.4-conn-interval.md
+chapters/07-low-power-design/7.5-ppk2-measurement.md
+chapters/07-low-power-design/7.6-battery-design.md
+chapters/07-low-power-design/7.7-summary.md
+
 # Back Matter (optional)
 # back-matter/appendix-a.md
 # back-matter/glossary.md

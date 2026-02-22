@@ -178,7 +178,9 @@ BLE開発における各担当者（ファームウェア/アプリ/企画）が
 ### 第7章: 低消費電力設計
 **概要**: スリープモード、広告間隔の最適化、接続間隔の調整、電流測定とプロファイリング、バッテリー駆動の実践  
 **想定ページ数**: 25-30ページ  
-**前提章**: 第6章
+**前提章**: 第6章  
+**ファイル**: `manuscript/chapters/07-low-power-design/`  
+**詳細**: [manuscript/chapters/07-low-power-design/outline.md](chapters/07-low-power-design/outline.md) を参照
 
 ### 第8章: 外部チップ連携（4線IF・LTE統合）
 **概要**: UART/SPI接続、LTEチップ+nRF52840構成（2パターン）、OTA実装の考慮点、トラブルシューティング  
