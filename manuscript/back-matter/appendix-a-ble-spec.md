@@ -155,4 +155,27 @@ SDKドキュメントを読む場面:
 
 ---
 
+## Core Specificationのバージョン間差分の読み方
+
+Core Specificationはバージョンごとに大幅に拡張されています。たとえばリンク層の仕様は、BLE 4.2では約90ページだったものが、5.x系では200ページを超えています。初めて仕様書を開いたときにこの分量に圧倒されるかもしれませんが、BLE 4.0/4.2からの差分を意識すると読みやすくなります。
+
+主なバージョンごとの変更点:
+
+| バージョン | 主な追加/変更 |
+|---|---|
+| **4.0** | BLE初版。PHY・LL・ATT・GATT・SMP・GAP の基本スタック |
+| **4.1** | Slave（ペリフェラル）が複数のMasterに接続可能に。Connection Parameter Update |
+| **4.2** | Data Length Extension（ペイロード251バイト）、LE Secure Connections、LE Privacy 1.2 |
+| **5.0** | 2M PHY（2Mbps）、LE Coded PHY（Long Range）、Extended Advertising |
+| **5.1** | Direction Finding（AoA/AoD：到来角度検知） |
+| **5.2** | LE Audio / Isochronous Channels、Power Control、Enhanced ATT |
+| **5.3** | Channel Classification Enhancement、Connection Subrating |
+| **5.4** | PAwR（Periodic Advertising with Responses）、Encrypted Advertising Data |
+
+実装で特に注意すべきは、**使用するSoC/モジュールが対応しているCore Specバージョン**によって使える機能が異なることです。nRF52840はBluetooth 5.0対応ですが、5.2以降のIsochronous Channelsには対応していません（nRF5340が対応）。SDKが対応していても、チップのコントローラが非対応であれば使えないため、データシートの対応バージョンを必ず確認してください。
+
+<!-- TBD: Core Spec 6.0の変更点が公開されたら追記 -->
+
+---
+
 **付録B** では本書で参照した公式仕様書・技術書・Webリソースの一覧を掲載しています。
