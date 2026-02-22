@@ -69,6 +69,14 @@ chapters/07-low-power-design/7.5-ppk2-measurement.md
 chapters/07-low-power-design/7.6-battery-design.md
 chapters/07-low-power-design/7.7-summary.md
 
+# Chapter 8: 外部チップ連携
+chapters/08-external-chips/8.1-overview.md
+chapters/08-external-chips/8.2-sensor-integration.md
+chapters/08-external-chips/8.3-hci-interface.md
+chapters/08-external-chips/8.4-lte-ble-integration.md
+chapters/08-external-chips/8.5-power-pitfalls.md
+chapters/08-external-chips/8.6-summary.md
+
 # Back Matter (optional)
 # back-matter/appendix-a.md
 # back-matter/glossary.md

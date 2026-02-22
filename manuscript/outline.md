@@ -185,7 +185,9 @@ BLE開発における各担当者（ファームウェア/アプリ/企画）が
 ### 第8章: 外部チップ連携（4線IF・LTE統合）
 **概要**: UART/SPI接続、LTEチップ+nRF52840構成（2パターン）、OTA実装の考慮点、トラブルシューティング  
 **想定ページ数**: 28-33ページ  
-**前提章**: 第6章、第7章
+**前提章**: 第6章、第7章  
+**ファイル**: `manuscript/chapters/08-external-chips/`  
+**詳細**: [manuscript/chapters/08-external-chips/outline.md](chapters/08-external-chips/outline.md) を参照
 
 **Part 3合計**: 103-122ページ
 
