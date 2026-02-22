@@ -32,21 +32,21 @@ keywords:
 epub-cover-image: "images/cover.png"  # TODO: Create cover image
 epub-metadata: "metadata.xml"  # TODO: Create if needed
 
-# PDF configuration (A5 / jlreq / LuaLaTeX + Harano Aji / Re:VIEW style)
+# PDF configuration (B5 / jlreq / LuaLaTeX + Harano Aji / Re:VIEW style)
 pdf-engine: lualatex
 documentclass: jlreq
 classoption:
   - book
   - lualatex
   - oneside
-papersize: a5
+papersize: b5
 
 # LaTeX customization
 geometry:
-  - left=18mm
-  - right=14mm
-  - top=20mm
-  - bottom=18mm
+  - left=22mm
+  - right=18mm
+  - top=25mm
+  - bottom=22mm
   - includehead
   - includefoot
 
