@@ -243,7 +243,9 @@ BLE開発における各担当者（ファームウェア/アプリ/企画）が
 ### 第14章: OTA（DFU）実装
 **概要**: **重点解説** - Nordic DFUプロトコル、Bootloaderの仕組み、ファームウェア更新フロー、iOSアプリからのDFU実行、よくあるトラブルと解決法  
 **想定ページ数**: 30-36ページ  
-**前提章**: 第6章、第8章、第9章
+**前提章**: 第6章、第8章、第9章  
+**ファイル**: `manuscript/chapters/14-ota-dfu/`  
+**詳細**: [manuscript/chapters/14-ota-dfu/outline.md](chapters/14-ota-dfu/outline.md) を参照
 
 **Part 5合計**: 72-87ページ
 

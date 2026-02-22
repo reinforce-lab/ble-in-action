@@ -119,6 +119,15 @@ chapters/13-thermometer-impl/13.4-ios-ble-receive.md
 chapters/13-thermometer-impl/13.5-ios-chart.md
 chapters/13-thermometer-impl/13.6-summary.md
 
+# Chapter 14: OTA DFU実装
+chapters/14-ota-dfu/14.1-dfu-overview.md
+chapters/14-ota-dfu/14.2-mcuboot-config.md
+chapters/14-ota-dfu/14.3-dfu-package.md
+chapters/14-ota-dfu/14.4-smp-protocol.md
+chapters/14-ota-dfu/14.5-ios-dfu.md
+chapters/14-ota-dfu/14.6-troubleshooting.md
+chapters/14-ota-dfu/14.7-summary.md
+
 # Back Matter (optional)
 # back-matter/appendix-a.md
 # back-matter/glossary.md
