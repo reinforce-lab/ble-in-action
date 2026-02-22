@@ -164,7 +164,9 @@ BLE開発における各担当者（ファームウェア/アプリ/企画）が
 ### 第5章: nRF52840開発環境
 **概要**: nRF Connect SDK 3.0のセットアップ、開発ツール（VS Code, nRF Connect for Desktop）、デバッガ接続、Hello World  
 **想定ページ数**: 20-24ページ  
-**前提章**: 第2章
+**前提章**: 第2章  
+**ファイル**: `manuscript/chapters/05-nrf52840-setup/`  
+**詳細**: [manuscript/chapters/05-nrf52840-setup/outline.md](chapters/05-nrf52840-setup/outline.md) を参照
 
 ### 第6章: ペリフェラル実装
 **概要**: 広告の開始、カスタムサービスとキャラクタリスティックの定義、Read/Write/Notifyの実装、接続管理  

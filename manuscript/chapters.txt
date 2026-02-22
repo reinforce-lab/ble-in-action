@@ -43,6 +43,14 @@ chapters/04-att-gatt/4.5-descriptors.md
 chapters/04-att-gatt/4.6-profiles.md
 chapters/04-att-gatt/4.7-summary.md
 
+# Chapter 5: nRF52840開発環境
+chapters/05-nrf52840-setup/5.1-overview.md
+chapters/05-nrf52840-setup/5.2-sdk-setup.md
+chapters/05-nrf52840-setup/5.3-board-setup.md
+chapters/05-nrf52840-setup/5.4-hello-ble.md
+chapters/05-nrf52840-setup/5.5-project-structure.md
+chapters/05-nrf52840-setup/5.6-summary.md
+
 # Back Matter (optional)
 # back-matter/appendix-a.md
 # back-matter/glossary.md
