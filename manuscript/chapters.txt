@@ -144,10 +144,9 @@ chapters/16-troubleshooting/16.4-platform-specific.md
 chapters/16-troubleshooting/16.5-ota-security-issues.md
 chapters/16-troubleshooting/16.6-faq-summary.md
 
-# Back Matter (optional)
-# back-matter/appendix-a.md
-# back-matter/glossary.md
-# back-matter/references.md
+# Back Matter
+back-matter/appendix-a-ble-spec.md
+back-matter/appendix-b-references.md
 
 # NOTE: Uncomment lines as chapters are created
 
