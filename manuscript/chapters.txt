@@ -34,7 +34,14 @@ chapters/03-ble-layer/3.5-connection-establishment.md
 chapters/03-ble-layer/3.6-gap.md
 chapters/03-ble-layer/3.7-summary.md
 
-# chapters/04-att-gatt/
+# Chapter 4: ATT・GATT・プロファイル
+chapters/04-att-gatt/4.1-att-gatt-overview.md
+chapters/04-att-gatt/4.2-attribute-structure.md
+chapters/04-att-gatt/4.3-att-commands.md
+chapters/04-att-gatt/4.4-gatt-hierarchy.md
+chapters/04-att-gatt/4.5-descriptors.md
+chapters/04-att-gatt/4.6-profiles.md
+chapters/04-att-gatt/4.7-summary.md
 
 # Back Matter (optional)
 # back-matter/appendix-a.md
