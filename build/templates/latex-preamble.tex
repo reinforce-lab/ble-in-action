@@ -55,41 +55,38 @@
 \definecolor{reviewdarkred}{rgb}{0.3,0,0}        % Re:VIEW dark red
 
 % ---- Section numbering depth ----------------------------------------
-\setcounter{secnumdepth}{3}
+\setcounter{secnumdepth}{4}
 
-% ---- Chapter / Section formatting -----------------------------------
-\usepackage[bf, raggedright, compact]{titlesec}
+% ---- Chapter / Section formatting (iBeaconHandbook header.txt 準拠) --
+\usepackage[bf, medium, raggedright, compact, calcwidth]{titlesec}
 
-% Chapter: 「第 1 章」 + thick grey rule
-%   review-custom.sty: \vspace*{-1\Cvs} で chapter 前のアキを詰める
+% Chapter: 「第 1 章」右寄せ + huge タイトル + 4pt グレー罫線
 \titleformat{\chapter}[display]
-  {\normalfont\Large\sffamily\bfseries}
-  {\raggedleft\normalfont\large\sffamily 第 \thechapter{} 章}
-  {2pt}
-  {\LARGE\sffamily\bfseries\raggedleft}
-  [\color{mgrey}{\titlerule[3pt]}]
+  {\large\bfseries}
+  {\raggedleft 第 \thechapter{} 章}
+  {1pt}
+  {\huge\bfseries\raggedleft}
+  [\color{mgrey}{\titlerule[4pt]}]
 \titlespacing*{\chapter}{0pt}{-20pt}{20pt}
 
-% Section: grey 1.5pt rule
+% Section: Large bold + 2pt グレー罫線
 \titleformat{\section}[hang]
-  {\normalfont\large\sffamily\bfseries}{\thesection}{10pt}{}
-  [\color{mgrey}{\titlerule[1.5pt]}]
-\titlespacing*{\section}{0pt}{2.5ex plus 0.8ex}{1.5ex plus 0.3ex}
+  {\Large\bfseries}{\thesection}{12pt}{}
+  [\color{mgrey}{\titlerule[2pt]}]
 
-% Subsection: grey 0.8pt rule
+% Subsection: large bold + 1pt グレー罫線
 \titleformat{\subsection}[hang]
-  {\normalfont\normalsize\sffamily\bfseries}{\thesubsection}{10pt}{}
-  [\color{mgrey}{\titlerule[0.8pt]}]
-\titlespacing*{\subsection}{0pt}{2ex plus 0.5ex}{1ex plus 0.2ex}
+  {\large\bfseries}{\thesubsection}{12pt}{}
+  [\color{mgrey}{\titlerule[1pt]}]
 
-% Subsubsection: no rule, compact (review-custom.sty 修正に準拠)
+% Subsubsection: large bold + 1pt グレー罫線
 \titleformat{\subsubsection}[hang]
-  {\normalfont\normalsize\bfseries}{\thesubsubsection}{10pt}{}
-\titlespacing*{\subsubsection}{0pt}{1.5ex plus 0.3ex}{0.8ex plus 0.1ex}
+  {\large\bfseries}{\thesubsubsection}{12pt}{}
+  [\color{mgrey}{\titlerule[1pt]}]
 
-% Paragraph: run-in (review-custom.sty 修正に準拠)
+% Paragraph: run-in
 \titleformat{\paragraph}[runin]
-  {\normalsize\bfseries}{\theparagraph}{8pt}{}[]
+  {\normalsize\bfseries}{\theparagraph}{12pt}{}[]
 
 % ---- Line spacing ---------------------------------------------------
 % jlreq の number_of_lines=40 が baselineskip を自動計算するため、
