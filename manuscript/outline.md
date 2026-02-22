@@ -265,7 +265,9 @@ BLE開発における各担当者（ファームウェア/アプリ/企画）が
 ### 第16章: よくある問題と解決法
 **概要**: 接続できない、データが送れない、電池が持たない、OTAが失敗する、プラットフォーム固有の問題、FAQ  
 **想定ページ数**: 22-27ページ  
-**前提章**: 第15章
+**前提章**: 第15章  
+**ファイル**: `manuscript/chapters/16-troubleshooting/`  
+**詳細**: [manuscript/chapters/16-troubleshooting/outline.md](chapters/16-troubleshooting/outline.md) を参照
 
 **Part 6合計**: 47-57ページ
 

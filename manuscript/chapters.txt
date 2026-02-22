@@ -136,6 +136,14 @@ chapters/15-debugging/15.4-ios-debugging.md
 chapters/15-debugging/15.5-android-hci-snoop.md
 chapters/15-debugging/15.6-debug-examples.md
 
+# Chapter 16: よくある問題と解決法
+chapters/16-troubleshooting/16.1-connection-issues.md
+chapters/16-troubleshooting/16.2-data-issues.md
+chapters/16-troubleshooting/16.3-power-issues.md
+chapters/16-troubleshooting/16.4-platform-specific.md
+chapters/16-troubleshooting/16.5-ota-security-issues.md
+chapters/16-troubleshooting/16.6-faq-summary.md
+
 # Back Matter (optional)
 # back-matter/appendix-a.md
 # back-matter/glossary.md
