@@ -4,7 +4,7 @@
 % ====================================================================
 %
 % Layout target: 技術書典の技術同人誌スタイル
-%   B5 (182×257mm), 10pt, 約40–45文字/行, 約37行/頁
+%   B5 (182×257mm), 8.5pt, 50文字/行, 40行/頁
 %   本文ゴシック体 (HaranoAjiGothic), 欧文サンセリフ (TeX Gyre Heros)
 %   章見出し「第 X 章」+グレー罫線
 %   jlreq クラスが日本語組版(行間・字送り)を自動処理
@@ -92,8 +92,10 @@
   {\normalsize\bfseries}{\theparagraph}{8pt}{}[]
 
 % ---- Line spacing ---------------------------------------------------
+% jlreq の number_of_lines=40 が baselineskip を自動計算するため、
+% setstretch は 1.0 (jlreq に委任)
 \usepackage{setspace}
-\setstretch{1.1}
+\setstretch{1.0}
 
 % ---- Paragraph indentation ------------------------------------------
 \setlength{\parindent}{1\zw}
