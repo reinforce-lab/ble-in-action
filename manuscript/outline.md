@@ -126,8 +126,10 @@ BLE開発における各担当者（ファームウェア/アプリ/企画）が
 
 ### 第2章: BLEの基本概念と用語
 **概要**: セントラル/ペリフェラル、接続と広告、UUID、サービスとキャラクタリスティック、通信フロー概要  
-**想定ページ数**: 20-25ページ  
-**前提章**: 第1章
+**想定ページ数**: 21〜28ページ  
+**前提章**: 第1章  
+**ファイル**: `manuscript/chapters/02-ble-basic/`  
+**詳細**: [manuscript/chapters/02-ble-basic/outline.md](chapters/02-ble-basic/outline.md) を参照
 
 **Part 1合計**: 40-50ページ
 
@@ -304,6 +306,10 @@ BLE開発における各担当者（ファームウェア/アプリ/企画）が
 ---
 
 ## 変更履歴
+
+### 2026-02-22: v1.3 第2章サブ節アウトラインを chapter outline に移動
+- 第2章の詳細（2.1〜2.7節）を `manuscript/chapters/02-ble-basic/outline.md` に新規作成
+- `manuscript/outline.md` の第2章エントリを概要+参照リンクに簡略化
 
 ### 2026-02-22: v1.2 第1章サブ節アウトラインを chapter outline に移動
 - 第1章のサブ節詳細（1.1〜1.5）を `manuscript/chapters/01-what-is-ble/outline.md` に移動
