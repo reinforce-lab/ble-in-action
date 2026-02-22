@@ -128,6 +128,14 @@ chapters/14-ota-dfu/14.5-ios-dfu.md
 chapters/14-ota-dfu/14.6-troubleshooting.md
 chapters/14-ota-dfu/14.7-summary.md
 
+# Chapter 15: パケットキャプチャとデバッグ
+chapters/15-debugging/15.1-debug-tools-overview.md
+chapters/15-debugging/15.2-nrf-sniffer-setup.md
+chapters/15-debugging/15.3-wireshark-analysis.md
+chapters/15-debugging/15.4-ios-debugging.md
+chapters/15-debugging/15.5-android-hci-snoop.md
+chapters/15-debugging/15.6-debug-examples.md
+
 # Back Matter (optional)
 # back-matter/appendix-a.md
 # back-matter/glossary.md
