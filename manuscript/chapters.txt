@@ -77,6 +77,16 @@ chapters/08-external-chips/8.4-lte-ble-integration.md
 chapters/08-external-chips/8.5-power-pitfalls.md
 chapters/08-external-chips/8.6-summary.md
 
+# Chapter 9: iOS Core Bluetooth
+chapters/09-ios-core-bluetooth/9.1-framework-overview.md
+chapters/09-ios-core-bluetooth/9.2-centralmanager.md
+chapters/09-ios-core-bluetooth/9.3-scanning.md
+chapters/09-ios-core-bluetooth/9.4-service-discovery.md
+chapters/09-ios-core-bluetooth/9.5-read-write.md
+chapters/09-ios-core-bluetooth/9.6-notify.md
+chapters/09-ios-core-bluetooth/9.7-background.md
+chapters/09-ios-core-bluetooth/9.8-summary.md
+
 # Back Matter (optional)
 # back-matter/appendix-a.md
 # back-matter/glossary.md

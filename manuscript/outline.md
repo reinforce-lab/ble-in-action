@@ -200,7 +200,9 @@ BLE開発における各担当者（ファームウェア/アプリ/企画）が
 ### 第9章: iOS Core Bluetooth
 **概要**: Core Bluetoothフレームワーク、スキャン、接続、サービス・キャラクタリスティックのディスカバリ、Read/Write/Subscribe、エラーハンドリング  
 **想定ページ数**: 35-40ページ  
-**前提章**: 第4章
+**前提章**: 第4章  
+**ファイル**: `manuscript/chapters/09-ios-core-bluetooth/`  
+**詳細**: [manuscript/chapters/09-ios-core-bluetooth/outline.md](chapters/09-ios-core-bluetooth/outline.md) を参照
 
 ### 第10章: Web Bluetooth API
 **概要**: Web Bluetooth APIの概要、ブラウザ対応状況、デバイス選択UI、Promiseベースの非同期処理、Webアプリでのセキュリティ考慮  
