@@ -149,7 +149,9 @@ BLE開発における各担当者（ファームウェア/アプリ/企画）が
 ### 第4章: ATT・GATT・プロファイル
 **概要**: ATTプロトコル、GATTデータ構造、サービスとキャラクタリスティックの詳細、Read/Write/Notify/Indicate、標準プロファイル  
 **想定ページ数**: 28-33ページ  
-**前提章**: 第3章
+**前提章**: 第3章  
+**ファイル**: `manuscript/chapters/04-att-gatt/`  
+**詳細**: [manuscript/chapters/04-att-gatt/outline.md](chapters/04-att-gatt/outline.md) を参照
 
 **Part 2合計**: 53-63ページ
 
