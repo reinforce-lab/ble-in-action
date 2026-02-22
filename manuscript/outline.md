@@ -207,7 +207,9 @@ BLE開発における各担当者（ファームウェア/アプリ/企画）が
 ### 第10章: Web Bluetooth API
 **概要**: Web Bluetooth APIの概要、ブラウザ対応状況、デバイス選択UI、Promiseベースの非同期処理、Webアプリでのセキュリティ考慮  
 **想定ページ数**: 22-27ページ  
-**前提章**: 第4章
+**前提章**: 第4章  
+**ファイル**: `manuscript/chapters/10-web-bluetooth/`  
+**詳細**: [manuscript/chapters/10-web-bluetooth/outline.md](chapters/10-web-bluetooth/outline.md) を参照
 
 ### 第11章: Android概要とLinux概要
 **概要**: Android BLE APIの構造（サンプルコード）、BlueZ on Linux（概要のみ）、各プラットフォームの特徴比較  

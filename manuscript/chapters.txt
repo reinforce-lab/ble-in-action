@@ -87,6 +87,14 @@ chapters/09-ios-core-bluetooth/9.6-notify.md
 chapters/09-ios-core-bluetooth/9.7-background.md
 chapters/09-ios-core-bluetooth/9.8-summary.md
 
+# Chapter 10: Web Bluetooth API
+chapters/10-web-bluetooth/10.1-overview.md
+chapters/10-web-bluetooth/10.2-request-device.md
+chapters/10-web-bluetooth/10.3-connect-gatt.md
+chapters/10-web-bluetooth/10.4-read-write.md
+chapters/10-web-bluetooth/10.5-notify.md
+chapters/10-web-bluetooth/10.6-limitations-summary.md
+
 # Back Matter (optional)
 # back-matter/appendix-a.md
 # back-matter/glossary.md
