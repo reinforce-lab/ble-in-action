@@ -51,6 +51,15 @@ chapters/05-nrf52840-setup/5.4-hello-ble.md
 chapters/05-nrf52840-setup/5.5-project-structure.md
 chapters/05-nrf52840-setup/5.6-summary.md
 
+# Chapter 6: ペリフェラル実装
+chapters/06-peripheral-impl/6.1-connectable-adv.md
+chapters/06-peripheral-impl/6.2-custom-service.md
+chapters/06-peripheral-impl/6.3-read-characteristic.md
+chapters/06-peripheral-impl/6.4-write-characteristic.md
+chapters/06-peripheral-impl/6.5-notify.md
+chapters/06-peripheral-impl/6.6-connection.md
+chapters/06-peripheral-impl/6.7-summary.md
+
 # Back Matter (optional)
 # back-matter/appendix-a.md
 # back-matter/glossary.md

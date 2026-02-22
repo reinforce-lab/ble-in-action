@@ -171,7 +171,9 @@ BLE開発における各担当者（ファームウェア/アプリ/企画）が
 ### 第6章: ペリフェラル実装
 **概要**: 広告の開始、カスタムサービスとキャラクタリスティックの定義、Read/Write/Notifyの実装、接続管理  
 **想定ページ数**: 30-35ページ  
-**前提章**: 第4章、第5章
+**前提章**: 第4章、第5章  
+**ファイル**: `manuscript/chapters/06-peripheral-impl/`  
+**詳細**: [manuscript/chapters/06-peripheral-impl/outline.md](chapters/06-peripheral-impl/outline.md) を参照
 
 ### 第7章: 低消費電力設計
 **概要**: スリープモード、広告間隔の最適化、接続間隔の調整、電流測定とプロファイリング、バッテリー駆動の実践  
