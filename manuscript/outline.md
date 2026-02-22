@@ -229,7 +229,9 @@ BLE開発における各担当者（ファームウェア/アプリ/企画）が
 ### 第12章: ビーコン実装
 **概要**: iBeacon/Eddystoneの仕様、ペリフェラル側実装、iOSアプリでの受信、位置情報サービスとの連携  
 **想定ページ数**: 20-24ページ  
-**前提章**: 第6章、第9章
+**前提章**: 第6章、第9章  
+**ファイル**: `manuscript/chapters/12-beacon-impl/`  
+**詳細**: [manuscript/chapters/12-beacon-impl/outline.md](chapters/12-beacon-impl/outline.md) を参照
 
 ### 第13章: 温度計実装
 **概要**: センサー（DHT22等）との接続、温度データのBLE送信、iOSアプリでのグラフ表示、Notificationの活用  

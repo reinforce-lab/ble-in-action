@@ -103,6 +103,14 @@ chapters/11-android-linux-ble/11.4-linux-bluez.md
 chapters/11-android-linux-ble/11.5-python-bleak.md
 chapters/11-android-linux-ble/11.6-platform-comparison.md
 
+# Chapter 12: ビーコン実装
+chapters/12-beacon-impl/12.1-beacon-overview.md
+chapters/12-beacon-impl/12.2-nrf52840-beacon.md
+chapters/12-beacon-impl/12.3-ios-beacon-reception.md
+chapters/12-beacon-impl/12.4-android-beacon.md
+chapters/12-beacon-impl/12.5-eddystone-url.md
+chapters/12-beacon-impl/12.6-summary.md
+
 # Back Matter (optional)
 # back-matter/appendix-a.md
 # back-matter/glossary.md
