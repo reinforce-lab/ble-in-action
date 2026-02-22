@@ -1,5 +1,5 @@
 # Pandoc Defaults for PDF Build
-# Usage: pandoc --defaults=build/config/pdf.yml
+# Usage: pandoc --defaults=build/config/pdf.yml <input files>
 
 # Input format
 from: markdown+smart+footnotes+fenced_code_blocks+inline_code_attributes+pipe_tables
@@ -19,13 +19,11 @@ file-scope: false
 
 # Code highlighting
 highlight-style: tango
-listings: true
 
-# PDF engine
+# PDF engine (lualatex for Japanese support)
 pdf-engine: lualatex
 
-# LaTeX template
-template: default.latex
+# LaTeX header
 include-in-header: build/templates/latex-preamble.tex
 
 # LaTeX variables
@@ -44,7 +42,3 @@ resource-path:
   - .
   - manuscript
   - manuscript/images
-
-# Filters (if any)
-# filters:
-#   - pandoc-crossref

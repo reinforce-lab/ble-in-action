@@ -1,5 +1,5 @@
 # Pandoc Defaults for EPUB Build
-# Usage: pandoc --defaults=build/config/epub.yml
+# Usage: pandoc --defaults=build/config/epub.yml <input files>
 
 # Input format
 from: markdown+smart+footnotes+fenced_code_blocks+inline_code_attributes+pipe_tables
@@ -21,19 +21,16 @@ file-scope: false
 highlight-style: tango
 
 # EPUB-specific
-epub-chapter-level: 2
-epub-cover-image: manuscript/images/cover.png
-epub-subdirectory: EPUB
+split-level: 2
 
 # Styling
 css: build/templates/epub-styles.css
+
+# Math
+mathml: true
 
 # Resource paths
 resource-path:
   - .
   - manuscript
   - manuscript/images
-
-# Filters (if any)
-# filters:
-#   - pandoc-crossref

@@ -32,11 +32,8 @@ keywords:
 epub-cover-image: "images/cover.png"  # TODO: Create cover image
 epub-metadata: "metadata.xml"  # TODO: Create if needed
 
-# PDF configuration (Japanese support)
-pdf-engine: xelatex
-mainfont: "Noto Sans CJK JP"
-CJKmainfont: "Noto Serif CJK JP"
-monofont: "Noto Sans Mono CJK JP"
+# PDF configuration (Japanese support via LuaLaTeX + Harano Aji)
+pdf-engine: lualatex
 documentclass: book
 classoption:
   - oneside
