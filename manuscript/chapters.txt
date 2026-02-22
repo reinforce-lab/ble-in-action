@@ -111,6 +111,14 @@ chapters/12-beacon-impl/12.4-android-beacon.md
 chapters/12-beacon-impl/12.5-eddystone-url.md
 chapters/12-beacon-impl/12.6-summary.md
 
+# Chapter 13: 温度計実装
+chapters/13-thermometer-impl/13.1-system-architecture.md
+chapters/13-thermometer-impl/13.2-firmware-sensor.md
+chapters/13-thermometer-impl/13.3-firmware-gatt.md
+chapters/13-thermometer-impl/13.4-ios-ble-receive.md
+chapters/13-thermometer-impl/13.5-ios-chart.md
+chapters/13-thermometer-impl/13.6-summary.md
+
 # Back Matter (optional)
 # back-matter/appendix-a.md
 # back-matter/glossary.md

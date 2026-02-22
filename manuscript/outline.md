@@ -236,7 +236,9 @@ BLE開発における各担当者（ファームウェア/アプリ/企画）が
 ### 第13章: 温度計実装
 **概要**: センサー（DHT22等）との接続、温度データのBLE送信、iOSアプリでのグラフ表示、Notificationの活用  
 **想定ページ数**: 22-27ページ  
-**前提章**: 第6章、第9章
+**前提章**: 第6章、第9章  
+**ファイル**: `manuscript/chapters/13-thermometer-impl/`  
+**詳細**: [manuscript/chapters/13-thermometer-impl/outline.md](chapters/13-thermometer-impl/outline.md) を参照
 
 ### 第14章: OTA（DFU）実装
 **概要**: **重点解説** - Nordic DFUプロトコル、Bootloaderの仕組み、ファームウェア更新フロー、iOSアプリからのDFU実行、よくあるトラブルと解決法  
