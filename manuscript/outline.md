@@ -214,7 +214,9 @@ BLE開発における各担当者（ファームウェア/アプリ/企画）が
 ### 第11章: Android概要とLinux概要
 **概要**: Android BLE APIの構造（サンプルコード）、BlueZ on Linux（概要のみ）、各プラットフォームの特徴比較  
 **想定ページ数**: 18-22ページ  
-**前提章**: 第4章
+**前提章**: 第4章  
+**ファイル**: `manuscript/chapters/11-android-linux-ble/`  
+**詳細**: [manuscript/chapters/11-android-linux-ble/outline.md](chapters/11-android-linux-ble/outline.md) を参照
 
 **Part 4合計**: 75-89ページ
 

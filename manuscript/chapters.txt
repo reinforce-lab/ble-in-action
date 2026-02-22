@@ -95,6 +95,14 @@ chapters/10-web-bluetooth/10.4-read-write.md
 chapters/10-web-bluetooth/10.5-notify.md
 chapters/10-web-bluetooth/10.6-limitations-summary.md
 
+# Chapter 11: Android/Linux BLE
+chapters/11-android-linux-ble/11.1-android-overview.md
+chapters/11-android-linux-ble/11.2-android-scan-connect.md
+chapters/11-android-linux-ble/11.3-android-gatt-issues.md
+chapters/11-android-linux-ble/11.4-linux-bluez.md
+chapters/11-android-linux-ble/11.5-python-bleak.md
+chapters/11-android-linux-ble/11.6-platform-comparison.md
+
 # Back Matter (optional)
 # back-matter/appendix-a.md
 # back-matter/glossary.md
