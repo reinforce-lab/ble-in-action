@@ -1,24 +1,27 @@
-/* EPUB Styles for BLEInAction */
+/* ================================================================
+   BLEInAction – EPUB Stylesheet
+   ================================================================
+   Design intent (from previous publication):
+   - Clean, readable layout for technical content
+   - justify text, centered figure captions
+   - Light background on code blocks with rounded borders
+   - Bordered tables with subtle header shading
+   - Fonts left to the EPUB reader (no hard-coded font-family)
+   ================================================================ */
 
-/* Reset and Base Styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+/* ---- Base ---- */
 body {
-  font-family: "Noto Sans CJK JP", sans-serif;
-  font-size: 1em;
-  line-height: 1.6;
+  margin: 5%;
   text-align: justify;
-  hyphens: auto;
-  -webkit-hyphens: auto;
+  font-size: medium;
+  line-height: 1.8;
+  orphans: 2;
+  widows: 2;
 }
 
-/* Typography */
+/* ---- Headings ---- */
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Noto Sans CJK JP", sans-serif;
+  text-align: left;
   font-weight: bold;
   margin-top: 1.5em;
   margin-bottom: 0.5em;
@@ -28,64 +31,59 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 1.8em;
-  text-align: center;
   margin-top: 2em;
   margin-bottom: 1em;
+  border-bottom: 3px solid #bbb;
+  padding-bottom: 0.3em;
 }
 
 h2 {
-  font-size: 1.5em;
+  font-size: 1.4em;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 0.2em;
 }
 
-h3 {
-  font-size: 1.3em;
-}
+h3 { font-size: 1.2em; }
+h4 { font-size: 1.05em; }
 
-h4 {
-  font-size: 1.1em;
-}
-
+/* ---- Paragraph ---- */
 p {
-  margin-bottom: 1em;
+  margin-bottom: 0.8em;
   text-indent: 1em;
 }
 
-/* First paragraph after heading should not be indented */
-h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p {
+/* First paragraph after heading: no indent */
+h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p,
+blockquote + p, pre + p, table + p, figure + p {
   text-indent: 0;
 }
 
-/* Links */
+/* ---- Links ---- */
 a {
   color: #0066cc;
   text-decoration: none;
 }
 
-a:hover {
-  text-decoration: underline;
+/* ---- Code ---- */
+code {
+  font-family: monospace;
+  font-size: 0.9em;
+  background-color: #f0f0f0;
+  padding: 0.1em 0.3em;
+  border-radius: 2px;
 }
 
-/* Code Blocks */
 pre {
-  background-color: #f5f5f5;
-  border: 1px solid #cccccc;
-  border-radius: 3px;
-  padding: 0.5em;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 0.2em;
+  padding: 1em;
   margin: 1em 0;
   overflow-x: auto;
-  font-family: "Noto Sans Mono CJK JP", "Courier New", monospace;
   font-size: 0.85em;
   line-height: 1.4;
   page-break-inside: avoid;
   break-inside: avoid;
-}
-
-code {
-  font-family: "Noto Sans Mono CJK JP", "Courier New", monospace;
-  font-size: 0.9em;
-  background-color: #f5f5f5;
-  padding: 0.1em 0.3em;
-  border-radius: 2px;
 }
 
 pre code {
@@ -94,16 +92,32 @@ pre code {
   border-radius: 0;
 }
 
-/* Block Quotes */
-blockquote {
-  margin: 1em 2em;
-  padding: 0.5em 1em;
-  border-left: 3px solid #cccccc;
-  background-color: #f9f9f9;
-  font-style: italic;
+/* Pandoc syntax highlighting: keep background consistent */
+pre.sourceCode {
+  background-color: #f0f0f0;
+  border-radius: 0.2em;
+  padding: 1em;
 }
 
-/* Lists */
+div.sourceCode {
+  margin: 1em 0;
+}
+
+/* ---- Block Quotes ---- */
+blockquote {
+  margin: 1em 1.5em;
+  padding: 0.5em 1em;
+  border-left: 3px solid #ccc;
+  background-color: #fafafa;
+  color: #333;
+}
+
+blockquote p {
+  text-indent: 0;
+  margin-bottom: 0.5em;
+}
+
+/* ---- Lists ---- */
 ul, ol {
   margin: 0.5em 0 1em 2em;
 }
@@ -112,7 +126,11 @@ li {
   margin-bottom: 0.3em;
 }
 
-/* Tables */
+li > p {
+  text-indent: 0;
+}
+
+/* ---- Tables ---- */
 table {
   border-collapse: collapse;
   width: 100%;
@@ -121,17 +139,26 @@ table {
 }
 
 th, td {
-  border: 1px solid #cccccc;
-  padding: 0.5em;
+  border: 1px solid #b9b9b9;
+  padding: 0.4em 0.6em;
   text-align: left;
 }
 
 th {
-  background-color: #f0f0f0;
+  color: #333;
+  background-color: #eee;
   font-weight: bold;
 }
 
-/* Images */
+caption {
+  text-align: center;
+  caption-side: top;
+  font-size: 0.9em;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+}
+
+/* ---- Images / Figures ---- */
 img {
   max-width: 100%;
   height: auto;
@@ -139,84 +166,78 @@ img {
   margin: 1em auto;
 }
 
-/* Figure captions */
-figcaption {
+figcaption,
+.figure-caption {
   text-align: center;
   font-size: 0.9em;
-  font-style: italic;
-  margin-top: 0.5em;
+  color: #555;
+  margin-top: 0.3em;
   margin-bottom: 1em;
 }
 
-/* Technical Terms (BLE, GATT, UUID, etc.) */
-.tech-term {
-  font-family: "Noto Sans Mono CJK JP", monospace;
-  font-weight: bold;
-}
-
-/* Page Breaks */
-.page-break {
-  page-break-after: always;
-  break-after: always;
-}
-
-/* Footnotes */
-.footnote {
-  font-size: 0.85em;
-  vertical-align: super;
-}
-
+/* ---- Footnotes ---- */
 .footnotes {
   margin-top: 2em;
   padding-top: 1em;
-  border-top: 1px solid #cccccc;
-  font-size: 0.9em;
+  border-top: 1px solid #ccc;
+  font-size: 0.85em;
 }
 
-/* Front Matter */
-.title-page {
-  text-align: center;
-  margin-top: 3em;
+/* ---- Definition Lists ---- */
+dl {
+  margin: 1em 0;
 }
 
-.author {
-  font-size: 1.2em;
-  margin-top: 2em;
+dt {
+  font-weight: bold;
+  margin-top: 0.5em;
 }
 
-.date {
-  margin-top: 1em;
+dd {
+  margin-left: 2em;
+  margin-bottom: 0.3em;
 }
 
-/* Table of Contents */
-#TOC ul {
+/* ---- Table of Contents ---- */
+#TOC ul,
+ol.toc {
   list-style-type: none;
-  margin-left: 0;
+  padding: 0;
+  margin-left: 1em;
+}
+
+#TOC li,
+ol.toc li {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 0.4em;
 }
 
 #TOC a {
   text-decoration: none;
 }
 
-#TOC li {
-  margin-bottom: 0.5em;
+/* ---- Front Matter ---- */
+h1.title {
+  text-align: center;
+  border-bottom: none;
 }
 
-/* Responsive adjustments */
-@media (max-width: 600px) {
-  body {
-    font-size: 0.95em;
-  }
-  
-  h1 {
-    font-size: 1.6em;
-  }
-  
-  h2 {
-    font-size: 1.4em;
-  }
-  
-  pre, code {
-    font-size: 0.8em;
-  }
+h2.author {
+  text-align: center;
+  font-weight: normal;
+  font-size: 1.2em;
+  border-bottom: none;
+}
+
+h3.date {
+  text-align: center;
+  font-weight: normal;
+  font-size: 1em;
+}
+
+/* ---- Page Break Helper ---- */
+.page-break {
+  page-break-after: always;
+  break-after: always;
 }

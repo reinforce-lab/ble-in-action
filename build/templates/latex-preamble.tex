@@ -1,85 +1,124 @@
-% LaTeX Preamble for BLEInAction Japanese PDF
-% This file is included in the PDF generation process via --include-in-header
-
 % ====================================================================
-% Japanese Font Configuration (LuaLaTeX)
+% BLEInAction – LaTeX Preamble (LuaLaTeX)
+% ====================================================================
+%
+% Design intent (from previous publication):
+%   - Japanese body text in gothic (HaranoAjiGothic), bold = W6 weight
+%   - Latin text in sans-serif (TeX Gyre Heros ≈ Helvetica)
+%   - Chapter headings: 「第 X 章」 with thick grey rule below
+%   - Section headings: grey rule below each level
+%   - Images capped at line width × 0.9, max height 8 cm
+%   - Caption without colon separator
+%   - Section numbering depth: 4 (chapter→subsubsection)
 % ====================================================================
 
-% Use fontspec for font selection (compatible with lualatex)
-\usepackage{fontspec}
-
-% Use luatexja for Japanese text handling
+% ---- Japanese engine ------------------------------------------------
+\usepackage{luatexja}
 \usepackage{luatexja-fontspec}
 
-% Set main Japanese fonts (Noto CJK family)
-\setmainjfont{Noto Serif CJK JP}[
-  UprightFont = *-Regular,
-  BoldFont = *-Bold
+% ---- Japanese fonts: Harano Aji Gothic (= modern ゴシック体) --------
+\setmainjfont{HaranoAjiGothic}[
+  UprightFont = HaranoAjiGothic-Regular,
+  BoldFont    = HaranoAjiGothic-Bold
+]
+\setsansjfont{HaranoAjiGothic}[
+  UprightFont = HaranoAjiGothic-Regular,
+  BoldFont    = HaranoAjiGothic-Bold
 ]
 
-\setsansjfont{Noto Sans CJK JP}[
+% ---- Latin fonts: TeX Gyre Heros (≈ Helvetica) ---------------------
+\usepackage{fontspec}
+\setmainfont{TeX Gyre Heros}[
   UprightFont = *-Regular,
-  BoldFont = *-Bold
+  BoldFont    = *-Bold,
+  ItalicFont  = *-Italic,
+  BoldItalicFont = *-BoldItalic
 ]
-
-% Set monospace font for code
-\setmonofont{Noto Sans Mono CJK JP}[
-  Scale=0.9
-]
-
-% Set Latin fonts
-\setmainfont{Noto Sans}[
+\setsansfont{TeX Gyre Heros}[
   UprightFont = *-Regular,
-  BoldFont = *-Bold,
-  ItalicFont = *-Italic,
+  BoldFont    = *-Bold,
+  ItalicFont  = *-Italic,
   BoldItalicFont = *-BoldItalic
 ]
 
-\setsansfont{Noto Sans}[
-  UprightFont = *-Regular,
-  BoldFont = *-Bold
-]
+% ---- Colours --------------------------------------------------------
+\usepackage{xcolor}
+\definecolor{mgrey}{gray}{0.75}
+\definecolor{codebg}{RGB}{245,245,245}
+\definecolor{codeframe}{RGB}{204,204,204}
+\definecolor{commentgreen}{RGB}{0,128,0}
+\definecolor{stringcolor}{RGB}{196,26,22}
+\definecolor{keywordblue}{RGB}{0,0,255}
 
-% ====================================================================
-% Page Layout and Typography
-% ====================================================================
+% ---- Section numbering depth ----------------------------------------
+\setcounter{secnumdepth}{4}
 
-% Improve line breaking for Japanese text
-\ltjsetparameter{jacharrange={-2}}
+% ---- Chapter / Section formatting (grey rules) ----------------------
+\usepackage[bf, raggedright, compact]{titlesec}
 
-% Adjust spacing for better readability
+% Chapter: 「第 1 章」 right-aligned, huge title, thick grey rule
+\titleformat{\chapter}[display]
+  {\large\bfseries}
+  {\raggedleft 第 \thechapter{} 章}
+  {1pt}
+  {\huge\bfseries\raggedleft}
+  [\color{mgrey}{\titlerule[4pt]}]
+
+% Section: grey 2pt rule
+\titleformat{\section}[hang]
+  {\Large\bfseries}{\thesection}{12pt}{}
+  [\color{mgrey}{\titlerule[2pt]}]
+
+% Subsection: grey 1pt rule
+\titleformat{\subsection}[hang]
+  {\large\bfseries}{\thesubsection}{12pt}{}
+  [\color{mgrey}{\titlerule[1pt]}]
+
+% Subsubsection: grey 1pt rule
+\titleformat{\subsubsection}[hang]
+  {\normalsize\bfseries}{\thesubsubsection}{12pt}{}
+  [\color{mgrey}{\titlerule[1pt]}]
+
+% Paragraph: run-in
+\titleformat{\paragraph}[runin]
+  {\normalsize\bfseries}{\theparagraph}{12pt}{}[]
+
+% ---- Spacing --------------------------------------------------------
 \usepackage{setspace}
 \setstretch{1.2}
 
-% Better handling of long URLs
-\usepackage{url}
-\urlstyle{same}
+\setlength{\parindent}{1em}
+\setlength{\parskip}{0.5em}
 
-% ====================================================================
-% Code Highlighting and Listings
-% ====================================================================
+% ---- Graphics – cap size to avoid overflow --------------------------
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{%
+  \ifdim\Gin@nat@width>\linewidth 0.9\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{8cm}
+\makeatother
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
 
-% Enhanced code block formatting
+\usepackage{float}
+\floatplacement{figure}{htbp}
+
+% ---- Caption: remove colon separator --------------------------------
+\usepackage{caption}
+\captionsetup{labelsep=space}
+
+% ---- Code listings ---------------------------------------------------
 \usepackage{listings}
-\usepackage{xcolor}
 
-% Define code block colors
-\definecolor{codebg}{RGB}{245,245,245}
-\definecolor{codeframe}{RGB}{204,204,204}
-\definecolor{commentcolor}{RGB}{0,128,0}
-\definecolor{stringcolor}{RGB}{196,26,22}
-\definecolor{keywordcolor}{RGB}{0,0,255}
-
-% Configure listings
 \lstset{
   basicstyle=\ttfamily\small,
   backgroundcolor=\color{codebg},
   frame=single,
   frameround=tttt,
   rulecolor=\color{codeframe},
-  commentstyle=\color{commentcolor},
+  framerule=1.5pt,
+  commentstyle=\color{commentgreen},
   stringstyle=\color{stringcolor},
-  keywordstyle=\color{keywordcolor}\bfseries,
+  keywordstyle=\color{keywordblue}\bfseries,
   breaklines=true,
   breakatwhitespace=false,
   showstringspaces=false,
@@ -91,48 +130,32 @@
   framexleftmargin=1.5em
 }
 
-% ====================================================================
-% Tables
-% ====================================================================
-
-% Better table support
+% ---- Tables ----------------------------------------------------------
 \usepackage{booktabs}
 \usepackage{longtable}
 \usepackage{array}
 
-% ====================================================================
-% Graphics and Figures
-% ====================================================================
+% ---- URLs ------------------------------------------------------------
+\usepackage{url}
+\urlstyle{same}
 
-% Enhanced graphics support
-\usepackage{graphicx}
-\usepackage{grffile}
-
-% Set default figure placement
-\usepackage{float}
-\floatplacement{figure}{htbp}
-
-% ====================================================================
-% Hyperlinks and References
-% ====================================================================
-
-% Note: hyperref is loaded by Pandoc automatically
-% Additional hyperref settings (will be applied after hyperref loads)
+% ---- Hyperlinks (Pandoc loads hyperref; configure after load) --------
 \AtBeginDocument{
   \hypersetup{
     unicode=true,
     bookmarksnumbered=true,
     bookmarksopen=true,
     bookmarksopenlevel=2,
+    colorlinks=true,
+    linkcolor=red,
+    citecolor=green,
+    urlcolor=magenta,
     pdfstartview={FitH},
     pdfpagemode=UseOutlines
   }
 }
 
-% ====================================================================
-% Headers and Footers
-% ====================================================================
-
+% ---- Headers / Footers -----------------------------------------------
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
@@ -141,60 +164,21 @@
 \fancyhead[RE]{\nouppercase{\leftmark}}
 \renewcommand{\headrulewidth}{0.4pt}
 
-% ====================================================================
-% Chapter and Section Formatting
-% ====================================================================
+% ---- Orphan / Widow control ------------------------------------------
+\widowpenalty=10000
+\clubpenalty=10000
+\raggedbottom
 
-% Adjust chapter/section spacing
-\usepackage{titlesec}
+% ---- Abstract environment for book class -----------------------------
+\newenvironment{abstract}{%
+  \small
+  \begin{center}\bfseries 概要\end{center}
+  \quotation
+}{\endquotation}
 
-\titleformat{\chapter}[display]
-  {\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter}{20pt}{\Huge}
-\titlespacing*{\chapter}{0pt}{-20pt}{40pt}
-
-\titleformat{\section}
-  {\normalfont\Large\bfseries}{\thesection}{1em}{}
-\titlespacing*{\section}{0pt}{3.5ex plus 1ex minus .2ex}{2.3ex plus .2ex}
-
-% ====================================================================
-% Technical Terms (BLE, GATT, UUID, etc.)
-% ====================================================================
-
-% Define command for technical terms (rendered in monospace)
+% ---- Technical term macros -------------------------------------------
 \newcommand{\techterm}[1]{\texttt{\textbf{#1}}}
-
-% Common BLE terms as macros for consistency
 \newcommand{\BLE}{\techterm{BLE}}
 \newcommand{\GATT}{\techterm{GATT}}
 \newcommand{\UUID}{\techterm{UUID}}
 \newcommand{\ATT}{\techterm{ATT}}
-
-% ====================================================================
-% Abstract Environment for Book Class
-% ====================================================================
-
-% Define abstract environment for book class (not available by default)
-\newenvironment{abstract}{%
-  \small
-  \begin{center}
-    \bfseries Abstract
-  \end{center}
-  \quotation
-}{%
-  \endquotation
-}
-
-% ====================================================================
-% Miscellaneous
-% ====================================================================
-
-% Better paragraph indentation
-\setlength{\parindent}{1em}
-\setlength{\parskip}{0.5em}
-
-% Prevent orphans and widows
-\widowpenalty=10000
-\clubpenalty=10000
-
-% Allow some flexibility in page breaks
-\raggedbottom
