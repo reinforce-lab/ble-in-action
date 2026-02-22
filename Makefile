@@ -37,16 +37,9 @@ PDF_FILE  := $(PDF_DIR)/BLEInAction.pdf
 CHAPTERS := $(addprefix $(MANUSCRIPT_DIR)/,\
   $(shell grep -v '^\#' $(CHAPTERS_TXT) | grep -v '^\s*$$'))
 
-# Common pandoc flags
-PANDOC_INPUT_FMT := markdown+smart+footnotes+fenced_code_blocks+inline_code_attributes+pipe_tables
-PANDOC_COMMON := \
-	--metadata-file=$(METADATA) \
-	--from=$(PANDOC_INPUT_FMT) \
-	--standalone \
-	--toc --toc-depth=2 \
-	--number-sections \
-	--highlight-style=tango \
-	--resource-path=.:$(MANUSCRIPT_DIR):$(MANUSCRIPT_DIR)/images
+# Pandoc defaults files (format-specific settings are here)
+PDF_DEFAULTS  := build/config/pdf.yml
+EPUB_DEFAULTS := build/config/epub.yml
 
 # --------------------------------------------------------------------------
 # Pre-flight check
@@ -62,16 +55,12 @@ check-pandoc:
 # --------------------------------------------------------------------------
 epub: check-pandoc $(EPUB_FILE)
 
-$(EPUB_FILE): $(CHAPTERS) $(METADATA) $(CSS) $(CHAPTERS_TXT)
+$(EPUB_FILE): $(CHAPTERS) $(METADATA) $(CSS) $(CHAPTERS_TXT) $(EPUB_DEFAULTS)
 	@mkdir -p $(EPUB_DIR)
 	@echo "=== Building EPUB ==="
 	pandoc $(CHAPTERS) \
-		$(PANDOC_COMMON) \
-		--to=epub3 \
-		--split-level=2 \
+		--defaults=$(EPUB_DEFAULTS) \
 		$(if $(wildcard $(COVER_IMAGE)),--epub-cover-image=$(COVER_IMAGE)) \
-		--css=$(CSS) \
-		--mathml \
 		--output=$@
 	@echo ""
 	@echo "✅ EPUB build complete: $@ ($$(du -h $@ | cut -f1))"
@@ -81,7 +70,7 @@ $(EPUB_FILE): $(CHAPTERS) $(METADATA) $(CSS) $(CHAPTERS_TXT)
 # --------------------------------------------------------------------------
 pdf: check-pandoc $(PDF_FILE)
 
-$(PDF_FILE): $(CHAPTERS) $(METADATA) $(LATEX_HEADER) $(CHAPTERS_TXT)
+$(PDF_FILE): $(CHAPTERS) $(METADATA) $(LATEX_HEADER) $(CHAPTERS_TXT) $(PDF_DEFAULTS)
 	@command -v lualatex >/dev/null 2>&1 || { \
 		echo "❌ lualatex が見つかりません。PATH=/Library/TeX/texbin を確認してください。"; \
 		echo "   brew install --cask mactex  または  brew install basictex"; \
@@ -89,19 +78,7 @@ $(PDF_FILE): $(CHAPTERS) $(METADATA) $(LATEX_HEADER) $(CHAPTERS_TXT)
 	@mkdir -p $(PDF_DIR)
 	@echo "=== Building PDF (B5 / jlreq / 50字×40行) ==="
 	pandoc $(CHAPTERS) \
-		$(PANDOC_COMMON) \
-		--to=latex \
-		--pdf-engine=lualatex \
-		--include-in-header=$(LATEX_HEADER) \
-		-V documentclass=jlreq \
-		-V classoption=book \
-		-V classoption=lualatex \
-		-V classoption=oneside \
-		-V classoption=paper=b5 \
-		-V classoption=fontsize=8.5pt \
-		-V classoption=line_length=50zw \
-		-V classoption=number_of_lines=40 \
-		-V classoption=head_space=25mm \
+		--defaults=$(PDF_DEFAULTS) \
 		--output=$@
 	@echo ""
 	@echo "✅ PDF build complete: $@ ($$(du -h $@ | cut -f1))"

@@ -1,5 +1,8 @@
 ---
-# Book Metadata
+# =======================================================================
+# Book Metadata (書籍情報のみ — ビルド設定は build/config/*.yml に集約)
+# =======================================================================
+
 title: "Bluetooth LE Practical Guide"
 subtitle: "From embedded devices to mobile apps"
 author:
@@ -26,43 +29,4 @@ keywords:
   - Embedded Systems
   - iOS Development
   - Android Development
-
-# Format-specific settings
-# EPUB configuration
-epub-cover-image: "images/cover.png"  # TODO: Create cover image
-epub-metadata: "metadata.xml"  # TODO: Create if needed
-
-# PDF configuration (B5 / jlreq / LuaLaTeX + Harano Aji / Re:VIEW style)
-# jlreq ネイティブレイアウト: 50字/行 × 40行/頁
-pdf-engine: lualatex
-documentclass: jlreq
-classoption:
-  - book
-  - lualatex
-  - oneside
-  - paper=b5
-  - fontsize=8.5pt
-  - line_length=50zw
-  - number_of_lines=40
-  - head_space=25mm
-
-# Table of contents
-toc: true
-toc-depth: 2
-lof: false  # List of figures
-lot: false  # List of tables
-
-# Code highlighting
-highlight-style: tango
-listings: true
-
-# Links and references
-colorlinks: true
-linkcolor: blue
-urlcolor: blue
-citecolor: green
-
-# Pandoc behavior
-standalone: true
-number-sections: true
 ---

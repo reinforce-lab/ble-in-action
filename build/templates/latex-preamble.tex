@@ -58,16 +58,13 @@
 \setcounter{secnumdepth}{4}
 
 % ---- Chapter / Section formatting (iBeaconHandbook header.txt 準拠) --
+%  jlreq の \chapter と titlesec の互換性のため \@chapapp を事前定義
+\makeatletter
+\providecommand{\@chapapp}{第}
+\providecommand{\@chappos}{章}
+\makeatother
+%  titlesec は section 以下のみカスタマイズ (chapter は jlreq に委任)
 \usepackage[bf, medium, raggedright, compact, calcwidth]{titlesec}
-
-% Chapter: 「第 1 章」右寄せ + huge タイトル + 4pt グレー罫線
-\titleformat{\chapter}[display]
-  {\large\bfseries}
-  {\raggedleft 第 \thechapter{} 章}
-  {1pt}
-  {\huge\bfseries\raggedleft}
-  [\color{mgrey}{\titlerule[4pt]}]
-\titlespacing*{\chapter}{0pt}{-20pt}{20pt}
 
 % Section: Large bold + 2pt グレー罫線
 \titleformat{\section}[hang]
@@ -87,6 +84,21 @@
 % Paragraph: run-in
 \titleformat{\paragraph}[runin]
   {\normalsize\bfseries}{\theparagraph}{12pt}{}[]
+
+% Chapter: jlreq の章見出しの後にグレー罫線を追加
+\usepackage{etoolbox}
+\makeatletter
+\apptocmd{\@makechapterhead}{%
+  \vspace{-8pt}%
+  {\color{mgrey}\hrule height 4pt}%
+  \vspace{12pt}%
+}{}{}
+\apptocmd{\@makeschapterhead}{%
+  \vspace{-8pt}%
+  {\color{mgrey}\hrule height 4pt}%
+  \vspace{12pt}%
+}{}{}
+\makeatother
 
 % ---- Line spacing ---------------------------------------------------
 % jlreq の number_of_lines=40 が baselineskip を自動計算するため、
