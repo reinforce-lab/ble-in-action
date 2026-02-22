@@ -142,7 +142,9 @@ BLE開発における各担当者（ファームウェア/アプリ/企画）が
 ### 第3章: 物理層・リンク層・GAP
 **概要**: 2.4GHz帯の物理層、周波数ホッピング、広告パケット構造、スキャンと接続確立、GAPの役割  
 **想定ページ数**: 25-30ページ  
-**前提章**: 第2章
+**前提章**: 第2章  
+**ファイル**: `manuscript/chapters/03-ble-layer/`  
+**詳細**: [manuscript/chapters/03-ble-layer/outline.md](chapters/03-ble-layer/outline.md) を参照
 
 ### 第4章: ATT・GATT・プロファイル
 **概要**: ATTプロトコル、GATTデータ構造、サービスとキャラクタリスティックの詳細、Read/Write/Notify/Indicate、標準プロファイル  
