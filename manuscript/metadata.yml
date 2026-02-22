@@ -32,20 +32,23 @@ keywords:
 epub-cover-image: "images/cover.png"  # TODO: Create cover image
 epub-metadata: "metadata.xml"  # TODO: Create if needed
 
-# PDF configuration (Japanese support via LuaLaTeX + Harano Aji)
+# PDF configuration (A5 / jlreq / LuaLaTeX + Harano Aji / Re:VIEW style)
 pdf-engine: lualatex
-documentclass: book
+documentclass: jlreq
 classoption:
+  - book
+  - lualatex
   - oneside
-  - 11pt
-papersize: a5  # Amazon KDP compatible
+papersize: a5
 
 # LaTeX customization
 geometry:
-  - margin=2cm
-  - top=2.5cm
-  - bottom=2.5cm
-linestretch: 1.2
+  - left=18mm
+  - right=14mm
+  - top=20mm
+  - bottom=18mm
+  - includehead
+  - includefoot
 
 # Table of contents
 toc: true

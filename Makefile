@@ -87,19 +87,24 @@ $(PDF_FILE): $(CHAPTERS) $(METADATA) $(LATEX_HEADER) $(CHAPTERS_TXT)
 		echo "   brew install --cask mactex  または  brew install basictex"; \
 		exit 1; }
 	@mkdir -p $(PDF_DIR)
-	@echo "=== Building PDF ==="
+	@echo "=== Building PDF (A5 / jlreq / Re:VIEW style) ==="
 	pandoc $(CHAPTERS) \
 		$(PANDOC_COMMON) \
 		--to=latex \
 		--pdf-engine=lualatex \
 		--include-in-header=$(LATEX_HEADER) \
-		-V documentclass=book \
+		-V documentclass=jlreq \
+		-V classoption=book \
+		-V classoption=lualatex \
+		-V classoption=oneside \
 		-V papersize=a5 \
-		-V fontsize=11pt \
-		-V linestretch=1.2 \
-		-V geometry:margin=2cm \
-		-V geometry:top=2.5cm \
-		-V geometry:bottom=2.5cm \
+		-V fontsize=10pt \
+		-V geometry:left=18mm \
+		-V geometry:right=14mm \
+		-V geometry:top=20mm \
+		-V geometry:bottom=18mm \
+		-V geometry:includehead \
+		-V geometry:includefoot \
 		--output=$@
 	@echo ""
 	@echo "✅ PDF build complete: $@ ($$(du -h $@ | cut -f1))"

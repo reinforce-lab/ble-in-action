@@ -1,22 +1,24 @@
 % ====================================================================
-% BLEInAction – LaTeX Preamble (LuaLaTeX)
+% BLEInAction – LaTeX Preamble (LuaLaTeX + jlreq)
+% Re:VIEW techbook テンプレート (m3dev/techbook-templete) 準拠
 % ====================================================================
 %
-% Design intent (from previous publication):
-%   - Japanese body text in gothic (HaranoAjiGothic), bold = W6 weight
-%   - Latin text in sans-serif (TeX Gyre Heros ≈ Helvetica)
-%   - Chapter headings: 「第 X 章」 with thick grey rule below
-%   - Section headings: grey rule below each level
-%   - Images capped at line width × 0.9, max height 8 cm
-%   - Caption without colon separator
-%   - Section numbering depth: 4 (chapter→subsubsection)
+% Layout target: 技術書典の技術同人誌スタイル
+%   A5 (148×210mm), 10pt, 約35文字/行, 約32行/頁
+%   本文ゴシック体 (HaranoAjiGothic), 欧文サンセリフ (TeX Gyre Heros)
+%   章見出し「第 X 章」+グレー罫線
+%   jlreq クラスが日本語組版(行間・字送り)を自動処理
+%
+% Reference:
+%   review-style.sty   – fancyhdr / hidelinks / figure placement
+%   review-custom.sty  – centered page numbers / chapter head spacing
+%   review-base.sty    – listings / shadecolor / colour scheme
 % ====================================================================
 
-% ---- Japanese engine ------------------------------------------------
-\usepackage{luatexja}
+% ---- Japanese fonts: Harano Aji Gothic (ゴシック体) -----------------
+%  jlreq + LuaLaTeX では luatexja は自動ロードされる
 \usepackage{luatexja-fontspec}
 
-% ---- Japanese fonts: Harano Aji Gothic (= modern ゴシック体) --------
 \setmainjfont{HaranoAjiGothic}[
   UprightFont = HaranoAjiGothic-Regular,
   BoldFont    = HaranoAjiGothic-Bold
@@ -41,94 +43,120 @@
   BoldItalicFont = *-BoldItalic
 ]
 
-% ---- Colours --------------------------------------------------------
+% ---- Colours (Re:VIEW カラースキーム) --------------------------------
 \usepackage{xcolor}
-\definecolor{mgrey}{gray}{0.75}
-\definecolor{codebg}{RGB}{245,245,245}
-\definecolor{codeframe}{RGB}{204,204,204}
-\definecolor{commentgreen}{RGB}{0,128,0}
-\definecolor{stringcolor}{RGB}{196,26,22}
-\definecolor{keywordblue}{RGB}{0,0,255}
+\definecolor{shadecolor}{gray}{0.9}             % Re:VIEW shadecolor
+\definecolor{mgrey}{gray}{0.75}                  % heading rules
+\definecolor{codebg}{gray}{0.9}                  % code background (≈ black!10!white)
+\definecolor{codeframe}{gray}{0.8}               % code frame
+\definecolor{reviewgreen}{rgb}{0,0.4,0}          % Re:VIEW green (comments)
+\definecolor{reviewblue}{rgb}{0.2,0.2,0.4}       % Re:VIEW blue (keywords)
+\definecolor{reviewred}{rgb}{0.7,0,0}            % Re:VIEW red (strings)
+\definecolor{reviewdarkred}{rgb}{0.3,0,0}        % Re:VIEW dark red
 
 % ---- Section numbering depth ----------------------------------------
-\setcounter{secnumdepth}{4}
+\setcounter{secnumdepth}{3}
 
-% ---- Chapter / Section formatting (grey rules) ----------------------
+% ---- Chapter / Section formatting -----------------------------------
 \usepackage[bf, raggedright, compact]{titlesec}
 
-% Chapter: 「第 1 章」 right-aligned, huge title, thick grey rule
+% Chapter: 「第 1 章」 + thick grey rule
+%   review-custom.sty: \vspace*{-1\Cvs} で chapter 前のアキを詰める
 \titleformat{\chapter}[display]
-  {\large\bfseries}
-  {\raggedleft 第 \thechapter{} 章}
-  {1pt}
-  {\huge\bfseries\raggedleft}
-  [\color{mgrey}{\titlerule[4pt]}]
+  {\normalfont\Large\sffamily\bfseries}
+  {\raggedleft\normalfont\large\sffamily 第 \thechapter{} 章}
+  {2pt}
+  {\LARGE\sffamily\bfseries\raggedleft}
+  [\color{mgrey}{\titlerule[3pt]}]
+\titlespacing*{\chapter}{0pt}{-20pt}{20pt}
 
-% Section: grey 2pt rule
+% Section: grey 1.5pt rule
 \titleformat{\section}[hang]
-  {\Large\bfseries}{\thesection}{12pt}{}
-  [\color{mgrey}{\titlerule[2pt]}]
+  {\normalfont\large\sffamily\bfseries}{\thesection}{10pt}{}
+  [\color{mgrey}{\titlerule[1.5pt]}]
+\titlespacing*{\section}{0pt}{2.5ex plus 0.8ex}{1.5ex plus 0.3ex}
 
-% Subsection: grey 1pt rule
+% Subsection: grey 0.8pt rule
 \titleformat{\subsection}[hang]
-  {\large\bfseries}{\thesubsection}{12pt}{}
-  [\color{mgrey}{\titlerule[1pt]}]
+  {\normalfont\normalsize\sffamily\bfseries}{\thesubsection}{10pt}{}
+  [\color{mgrey}{\titlerule[0.8pt]}]
+\titlespacing*{\subsection}{0pt}{2ex plus 0.5ex}{1ex plus 0.2ex}
 
-% Subsubsection: grey 1pt rule
+% Subsubsection: no rule, compact (review-custom.sty 修正に準拠)
 \titleformat{\subsubsection}[hang]
-  {\normalsize\bfseries}{\thesubsubsection}{12pt}{}
-  [\color{mgrey}{\titlerule[1pt]}]
+  {\normalfont\normalsize\bfseries}{\thesubsubsection}{10pt}{}
+\titlespacing*{\subsubsection}{0pt}{1.5ex plus 0.3ex}{0.8ex plus 0.1ex}
 
-% Paragraph: run-in
+% Paragraph: run-in (review-custom.sty 修正に準拠)
 \titleformat{\paragraph}[runin]
-  {\normalsize\bfseries}{\theparagraph}{12pt}{}[]
+  {\normalsize\bfseries}{\theparagraph}{8pt}{}[]
 
-% ---- Spacing --------------------------------------------------------
+% ---- Line spacing ---------------------------------------------------
 \usepackage{setspace}
-\setstretch{1.2}
+\setstretch{1.1}
 
-\setlength{\parindent}{1em}
-\setlength{\parskip}{0.5em}
+% ---- Paragraph indentation ------------------------------------------
+\setlength{\parindent}{1\zw}
+\setlength{\parskip}{0pt plus 1pt}
 
-% ---- Graphics – cap size to avoid overflow --------------------------
+% ---- Graphics – cap size for A5 page --------------------------------
 \usepackage{graphicx}
 \makeatletter
 \def\maxwidth{%
-  \ifdim\Gin@nat@width>\linewidth 0.9\linewidth\else\Gin@nat@width\fi}
-\def\maxheight{8cm}
+  \ifdim\Gin@nat@width>\linewidth 0.92\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{10cm}
 \makeatother
 \setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
 
+% ---- Float placement (Re:VIEW: figure / table は H 固定) -----------
 \usepackage{float}
-\floatplacement{figure}{htbp}
+\floatplacement{figure}{H}
+\floatplacement{table}{H}
 
-% ---- Caption: remove colon separator --------------------------------
+% ---- Caption ---------------------------------------------------------
 \usepackage{caption}
-\captionsetup{labelsep=space}
+\captionsetup{
+  labelsep=space,
+  font=small,
+  labelfont=bf,
+  format=hang,
+  margin=1em
+}
 
-% ---- Code listings ---------------------------------------------------
+% ---- Code listings (Re:VIEW風: scriptsize, shaded background) -------
 \usepackage{listings}
 
 \lstset{
-  basicstyle=\ttfamily\small,
+  basicstyle=\ttfamily\scriptsize,
   backgroundcolor=\color{codebg},
   frame=single,
   frameround=tttt,
   rulecolor=\color{codeframe},
-  framerule=1.5pt,
-  commentstyle=\color{commentgreen},
-  stringstyle=\color{stringcolor},
-  keywordstyle=\color{keywordblue}\bfseries,
+  framerule=0.5pt,
+  commentstyle=\color{reviewgreen}\itshape,
+  stringstyle=\color{reviewred},
+  keywordstyle=\color{reviewblue}\bfseries,
   breaklines=true,
   breakatwhitespace=false,
   showstringspaces=false,
-  tabsize=2,
+  tabsize=4,
   numbers=left,
   numberstyle=\tiny\color{gray},
   stepnumber=1,
   xleftmargin=2em,
-  framexleftmargin=1.5em
+  framexleftmargin=1.5em,
+  aboveskip=1em,
+  belowskip=0.8em,
+  columns=fixed,
+  basewidth=0.5em
 }
+
+% ---- Pandoc Shaded environment (fallback for fenced code blocks) -----
+\usepackage{framed}
+\renewenvironment{Shaded}{%
+  \definecolor{shadecolor}{gray}{0.9}%
+  \begin{snugshade}%
+}{\end{snugshade}}
 
 % ---- Tables ----------------------------------------------------------
 \usepackage{booktabs}
@@ -139,37 +167,42 @@
 \usepackage{url}
 \urlstyle{same}
 
-% ---- Hyperlinks (Pandoc loads hyperref; configure after load) --------
+% ---- Hyperlinks (Re:VIEW: hidelinks — 印刷向けリンク非表示) ----------
 \AtBeginDocument{
   \hypersetup{
     unicode=true,
+    hidelinks,
     bookmarksnumbered=true,
     bookmarksopen=true,
     bookmarksopenlevel=2,
-    colorlinks=true,
-    linkcolor=red,
-    citecolor=green,
-    urlcolor=magenta,
     pdfstartview={FitH},
     pdfpagemode=UseOutlines
   }
 }
 
-% ---- Headers / Footers -----------------------------------------------
+% ---- Headers / Footers (Re:VIEW custom: ページ番号中央) ---------------
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[LE,RO]{\thepage}
-\fancyhead[LO]{\nouppercase{\rightmark}}
-\fancyhead[RE]{\nouppercase{\leftmark}}
+\fancyhead[L]{\small\sffamily\bfseries\nouppercase{\leftmark}}
+\fancyfoot[C]{\thepage}
 \renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Chapter-starting pages (plain style: page number centered)
+\fancypagestyle{plain}{%
+  \fancyhf{}%
+  \fancyfoot[C]{\thepage}%
+  \renewcommand{\headrulewidth}{0pt}%
+  \renewcommand{\footrulewidth}{0pt}%
+}
 
 % ---- Orphan / Widow control ------------------------------------------
 \widowpenalty=10000
 \clubpenalty=10000
 \raggedbottom
 
-% ---- Abstract environment for book class -----------------------------
+% ---- Abstract environment --------------------------------------------
 \newenvironment{abstract}{%
   \small
   \begin{center}\bfseries 概要\end{center}
