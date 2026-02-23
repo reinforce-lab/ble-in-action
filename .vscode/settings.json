@@ -17,7 +17,8 @@
     "files.encoding": "utf8",
     "files.autoGuessEncoding": false,
     "[markdown]": {
-        "editor.wordWrap": "on",
+        "editor.wordWrap": "wordWrapColumn",
+        "editor.wordWrapColumn": 86,
         "editor.quickSuggestions": {
             "comments": "off",
             "strings": "off",
