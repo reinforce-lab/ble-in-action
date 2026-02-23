@@ -1,0 +1,10 @@
+# Placeholder for architecture diagram
+# Expected: 800x600px or higher
+# Format: PNG
+# TODO: Create diagram showing:
+#   - Peripheral (embedded device) with GATT Server
+#   - Central (smartphone) with GATT Client  
+#   - Communication flow with arrows
+#   - Service/Characteristic structure
+#   - Data flow direction
+# Tools: Draw.io, PlantUML, or Mermaid

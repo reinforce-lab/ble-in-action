@@ -1,0 +1,228 @@
+% ====================================================================
+% BLEInAction – LaTeX Preamble (LuaLaTeX + jlreq)
+% Re:VIEW techbook テンプレート (m3dev/techbook-templete) 準拠
+% ====================================================================
+%
+% Layout target: 技術書典の技術同人誌スタイル
+%   B5 (182×257mm), 8.5pt, 50文字/行, 40行/頁
+%   本文ゴシック体 (HaranoAjiGothic), 欧文サンセリフ (TeX Gyre Heros)
+%   章見出し「第 X 章」+グレー罫線
+%   jlreq クラスが日本語組版(行間・字送り)を自動処理
+%
+% Reference:
+%   review-style.sty   – fancyhdr / hidelinks / figure placement
+%   review-custom.sty  – centered page numbers / chapter head spacing
+%   review-base.sty    – listings / shadecolor / colour scheme
+% ====================================================================
+
+% ---- Japanese fonts: Harano Aji Gothic (ゴシック体) -----------------
+%  jlreq + LuaLaTeX では luatexja は自動ロードされる
+\usepackage{luatexja-fontspec}
+
+\setmainjfont{HaranoAjiGothic}[
+  UprightFont = HaranoAjiGothic-Regular,
+  BoldFont    = HaranoAjiGothic-Bold
+]
+\setsansjfont{HaranoAjiGothic}[
+  UprightFont = HaranoAjiGothic-Regular,
+  BoldFont    = HaranoAjiGothic-Bold
+]
+
+% ---- Latin fonts: TeX Gyre Heros (≈ Helvetica) ---------------------
+\usepackage{fontspec}
+\setmainfont{TeX Gyre Heros}[
+  UprightFont = *-Regular,
+  BoldFont    = *-Bold,
+  ItalicFont  = *-Italic,
+  BoldItalicFont = *-BoldItalic
+]
+\setsansfont{TeX Gyre Heros}[
+  UprightFont = *-Regular,
+  BoldFont    = *-Bold,
+  ItalicFont  = *-Italic,
+  BoldItalicFont = *-BoldItalic
+]
+
+% ---- Colours (Re:VIEW カラースキーム) --------------------------------
+\usepackage{xcolor}
+\definecolor{shadecolor}{gray}{0.9}             % Re:VIEW shadecolor
+\definecolor{mgrey}{gray}{0.75}                  % heading rules
+\definecolor{codebg}{gray}{0.9}                  % code background (≈ black!10!white)
+\definecolor{codeframe}{gray}{0.8}               % code frame
+\definecolor{reviewgreen}{rgb}{0,0.4,0}          % Re:VIEW green (comments)
+\definecolor{reviewblue}{rgb}{0.2,0.2,0.4}       % Re:VIEW blue (keywords)
+\definecolor{reviewred}{rgb}{0.7,0,0}            % Re:VIEW red (strings)
+\definecolor{reviewdarkred}{rgb}{0.3,0,0}        % Re:VIEW dark red
+
+% ---- Section numbering depth ----------------------------------------
+\setcounter{secnumdepth}{4}
+
+% ---- Chapter / Section formatting (iBeaconHandbook header.txt 準拠) --
+%  jlreq の \chapter と titlesec の互換性のため \@chapapp を事前定義
+\makeatletter
+\providecommand{\@chapapp}{第}
+\providecommand{\@chappos}{章}
+\makeatother
+%  titlesec は section 以下のみカスタマイズ (chapter は jlreq に委任)
+\usepackage[bf, medium, raggedright, compact, calcwidth]{titlesec}
+
+% Section: Large bold + 2pt グレー罫線
+\titleformat{\section}[hang]
+  {\Large\bfseries}{\thesection}{12pt}{}
+  [\color{mgrey}{\titlerule[2pt]}]
+
+% Subsection: large bold + 1pt グレー罫線
+\titleformat{\subsection}[hang]
+  {\large\bfseries}{\thesubsection}{12pt}{}
+  [\color{mgrey}{\titlerule[1pt]}]
+
+% Subsubsection: large bold + 1pt グレー罫線
+\titleformat{\subsubsection}[hang]
+  {\large\bfseries}{\thesubsubsection}{12pt}{}
+  [\color{mgrey}{\titlerule[1pt]}]
+
+% Paragraph: run-in
+\titleformat{\paragraph}[runin]
+  {\normalsize\bfseries}{\theparagraph}{12pt}{}[]
+
+% Chapter: jlreq の章見出しの後にグレー罫線を追加
+\usepackage{etoolbox}
+\makeatletter
+\apptocmd{\@makechapterhead}{%
+  \vspace{-8pt}%
+  {\color{mgrey}\hrule height 4pt}%
+  \vspace{12pt}%
+}{}{}
+\apptocmd{\@makeschapterhead}{%
+  \vspace{-8pt}%
+  {\color{mgrey}\hrule height 4pt}%
+  \vspace{12pt}%
+}{}{}
+\makeatother
+
+% ---- Line spacing ---------------------------------------------------
+% jlreq の number_of_lines=40 が baselineskip を自動計算するため、
+% setstretch は 1.0 (jlreq に委任)
+\usepackage{setspace}
+\setstretch{1.0}
+
+% ---- Paragraph indentation ------------------------------------------
+\setlength{\parindent}{1\zw}
+\setlength{\parskip}{0pt plus 1pt}
+
+% ---- Graphics – cap size for B5 page --------------------------------
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{%
+  \ifdim\Gin@nat@width>\linewidth 0.92\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{14cm}
+\makeatother
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+
+% ---- Float placement (Re:VIEW: figure / table は H 固定) -----------
+\usepackage{float}
+\floatplacement{figure}{H}
+\floatplacement{table}{H}
+
+% ---- Caption ---------------------------------------------------------
+\usepackage{caption}
+\captionsetup{
+  labelsep=space,
+  font=small,
+  labelfont=bf,
+  format=hang,
+  margin=1em
+}
+
+% ---- Code listings (Re:VIEW風: scriptsize, shaded background) -------
+\usepackage{listings}
+
+\lstset{
+  basicstyle=\ttfamily\scriptsize,
+  backgroundcolor=\color{codebg},
+  frame=single,
+  frameround=tttt,
+  rulecolor=\color{codeframe},
+  framerule=0.5pt,
+  commentstyle=\color{reviewgreen}\itshape,
+  stringstyle=\color{reviewred},
+  keywordstyle=\color{reviewblue}\bfseries,
+  breaklines=true,
+  breakatwhitespace=false,
+  showstringspaces=false,
+  tabsize=4,
+  numbers=left,
+  numberstyle=\tiny\color{gray},
+  stepnumber=1,
+  xleftmargin=2em,
+  framexleftmargin=1.5em,
+  aboveskip=1em,
+  belowskip=0.8em,
+  columns=fixed,
+  basewidth=0.5em
+}
+
+% ---- Pandoc Shaded environment (fallback for fenced code blocks) -----
+\usepackage{framed}
+\renewenvironment{Shaded}{%
+  \definecolor{shadecolor}{gray}{0.9}%
+  \begin{snugshade}%
+}{\end{snugshade}}
+
+% ---- Tables ----------------------------------------------------------
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+
+% ---- URLs ------------------------------------------------------------
+\usepackage{url}
+\urlstyle{same}
+
+% ---- Hyperlinks (Re:VIEW: hidelinks — 印刷向けリンク非表示) ----------
+\AtBeginDocument{
+  \hypersetup{
+    unicode=true,
+    hidelinks,
+    bookmarksnumbered=true,
+    bookmarksopen=true,
+    bookmarksopenlevel=2,
+    pdfstartview={FitH},
+    pdfpagemode=UseOutlines
+  }
+}
+
+% ---- Headers / Footers (Re:VIEW custom: ページ番号中央) ---------------
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\sffamily\bfseries\nouppercase{\leftmark}}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Chapter-starting pages (plain style: page number centered)
+\fancypagestyle{plain}{%
+  \fancyhf{}%
+  \fancyfoot[C]{\thepage}%
+  \renewcommand{\headrulewidth}{0pt}%
+  \renewcommand{\footrulewidth}{0pt}%
+}
+
+% ---- Orphan / Widow control ------------------------------------------
+\widowpenalty=10000
+\clubpenalty=10000
+\raggedbottom
+
+% ---- Abstract environment --------------------------------------------
+\newenvironment{abstract}{%
+  \small
+  \begin{center}\bfseries 概要\end{center}
+  \quotation
+}{\endquotation}
+
+% ---- Technical term macros -------------------------------------------
+\newcommand{\techterm}[1]{\texttt{\textbf{#1}}}
+\newcommand{\BLE}{\techterm{BLE}}
+\newcommand{\GATT}{\techterm{GATT}}
+\newcommand{\UUID}{\techterm{UUID}}
+\newcommand{\ATT}{\techterm{ATT}}

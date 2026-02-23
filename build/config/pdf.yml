@@ -1,0 +1,46 @@
+# =======================================================================
+# Pandoc Defaults — PDF Build  (B5 / jlreq / LuaLaTeX)
+# Usage: pandoc --defaults=build/config/pdf.yml <input files> -o out.pdf
+# =======================================================================
+
+# ---- Input / Output ---------------------------------------------------
+from: markdown+smart+footnotes+fenced_code_blocks+inline_code_attributes+pipe_tables
+to: latex
+standalone: true
+top-level-division: chapter
+
+# ---- Metadata ----------------------------------------------------------
+metadata-file: manuscript/metadata.yml
+
+# ---- Table of Contents -------------------------------------------------
+number-sections: true
+toc: true
+toc-depth: 1
+
+# ---- Code Highlighting -------------------------------------------------
+highlight-style: tango
+
+# ---- PDF Engine --------------------------------------------------------
+pdf-engine: lualatex
+
+# ---- LaTeX Preamble ----------------------------------------------------
+include-in-header: build/templates/latex-preamble.tex
+
+# ---- LaTeX Variables (jlreq native layout: 50字/行 × 40行/頁) ----------
+variables:
+  documentclass: jlreq
+  classoption:
+    - book
+    - lualatex
+    - oneside
+    - paper=b5
+    - fontsize=8.5pt
+    - line_length=50zw
+    - number_of_lines=40
+    - head_space=25mm
+
+# ---- Resource Paths ----------------------------------------------------
+resource-path:
+  - .
+  - manuscript
+  - manuscript/images

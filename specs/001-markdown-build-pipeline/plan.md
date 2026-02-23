@@ -1,0 +1,135 @@
+# Implementation Plan: Markdown Build Pipeline for Kindle Publishing
+
+**Branch**: `001-markdown-build-pipeline` | **Date**: 2025-10-21 | **Spec**: [spec.md](./spec.md)
+**Input**: Feature specification from `/specs/001-markdown-build-pipeline/spec.md`
+
+**Note**: This template is filled in by the `/speckit.plan` command. See `.specify/templates/commands/plan.md` for the execution workflow.
+
+## Summary
+
+Establish a VS Code-integrated writing environment using Markdown that builds to Amazon Kindle formats (EPUB and PDF). The system will enable technical book authoring with code syntax highlighting, support Japanese text with English technical terms, and provide a CI-ready local build pipeline. This feature prioritizes the writing experience (P1), followed by local building capabilities (P2), and future CI compatibility (P3).
+
+## Technical Context
+
+**Language/Version**: Shell scripts (bash/zsh), Python 3.11+ (build scripts), Pandoc 3.x  
+**Primary Dependencies**: 
+- Pandoc 3.x (universal document converter)
+- LaTeX distribution (TexLive/MacTeX for PDF generation)
+- epubcheck (EPUB validation)
+- VS Code extensions (Markdown Preview Enhanced, Markdown All in One)
+
+**Storage**: Files (Markdown source, images, generated EPUB/PDF outputs)  
+**Testing**: Manual validation via Amazon KDP validator (epubcheck) and test builds  
+**Target Platform**: macOS (local development), CI-compatible (GitHub Actions/GitLab CI future)  
+**Project Type**: Single project (book manuscript with build tooling)  
+**Performance Goals**: Build completes in <2 minutes for 50-page manuscript, <5 minutes for 300-page book  
+**Constraints**: 
+- Must support UTF-8 Japanese text with English technical terms
+- Must generate KDP-compliant EPUB 3.0 and print PDF
+- Must integrate with VS Code for authoring experience
+- Must use standard package-manageable dependencies (Homebrew on macOS)
+- LaTeX installation ~2GB (acceptable for local dev; Docker-based for CI)
+
+**Scale/Scope**: 
+- Expected manuscript: 200-400 pages
+- Multiple code examples per chapter (6-8 programming languages)
+- 50-100 images/diagrams
+- 15-25 chapters
+
+**Research Resolution**: See [research.md](./research.md) for detailed toolchain comparison and selection rationale.
+
+## Constitution Check
+
+*GATE: Must pass before Phase 0 research. Re-check after Phase 1 design.*
+
+### Build Pipeline Alignment with Book Constitution
+
+This feature implements the **infrastructure** for the book project and must support the constitution's principles:
+
+**✅ Principle I - Hands-On Learning Through Practice**
+- Build system must preserve code block formatting across all languages (C, C++, Swift, Kotlin, JavaScript, Python)
+- Must maintain syntax highlighting information in output formats
+- **Status**: ✅ VERIFIED - Pandoc supports 200+ languages with syntax highlighting via highlight.js/Pygments
+
+**✅ Principle II - Cross-Platform Code Verification (NON-NEGOTIABLE)**
+- Build system should not interfere with including tested code examples
+- Must support embedding executable code from external sources
+- **Status**: ✅ VERIFIED - Markdown allows referencing external files; code-examples/ directory structure enables tested code inclusion
+
+**✅ Principle V - Self-Contained Examples**
+- Build system must handle multi-file code examples
+- Must support clear file structure visualization in output
+- **Status**: ✅ VERIFIED - Markdown supports code blocks, fenced divs, and can include file trees as formatted text
+
+**✅ Principle VI - Technical Accuracy & Standards Compliance**
+- Generated EPUB must be EPUB 3.0 compliant (KDP requirement)
+- Generated PDF must meet KDP print specifications
+- **Status**: ✅ VERIFIED - Pandoc generates EPUB 3.0; LaTeX PDF customizable to KDP specs; epubcheck validation confirms compliance
+
+**Additional Requirements from Constitution**:
+- **UTF-8 Japanese text**: ✅ Pandoc + xelatex support UTF-8 and CJK fonts
+- **Chapter structure**: ✅ Pandoc auto-generates TOC from markdown headings with `--toc` flag
+- **Image handling**: ✅ Images embedded in EPUB, included in PDF via LaTeX
+- **Metadata support**: ✅ YAML front matter supports all required fields (title, author, ISBN, etc.)
+
+**⚠️ Key Risk Resolved**: Pandoc is widely adopted (O'Reilly, academic publishers) - meets FR-012 requirement for standard, widely-adopted tools
+
+**Gate Status**: ✅ PASSED - All constitution principles supported by selected toolchain (Pandoc + LaTeX)
+
+## Project Structure
+
+### Documentation (this feature)
+
+```
+specs/001-markdown-build-pipeline/
+├── plan.md              # This file (/speckit.plan command output)
+├── research.md          # Phase 0 output (toolchain comparison)
+├── data-model.md        # Phase 1 output (build configuration schema)
+├── quickstart.md        # Phase 1 output (setup and first build guide)
+└── checklists/
+    └── requirements.md  # Specification quality checklist
+```
+
+### Source Code (repository root)
+
+```
+manuscript/              # Book content
+├── chapters/
+│   ├── 01-introduction.md
+│   ├── 02-ble-basics.md
+│   └── ...
+├── images/
+│   ├── diagrams/
+│   └── screenshots/
+├── code-examples/       # Complete, testable code referenced in book
+│   ├── embedded/
+│   ├── ios/
+│   └── android/
+└── metadata.yml         # Book metadata (title, author, ISBN, etc.)
+
+build/                   # Build system
+├── scripts/
+│   ├── build.sh        # Main build script
+│   ├── validate.sh     # KDP validation script
+│   └── setup.sh        # Dependency installation
+├── templates/          # Output templates for EPUB/PDF styling
+├── config/             # Build configuration
+└── .gitignore
+
+output/                  # Generated artifacts (not committed)
+├── epub/
+├── pdf/
+└── validation-reports/
+
+.vscode/                 # VS Code configuration
+├── settings.json       # Markdown preview settings
+├── extensions.json     # Recommended extensions
+└── tasks.json          # Build tasks integration
+```
+
+**Structure Decision**: Single project structure suitable for a book manuscript. The `manuscript/` directory contains all authoring content, `build/` contains the publishing toolchain, and `output/` holds generated files. This structure separates content from infrastructure and aligns with standard technical book projects (e.g., O'Reilly's Atlas, Pragmatic Programmers toolchains).
+
+## Complexity Tracking
+
+*No constitution violations - this section intentionally left empty.*
+

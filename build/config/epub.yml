@@ -1,0 +1,32 @@
+# =======================================================================
+# Pandoc Defaults — EPUB Build
+# Usage: pandoc --defaults=build/config/epub.yml <input files> -o out.epub
+# =======================================================================
+
+# ---- Input / Output ---------------------------------------------------
+from: markdown+smart+footnotes+fenced_code_blocks+inline_code_attributes+pipe_tables
+to: epub3
+standalone: true
+top-level-division: chapter
+
+# ---- Metadata ----------------------------------------------------------
+metadata-file: manuscript/metadata.yml
+
+# ---- Table of Contents -------------------------------------------------
+number-sections: true
+toc: true
+toc-depth: 1
+
+# ---- Code Highlighting -------------------------------------------------
+highlight-style: tango
+
+# ---- EPUB-specific -----------------------------------------------------
+split-level: 2
+css: build/templates/epub-styles.css
+html-math-method: mathml
+
+# ---- Resource Paths ----------------------------------------------------
+resource-path:
+  - .
+  - manuscript
+  - manuscript/images

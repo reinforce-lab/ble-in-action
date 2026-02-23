@@ -1,0 +1,60 @@
+# Build outputs
+output/
+*.epub
+*.pdf
+
+# LaTeX intermediate files
+*.aux
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+
+# Pandoc temporary files
+*.tmp
+*.bak
+
+# VS Code (exclude all except config files)
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/extensions.json
+!.vscode/launch.json
+
+# macOS
+.DS_Store
+Thumbs.db
+
+# Environment variables
+.env
+.env.local
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.venv/
+venv/
+
+# Shell script logs
+*.log
+
+# Temporary files
+*.swp
+*.swo
+*~
+
+# Docker volumes
+.docker/
+
+# Build logs (inside output directory)
+# Already covered by output/
+
+# Node modules (if any JavaScript tools are added)
+node_modules/
+
