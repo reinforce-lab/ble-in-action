@@ -2,7 +2,6 @@
 
 <!-- topic: 公式仕様書, 参考書, Webリソース, SDK ドキュメント -->
 
----
 
 ## 公式仕様書・標準文書
 
@@ -15,7 +14,6 @@
 | Assigned Numbers | https://www.bluetooth.com/specifications/assigned-numbers/ |
 | Heart Rate Profile 1.0 | https://www.bluetooth.com/specifications/specs/heart-rate-profile-1-0/ |
 
----
 
 ## nRF Connect SDK / Zephyr RTOS
 
@@ -27,7 +25,6 @@
 | Nordic Semiconductor DevZone（Q&Aフォーラム） | https://devzone.nordicsemi.com/ |
 | nRF Connect SDK GitHub | https://github.com/nrfconnect/sdk-nrf |
 
----
 
 ## Apple / iOS
 
@@ -38,7 +35,6 @@
 | WWDC 2017: What's New in Core Bluetooth | https://developer.apple.com/videos/play/wwdc2017/712/ |
 | Swift Charts ドキュメント | https://developer.apple.com/documentation/charts |
 
----
 
 ## Android / Google
 
@@ -48,7 +44,6 @@
 | Android Bluetooth 権限ガイド | https://developer.android.com/guide/topics/connectivity/bluetooth/permissions |
 | Android Kotlin サンプル（BluetoothLeGatt） | https://github.com/android/connectivity-samples |
 
----
 
 ## Linux / Python
 
@@ -59,7 +54,6 @@
 | bleak Python ライブラリ | https://bleak.readthedocs.io/ |
 | bleak GitHub | https://github.com/hbldh/bleak |
 
----
 
 ## Web Bluetooth
 
@@ -70,7 +64,6 @@
 | Web Bluetooth サンプル集 | https://googlechrome.github.io/samples/web-bluetooth/ |
 | ブラウザ対応状況 | https://caniuse.com/web-bluetooth |
 
----
 
 ## ビーコン関連
 
@@ -79,7 +72,6 @@
 | iBeacon 仕様 (Apple) | https://developer.apple.com/ibeacon/ |
 | Eddystone 仕様 (Google) | https://github.com/google/eddystone/tree/master/protocol-specification |
 
----
 
 ## OTA DFU
 
@@ -90,7 +82,6 @@
 | nRF Connect Device Manager (Android) | https://github.com/NordicSemiconductor/Android-nRF-Connect-Device-Manager |
 | imgtool（MCUBoot署名ツール） | https://docs.mcuboot.com/imgtool.html |
 
----
 
 ## デバッグ・解析ツール
 
@@ -101,7 +92,6 @@
 | Wireshark BLE Dissector ドキュメント | https://wiki.wireshark.org/Bluetooth |
 | nRF Power Profiler Kit II (PPK2) | https://www.nordicsemi.com/Products/Development-hardware/Power-Profiler-Kit-2 |
 
----
 
 ## 参考書籍
 
@@ -111,7 +101,6 @@
 | *Bluetooth Low Energy: The Developer's Handbook* | Robin Heydon | Prentice Hall |
 | *Bluetooth Application Developer's Guide* | Slee / Sherrill / Bhatt | Syngress |
 
----
 
 ## コミュニティ・その他
 
@@ -121,6 +110,5 @@
 | Stack Overflow [bluetooth-lowenergy] タグ | https://stackoverflow.com/questions/tagged/bluetooth-lowenergy |
 | Reddit r/embedded | https://www.reddit.com/r/embedded/ |
 
----
 
 *本書中のリンクは2025年時点のものです。URLは変更になる場合があります。*

@@ -2,7 +2,6 @@
 
 <!-- topic: Bluetooth SIG仕様書, Core Specification, GATT割り当て番号, 仕様書の構成 -->
 
----
 
 ## Bluetooth SIG 仕様書とは
 
@@ -19,7 +18,6 @@ Bluetooth の技術仕様は **Bluetooth SIG (Special Interest Group)** が策�
 | **Assigned Numbers** | UUID、会社ID、広告データタイプの番号割り当て |
 | **Bluetooth Profile (各種)** | HRS、CTS、FMPなどプロファイル仕様 |
 
----
 
 ## Core Specification の構造
 
@@ -58,7 +56,6 @@ Vol 6: Low Energy Controller
         → Connection Interval、Window Size、Supervision Timeout
 ```
 
----
 
 ## よく参照するセクション
 
@@ -98,7 +95,6 @@ Supervision Timeout  : 100ms 〜 32000ms (単位: 10ms)
   Octet 3+: Attribute Value (0〜(ATT_MTU-3) bytes)
 ```
 
----
 
 ## GATT Specification Supplement の使い方
 
@@ -113,7 +109,6 @@ GSS には Bluetooth SIG が定義する標準 Characteristic が列挙されて
 
 自分で Characteristic のフォーマットを決める前に、GSS で既定義のものがないか確認しましょう。標準を使うとベンダー非依存で相互運用性が高まります。
 
----
 
 ## Assigned Numbers の使い方
 
@@ -134,7 +129,6 @@ https://www.bluetooth.com/specifications/assigned-numbers/
 （PDFとXML両方あり。XMLはプログラムからの参照に便利）
 ```
 
----
 
 ## SDK ドキュメントとの使い分け
 
@@ -153,7 +147,6 @@ SDKドキュメントを読む場面:
 という流れが効率的です。
 ```
 
----
 
 ## Core Specificationのバージョン間差分の読み方
 
@@ -176,6 +169,5 @@ Core Specificationはバージョンごとに大幅に拡張されています�
 
 <!-- TBD: Core Spec 6.0の変更点が公開されたら追記 -->
 
----
 
 **付録B** では本書で参照した公式仕様書・技術書・Webリソースの一覧を掲載しています。
