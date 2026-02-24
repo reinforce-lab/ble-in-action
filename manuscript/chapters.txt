@@ -10,6 +10,7 @@ preface.md
 # Main Content
 
 # Chapter 1: BLEとは何か
+chapters/01-what-is-ble/1.0-intro.md
 chapters/01-what-is-ble/1.1-starting-with-microbit.md
 chapters/01-what-is-ble/1.2-ble-introduction.md
 chapters/01-what-is-ble/1.3-ble-ecosystem.md
@@ -17,6 +18,7 @@ chapters/01-what-is-ble/1.4-ble-development-roles.md
 chapters/01-what-is-ble/1.5-summary.md
 
 # Chapter 2: BLEの基本概念と用語
+chapters/02-ble-basic/2.0-intro.md
 chapters/02-ble-basic/2.1-ble-overview.md
 chapters/02-ble-basic/2.2-advertising-scanning.md
 chapters/02-ble-basic/2.3-connection.md
@@ -26,6 +28,7 @@ chapters/02-ble-basic/2.6-pairing-bonding.md
 chapters/02-ble-basic/2.7-summary.md
 
 # Chapter 3: 物理層・リンク層・GAP
+chapters/03-ble-layer/3.0-intro.md
 chapters/03-ble-layer/3.1-stack-overview.md
 chapters/03-ble-layer/3.2-physical-layer.md
 chapters/03-ble-layer/3.3-link-layer-state-machine.md
@@ -35,6 +38,7 @@ chapters/03-ble-layer/3.6-gap.md
 chapters/03-ble-layer/3.7-summary.md
 
 # Chapter 4: ATT・GATT・プロファイル
+chapters/04-att-gatt/4.0-intro.md
 chapters/04-att-gatt/4.1-att-gatt-overview.md
 chapters/04-att-gatt/4.2-attribute-structure.md
 chapters/04-att-gatt/4.3-att-commands.md
@@ -44,6 +48,7 @@ chapters/04-att-gatt/4.6-profiles.md
 chapters/04-att-gatt/4.7-summary.md
 
 # Chapter 5: nRF52840開発環境
+chapters/05-nrf52840-setup/5.0-intro.md
 chapters/05-nrf52840-setup/5.1-overview.md
 chapters/05-nrf52840-setup/5.2-sdk-setup.md
 chapters/05-nrf52840-setup/5.3-board-setup.md
@@ -52,6 +57,7 @@ chapters/05-nrf52840-setup/5.5-project-structure.md
 chapters/05-nrf52840-setup/5.6-summary.md
 
 # Chapter 6: ペリフェラル実装
+chapters/06-peripheral-impl/6.0-intro.md
 chapters/06-peripheral-impl/6.1-connectable-adv.md
 chapters/06-peripheral-impl/6.2-custom-service.md
 chapters/06-peripheral-impl/6.3-read-characteristic.md
@@ -61,6 +67,7 @@ chapters/06-peripheral-impl/6.6-connection.md
 chapters/06-peripheral-impl/6.7-summary.md
 
 # Chapter 7: 低消費電力設計
+chapters/07-low-power-design/7.0-intro.md
 chapters/07-low-power-design/7.1-power-basics.md
 chapters/07-low-power-design/7.2-sleep-mode.md
 chapters/07-low-power-design/7.3-adv-interval.md
@@ -70,6 +77,7 @@ chapters/07-low-power-design/7.6-battery-design.md
 chapters/07-low-power-design/7.7-summary.md
 
 # Chapter 8: 外部チップ連携
+chapters/08-external-chips/8.0-intro.md
 chapters/08-external-chips/8.1-overview.md
 chapters/08-external-chips/8.2-sensor-integration.md
 chapters/08-external-chips/8.3-hci-interface.md
@@ -78,6 +86,7 @@ chapters/08-external-chips/8.5-power-pitfalls.md
 chapters/08-external-chips/8.6-summary.md
 
 # Chapter 9: iOS Core Bluetooth
+chapters/09-ios-core-bluetooth/9.0-intro.md
 chapters/09-ios-core-bluetooth/9.1-framework-overview.md
 chapters/09-ios-core-bluetooth/9.2-centralmanager.md
 chapters/09-ios-core-bluetooth/9.3-scanning.md
@@ -88,6 +97,7 @@ chapters/09-ios-core-bluetooth/9.7-background.md
 chapters/09-ios-core-bluetooth/9.8-summary.md
 
 # Chapter 10: Web Bluetooth API
+chapters/10-web-bluetooth/10.0-intro.md
 chapters/10-web-bluetooth/10.1-overview.md
 chapters/10-web-bluetooth/10.2-request-device.md
 chapters/10-web-bluetooth/10.3-connect-gatt.md
@@ -96,6 +106,7 @@ chapters/10-web-bluetooth/10.5-notify.md
 chapters/10-web-bluetooth/10.6-limitations-summary.md
 
 # Chapter 11: Android/Linux BLE
+chapters/11-android-linux-ble/11.0-intro.md
 chapters/11-android-linux-ble/11.1-android-overview.md
 chapters/11-android-linux-ble/11.2-android-scan-connect.md
 chapters/11-android-linux-ble/11.3-android-gatt-issues.md
@@ -104,6 +115,7 @@ chapters/11-android-linux-ble/11.5-python-bleak.md
 chapters/11-android-linux-ble/11.6-platform-comparison.md
 
 # Chapter 12: ビーコン実装
+chapters/12-beacon-impl/12.0-intro.md
 chapters/12-beacon-impl/12.1-beacon-overview.md
 chapters/12-beacon-impl/12.2-nrf52840-beacon.md
 chapters/12-beacon-impl/12.3-ios-beacon-reception.md
@@ -112,6 +124,7 @@ chapters/12-beacon-impl/12.5-eddystone-url.md
 chapters/12-beacon-impl/12.6-summary.md
 
 # Chapter 13: 温度計実装
+chapters/13-thermometer-impl/13.0-intro.md
 chapters/13-thermometer-impl/13.1-system-architecture.md
 chapters/13-thermometer-impl/13.2-firmware-sensor.md
 chapters/13-thermometer-impl/13.3-firmware-gatt.md
@@ -120,6 +133,7 @@ chapters/13-thermometer-impl/13.5-ios-chart.md
 chapters/13-thermometer-impl/13.6-summary.md
 
 # Chapter 14: OTA DFU実装
+chapters/14-ota-dfu/14.0-intro.md
 chapters/14-ota-dfu/14.1-dfu-overview.md
 chapters/14-ota-dfu/14.2-mcuboot-config.md
 chapters/14-ota-dfu/14.3-dfu-package.md
@@ -129,6 +143,7 @@ chapters/14-ota-dfu/14.6-troubleshooting.md
 chapters/14-ota-dfu/14.7-summary.md
 
 # Chapter 15: パケットキャプチャとデバッグ
+chapters/15-debugging/15.0-intro.md
 chapters/15-debugging/15.1-debug-tools-overview.md
 chapters/15-debugging/15.2-nrf-sniffer-setup.md
 chapters/15-debugging/15.3-wireshark-analysis.md
@@ -137,6 +152,7 @@ chapters/15-debugging/15.5-android-hci-snoop.md
 chapters/15-debugging/15.6-debug-examples.md
 
 # Chapter 16: よくある問題と解決法
+chapters/16-troubleshooting/16.0-intro.md
 chapters/16-troubleshooting/16.1-connection-issues.md
 chapters/16-troubleshooting/16.2-data-issues.md
 chapters/16-troubleshooting/16.3-power-issues.md
