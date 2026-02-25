@@ -5,17 +5,18 @@
 # macOS BasicTeX / MacTeX の PATH を追加
 export PATH := /Library/TeX/texbin:$(PATH)
 
-.PHONY: help epub pdf all validate clean check-pandoc
+.PHONY: help epub pdf pdf-ch all validate clean check-pandoc
 
 # Default target
 help:
 	@echo "BLEInAction Build System (local pandoc)"
 	@echo ""
-	@echo "  make epub       Build EPUB"
-	@echo "  make pdf        Build PDF  (requires lualatex)"
-	@echo "  make all        Build EPUB + PDF"
-	@echo "  make validate   Validate EPUB with epubcheck"
-	@echo "  make clean      Remove generated output files"
+	@echo "  make epub         Build EPUB"
+	@echo "  make pdf          Build PDF  (requires lualatex)"
+	@echo "  make pdf-ch CH=3  Build PDF for a single chapter (fast review)"
+	@echo "  make all          Build EPUB + PDF"
+	@echo "  make validate     Validate EPUB with epubcheck"
+	@echo "  make clean        Remove generated output files"
 	@echo ""
 
 # --------------------------------------------------------------------------
@@ -82,6 +83,32 @@ $(PDF_FILE): $(CHAPTERS) $(METADATA) $(LATEX_HEADER) $(CHAPTERS_TXT) $(PDF_DEFAU
 		--output=$@
 	@echo ""
 	@echo "✅ PDF build complete: $@ ($$(du -h $@ | cut -f1))"
+
+# --------------------------------------------------------------------------
+# PDF – single chapter  (make pdf-ch CH=3)
+# --------------------------------------------------------------------------
+CH ?=
+CH_PAD  = $(shell printf '%02d' $(CH))
+CH_DIR  = chapters/$(CH_PAD)-
+CH_FILES = $(addprefix $(MANUSCRIPT_DIR)/,\
+  $(shell grep '^$(CH_DIR)' $(CHAPTERS_TXT)))
+CH_PDF  = $(PDF_DIR)/ch$(CH_PAD).pdf
+
+pdf-ch: check-pandoc
+	@if [ -z "$(CH)" ]; then \
+		echo "❌ 章番号を指定してください。例: make pdf-ch CH=3"; exit 1; fi
+	@if [ -z "$(CH_FILES)" ]; then \
+		echo "❌ 第$(CH)章のファイルが見つかりません。"; exit 1; fi
+	@command -v lualatex >/dev/null 2>&1 || { \
+		echo "❌ lualatex が見つかりません。"; exit 1; }
+	@mkdir -p $(PDF_DIR)
+	@echo "=== Building PDF – 第$(CH)章 (review) ==="
+	pandoc $(CH_FILES) \
+		--defaults=$(PDF_DEFAULTS) \
+		-V chapternumber=$(CH) \
+		--output=$(CH_PDF)
+	@echo ""
+	@echo "✅ Chapter PDF: $(CH_PDF) ($$(du -h $(CH_PDF) | cut -f1))"
 
 # --------------------------------------------------------------------------
 # All

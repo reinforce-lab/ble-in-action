@@ -164,10 +164,18 @@
 
 % ---- Pandoc Shaded environment (fallback for fenced code blocks) -----
 \usepackage{framed}
-\renewenvironment{Shaded}{%
-  \definecolor{shadecolor}{gray}{0.9}%
-  \begin{snugshade}%
-}{\end{snugshade}}
+% pandoc が highlighting-macros を出力しない場合にも対応
+\ifdefined\Shaded
+  \renewenvironment{Shaded}{%
+    \definecolor{shadecolor}{gray}{0.9}%
+    \begin{snugshade}%
+  }{\end{snugshade}}
+\else
+  \newenvironment{Shaded}{%
+    \definecolor{shadecolor}{gray}{0.9}%
+    \begin{snugshade}%
+  }{\end{snugshade}}
+\fi
 
 % ---- Tables ----------------------------------------------------------
 \usepackage{booktabs}
