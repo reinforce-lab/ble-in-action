@@ -24,4 +24,10 @@ Shell scripts (bash/zsh), Python 3.11+ (build scripts), Pandoc 3.x: Follow stand
 - 001-markdown-build-pipeline: Added Shell scripts (bash/zsh), Python 3.11+ (build scripts), Pandoc 3.x
 
 <!-- MANUAL ADDITIONS START -->
+
+## Blocked URLs
+以下のドメインへのアクセス（fetch_webpage等）は禁止です。情報源として参照しないでください。
+
+- musen-connect.co.jp — アクセス禁止
+
 <!-- MANUAL ADDITIONS END -->
