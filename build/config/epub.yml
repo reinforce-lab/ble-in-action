@@ -9,6 +9,10 @@ to: epub3
 standalone: true
 top-level-division: chapter
 
+# ---- Cross-reference Filter (pandoc-crossref) --------------------------
+filters:
+  - pandoc-crossref
+
 # ---- Metadata ----------------------------------------------------------
 metadata-file: manuscript/metadata.yml
 
@@ -30,3 +34,13 @@ resource-path:
   - .
   - manuscript
   - manuscript/images
+
+# ---- pandoc-crossref settings (Japanese) --------------------------------
+metadata:
+  secPrefix: "節"
+  chapPrefix: "章"
+  figPrefix: "図"
+  tblPrefix: "表"
+  lstPrefix: "リスト"
+  secPrefixTemplate: "$$i$$$$p$$"
+  chapPrefixTemplate: "第$$i$$$$p$$"
