@@ -1,26 +1,28 @@
 ---
 # =======================================================================
 # Book Metadata (書籍情報のみ — ビルド設定は build/config/*.yml に集約)
+#
+# NOTE: 値はプレースホルダー。出版（KDP登録）前に確定情報へ差し替えること。
+#       〈…〉と TODO コメントの箇所が未確定。
 # =======================================================================
 
-title: "Bluetooth LE Practical Guide"
-subtitle: "From embedded devices to mobile apps"
+title: "Bluetooth Low Energy開発実践"   # 仮題（要確定）
+subtitle: "組み込みデバイスからモバイルアプリまで"
 author:
-  - name: "Author Name"
+  - name: "Akihiro Uehara"
     affiliation: ""
-date: "2025"
+date: "2026"                             # TODO: 刊行年
 lang: ja
 
-# Publisher Information (placeholders)
-publisher: "TBD"
-isbn: "TBD"
-rights: "© 2025 Author Name. All rights reserved."
+# Publisher Information (プレースホルダー)
+publisher: "〈出版社名 / 個人出版〉"      # TODO: KDP登録時に確定
+isbn: "〈ISBN〉"                          # TODO: 紙版で必要なら取得
+rights: "© 2026 Akihiro Uehara. All rights reserved."
 
 # Content Description
 abstract: |
-  A comprehensive guide to Bluetooth Low Energy development,
-  covering embedded device firmware, iOS/Android mobile applications,
-  and real-world implementation patterns.
+  Bluetooth Low Energy 開発の実践ガイド。組み込みデバイスのファームウェア、
+  iOS / Android モバイルアプリ、実世界での実装パターンを横断的に扱う。
 
 keywords:
   - Bluetooth Low Energy

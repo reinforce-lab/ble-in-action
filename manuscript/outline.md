@@ -35,7 +35,7 @@ BLE開発における各担当者（ファームウェア/アプリ/企画）が
 ### GitHub公開
 
 本書の原稿とサンプルコードは以下で公開予定：
-- リポジトリ: https://github.com/[username]/BLEInAction
+- リポジトリ: https://github.com/reinforce-lab/ble-in-action
 - ビルドシステム: Pandoc + Makefile（EPUB/PDF生成）
 - イシュー受付: 誤字脱字・技術的指摘をGitHubイシューで受付
 

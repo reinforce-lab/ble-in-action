@@ -1,0 +1,135 @@
+# CLAUDE.md
+
+このファイルは、Claude Code（および Claude 系アシスタント）が本リポジトリで作業する際の指針です。
+本リポジトリは**ソフトウェアではなく書籍の原稿**です。その前提で読んでください。
+
+---
+
+## 1. プロジェクト概要
+
+- **書籍名**: 『Bluetooth Low Energy開発実践』（英題 *BLE In Action*）
+- **形態**: 日本語の技術書。**Amazon KDP で 紙（ペーパーバック）＋ 電子書籍（Kindle）** として出版予定
+- **製本**: Pandoc で Markdown → EPUB / PDF（LuaLaTeX, jlreq, B5）に変換
+- **規模**: 序文 ＋ 全16章 ＋ 付録。想定 410〜495 ページ
+- **対象読者**: 組み込み（ファーム）開発者 / モバイルアプリ開発者 / 企画・PM / ホビイスト
+- **扱う技術**: Nordic nRF52840 ＋ nRF Connect SDK 3.0（ファーム）、iOS Core Bluetooth（メイン）、Web Bluetooth、Android / Linux（概要）
+- **ねらい**: SDK に隠蔽された通信の実態を理解し、ファーム／アプリ／企画の各担当が「共通言語」で対話・デバッグできるようにする
+
+詳細な章立てと依存関係は [manuscript/outline.md](manuscript/outline.md)、執筆理念は [.specify/memory/constitution.md](.specify/memory/constitution.md) を参照。
+
+---
+
+## 2. あなた（アシスタント）の役割
+
+**執筆は著者本人が行います。** あなたの役割は **壁打ち相手・校正者・相談役** です。原稿を勝手に書き進める存在ではありません。
+
+- **求められていない本文の書き換え・新章の書き起こしをしない。** まず提案し、著者の判断を仰ぐ
+- **校正・編集は差分を最小に。** 著者の声・文体・論理構成を尊重し、「なぜそう直すか」を必ず添える
+- 指摘は本書の **スタイルガイド（[docs/](docs/)）に準拠**させる（第5章参照）
+- **技術的正確性を最優先**。BLE 仕様に関わる記述は根拠（仕様書の版・節など）を添え、不確かなことは断定しない。憶測で仕様を語らない
+- 大きな構成変更・章をまたぐ修正は、着手前に方針を相談する
+- 壁打ちでは、結論だけでなく **トレードオフ・抜け漏れ・読者目線での疑問** を一緒に出す
+
+---
+
+## 3. ビルド / よく使うコマンド
+
+ビルドは Makefile に集約。Docker 不要、ローカル pandoc + LuaLaTeX で完結します。
+
+```bash
+make epub                 # EPUB を生成 → output/epub/BLEInAction.epub
+make pdf                  # PDF 全体を生成（LuaLaTeX）→ output/pdf/BLEInAction.pdf
+make pdf-ch CH=3          # 第3章のみ PDF（レビュー用・行間広め）
+make pdf-ch CH=3 LAYOUT=1 # 第3章のみ PDF（本番レイアウト）
+make all                  # EPUB + PDF
+make validate             # epubcheck で EPUB を検証
+make clean                # 生成物を削除
+make help                 # ヘルプ
+```
+
+- **前提ツール**: `pandoc`(3.x) / `BasicTeX`(LuaLaTeX) / `pandoc-crossref` / `epubcheck`（任意）
+- **環境構築の手順**: [quickstart.md](quickstart.md) に集約（tlmgr で luatexja・haranoaji 等を導入）
+- LuaLaTeX の PATH（`/Library/TeX/texbin`）は Makefile に組み込み済み
+- 生成物 `output/` は `.gitignore` 対象
+
+---
+
+## 4. リポジトリ構成
+
+```
+manuscript/                 原稿本体
+├── metadata.yml            書籍メタデータ（タイトル/著者/ISBN 等）
+├── chapters.txt            章・節ファイルの掲載順マニフェスト（ここに登録した順で製本）
+├── outline.md              全体の章立て・ページ見積もり・依存関係
+├── preface.md              はじめに
+├── chapters/NN-name/       各章。1ファイル1節（X.Y-name.md）
+└── back-matter/            付録A（仕様書の読み方）、付録B（参考文献）
+build/
+├── config/{pdf,epub}.yml   Pandoc defaults（フォーマット別設定）
+└── templates/              latex-preamble.tex / epub-styles.css / latex-review-spacing.tex
+docs/                       執筆ガイドライン（スタイル / 読者層別Note）
+output/                     生成物（gitignore）
+specs/ , .specify/          Spec Kit（章ごとの仕様・憲法・テンプレート）
+hoge/                       旧ドラフト（Re:VIEW .re 形式）・参考PDF・図版素材のアーカイブ
+```
+
+> **`hoge/` は過去資産の保管庫**です。現行の製本対象ではありません。参考にはしても、ここを編集・削除しないこと。
+
+---
+
+## 5. 原稿ファイルの規則
+
+- **1ファイル＝1節**。ファイル名のプレフィックスは見出し番号と対応（`1.2-ble-introduction.md` → 本文は `## 1.2 …`）
+- **見出しレベル**: `#` 章タイトル / `##` X.Y 節 / `###` X.Y.Z 項
+- **章・節を追加したら必ず [chapters.txt](manuscript/chapters.txt) に登録**（登録しないと製本されない）
+- **節区切りの水平線（`---`）は使わない**（過去に全削除済み。見出しで区切る）
+- 相互参照は **pandoc-crossref 構文**: 章/節 `[@sec:chN]`、図 `[@fig:...]`、表 `[@tbl:...]`、リスト `[@lst:...]`（直接の数値参照は使わない）
+
+---
+
+## 6. 執筆スタイル（要点）
+
+**完全な規則は [docs/writing-style-guide.md](docs/writing-style-guide.md) を参照。** 校正時は必ずこれに従う。要点のみ抜粋：
+
+- **文体**: 「です・ます」調（論文調「である」・会話調「だ」は不可）
+- **カタカナ複合語に中黒（・）を使わない**: 「アドバタイジングパケット」（×「アドバタイジング・パケット」）
+- **語尾の長音は付ける**: サーバー / コントローラー / ディスクリプター（×サーバ）
+- **BLE 標準用語は英語**のまま、初出時に日本語併記（例: `GATT (Generic Attribute Profile、汎用属性プロファイル)`）。API 名（`startAdvertising()` 等）は英語のまま
+- **数値と単位の間にスペース**: `100 ms` / `2.4 GHz` / `-20 dBm`（例外: `95%` は直付け）
+- **数式**: インライン `$...$`、ディスプレイ `$$...$$`（KaTeX 記法）
+- **絵文字は本文に入れない**（PDF の Harano Aji フォントに字形がなく表示されない。✅❌ ではなく「OK / NG」等のテキスト）
+- 図キャプション: `Fig. {章}.{連番}`、表: `表`、サブ図は `(a)(b)(c)`
+
+---
+
+## 7. 読者層への配慮
+
+**詳細は [docs/writing-guidelines-reader-notes.md](docs/writing-guidelines-reader-notes.md)（章別の配慮マップあり）を参照。**
+
+- 4つの読者層: **ホビースト / ファーム開発者 / アプリ開発者 / 企画者**
+- 各章に **【○○の方へ】** 形式の Note を、文脈に沿って **1章あたり 2〜4 箇所**挿入（過度に繰り返さない／技術説明の流れを分断しない）
+
+---
+
+## 8. ガードレール（禁止・注意）
+
+- **参照禁止ドメイン**: `musen-connect.co.jp` は情報源として参照しない（取得・引用しない）
+- **原稿の外部送信・公開をしない**（明示の許可がない限り。外部サービスへの送信は公開と同じと考える）
+- **出典の明記**: 引用・サンプルコードの参照元・仕様書の版は必ず示す。仕様書／SDK コードの転載は出典必須。本書のコードは MIT ライセンス前提
+- **コミット／プッシュは著者の指示があってから**行う（無断で git 操作しない）
+- 破壊的操作（ファイル削除・大幅な上書き）の前に対象を確認し、想定と違えば手を止めて報告する
+
+---
+
+## 9. Git / ワークフロー
+
+- 現在の作業ブランチ: `review/v0.1`（メインは `main`）
+- 章の仕様管理に **Spec Kit**（`.specify/`）と `/speckit.*` スラッシュコマンドを使用
+- `.github/copilot-instructions.md` は **自動生成で内容が古い**（`src/` `tests/` `pytest` 等はこのプロジェクトと無関係）。**本ファイル（CLAUDE.md）を優先**すること
+
+---
+
+## 10. 出版前の確定待ち事項（プレースホルダー）
+
+- [manuscript/metadata.yml](manuscript/metadata.yml) の **確定タイトル・著者名・出版社・ISBN・刊行年** はプレースホルダー（`〈…〉` と `TODO` コメントで明示）。KDP 登録前に確定情報へ差し替える
+- GitHub リポジトリ URL は `https://github.com/reinforce-lab/ble-in-action` に統一済み（[preface.md](manuscript/preface.md) / [outline.md](manuscript/outline.md)）
