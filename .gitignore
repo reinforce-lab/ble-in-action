@@ -58,3 +58,5 @@ venv/
 # Node modules (if any JavaScript tools are added)
 node_modules/
 
+# メモ書き
+Untitled-*.md

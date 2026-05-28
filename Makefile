@@ -13,7 +13,8 @@ help:
 	@echo ""
 	@echo "  make epub         Build EPUB"
 	@echo "  make pdf          Build PDF  (requires lualatex)"
-	@echo "  make pdf-ch CH=3  Build PDF for a single chapter (fast review)"
+	@echo "  make pdf-ch CH=3          Build PDF – single chapter, review mode (double-spaced, default)"
+	@echo "  make pdf-ch CH=3 LAYOUT=1  Build PDF – single chapter, print layout"
 	@echo "  make all          Build EPUB + PDF"
 	@echo "  make validate     Validate EPUB with epubcheck"
 	@echo "  make clean        Remove generated output files"
@@ -87,7 +88,8 @@ $(PDF_FILE): $(CHAPTERS) $(METADATA) $(LATEX_HEADER) $(CHAPTERS_TXT) $(PDF_DEFAU
 # --------------------------------------------------------------------------
 # PDF – single chapter  (make pdf-ch CH=3)
 # --------------------------------------------------------------------------
-CH ?=
+CH     ?=
+LAYOUT ?= 0
 CH_PAD  = $(shell printf '%02d' $(CH))
 CH_DIR  = chapters/$(CH_PAD)-
 CH_FILES = $(addprefix $(MANUSCRIPT_DIR)/,\
@@ -102,9 +104,11 @@ pdf-ch: check-pandoc
 	@command -v lualatex >/dev/null 2>&1 || { \
 		echo "❌ lualatex が見つかりません。"; exit 1; }
 	@mkdir -p $(PDF_DIR)
-	@echo "=== Building PDF – 第$(CH)章 (review) ==="
+	@echo "=== Building PDF – 第$(CH)章 ($(if $(filter 1,$(LAYOUT)),print layout,review / double-spaced)) ==="
 	pandoc $(CH_FILES) \
 		--defaults=$(PDF_DEFAULTS) \
+		$(if $(filter 1,$(LAYOUT)),,--include-in-header=build/templates/latex-review-spacing.tex) \
+		--toc-depth=3 \
 		-V chapternumber=$(CH) \
 		--output=$(CH_PDF)
 	@echo ""
