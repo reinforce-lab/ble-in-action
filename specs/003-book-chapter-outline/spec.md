@@ -29,7 +29,7 @@
 
 **Why this priority**: 各章を独立したfeatureとして管理するワークフローの起点。章ごとの並行作業を可能にする。
 
-**Independent Test**: 任意の章（例：第1章）について、章立ての情報をもとに `/speckit.specify 第1章の詳細仕様` を実行し、適切なspecが生成できる。
+**Independent Test**: 任意の章（例：第1章）について、章立ての情報をもとに、適切な章別specが作成できる。
 
 **Acceptance Scenarios**:
 
@@ -159,5 +159,4 @@
 
 **変更履歴**:
 - 2025-10-23: 初版作成（feature 003開始）
-
 

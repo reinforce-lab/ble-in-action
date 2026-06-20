@@ -55,7 +55,7 @@
 
 ## Overall Status
 
-**PASS** ✅ - Specification is ready for `/speckit.plan`
+**PASS** ✅ - Specification is ready for planning
 
 All checklist items verified. The specification:
 1. Clearly defines what the chapter outline feature delivers

@@ -58,7 +58,7 @@
 
 ## Notes
 
-All checklist items pass. Specification is ready for `/speckit.clarify` or `/speckit.plan` phase.
+All checklist items pass. Specification is ready for clarification or planning.
 
 **Key Strengths**:
 - Clear prioritization (P1: basic style, P2: technical formatting, P3: citations)

@@ -1,0 +1,4 @@
+interface:
+  display_name: "BLE Book Writing Support"
+  short_description: "BLE技術書原稿の執筆支援と構成レビューの実行手順"
+  default_prompt: "Use $ble-book-writing-support to review a BLE In Action manuscript section without rewriting the author voice."

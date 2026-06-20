@@ -41,7 +41,7 @@
 - Edge Cases: 6 edge cases identified covering build failures, platform differences, and format requirements
 - Assumptions: Documented in dedicated section covering environment, tools, and constraints
 
-**Ready for**: `/speckit.plan` - Proceed to implementation planning phase
+**Ready for**: implementation planning phase
 
 ## Notes
 
