@@ -1,6 +1,6 @@
 ---
 name: ble-book-writing-support
-description: 日本語技術書『Bluetooth Low Energy開発実践』の執筆支援、壁打ち、校正、構成レビュー、技術レビューに使用する。BLE、Nordic nRF Connect SDK、iOS Core Bluetooth、Web Bluetooth、Android/Linux BLE を扱う原稿について、著者の文体を保ちながら、技術的正確性、章構成、論証、読者負荷、Pandoc/Markdown 書式、表記ゆれ、読者層別Noteを点検する。本文の新規執筆、大幅な書き換え、章をまたぐ構成変更は、著者から明示された場合、または方針確認後にのみ行う。
+description: /Users/u_akihiro/Desktop/BLEInAction の日本語技術書『Bluetooth Low Energy開発実践』専用の執筆支援に使用する。manuscript/、docs/、specs/、AGENTS.md、Pandoc/Markdown製本設定、KDP出版方針、読者層別Note、BLE/Nordic nRF Connect SDK/iOS Core Bluetooth/Web Bluetooth/Android/Linux BLE を扱う原稿の壁打ち、校正、構成レビュー、技術レビューではこの skill を優先する。汎用の writing-technical-docs ではなく、本書固有の「です・ます」調、スタイルガイド、出版方針、著者の文体を保つ。本文の新規執筆、大幅な書き換え、章をまたぐ構成変更は、著者から明示された場合、または方針確認後にのみ行う。
 ---
 
 # BLE技術書執筆支援
@@ -19,7 +19,7 @@ description: 日本語技術書『Bluetooth Low Energy開発実践』の執筆�
 - `docs/book-constitution.md`: 本書の理念、品質基準、コード例の検証方針。
 - `docs/writing-style-guide.md`: 表記、用語、Markdown/Pandoc書式。
 - `docs/writing-guidelines-reader-notes.md`: 読者層定義、読者層別Note、章別配慮マップ。
-- `manuscript/outline.md`: 章立て、章間依存、ページ見積もり。
+- `specs/outline.md`: 章立て、章間依存、ページ見積もり。
 - `manuscript/chapters.txt`: 製本対象ファイルの順序。
 
 正本の内容をSkill内に重複して持たない。
@@ -34,6 +34,7 @@ description: 日本語技術書『Bluetooth Low Energy開発実践』の執筆�
 - 不確かなBLE仕様、SDK/APIの挙動、OS依存の動作は断定しない。
 - 仕様や外部資料に基づく指摘では、仕様書の版、章節、公式ドキュメント、SDKバージョンなどの根拠を示す。
 - 原稿を外部サービスへ送信しない。公開、引用、転載に相当する行為は、著者の明示許可なしに行わない。
+- KDP Select への登録を視野に入れるため、公開GitHubには本文全体を置かない。公開対象はサンプル章、正誤表、サンプルコード、ビルド環境、図表の一部に限定する。
 
 ## 作業分類
 
