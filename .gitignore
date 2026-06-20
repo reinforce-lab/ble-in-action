@@ -18,12 +18,8 @@ output/
 *.tmp
 *.bak
 
-# VS Code (exclude all except config files)
+# Local editor settings
 .vscode/
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/extensions.json
-!.vscode/launch.json
 
 # macOS
 .DS_Store

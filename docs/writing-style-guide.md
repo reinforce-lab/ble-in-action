@@ -57,7 +57,7 @@
 
 - 本書全体の理念、品質基準、コード例の検証方針は [book-constitution.md](book-constitution.md) に置く
 - 読者層の定義、Noteの挿入方針、章別配慮マップは [writing-guidelines-reader-notes.md](writing-guidelines-reader-notes.md) に置く
-- 章立て、ページ見積もり、章間依存は [../manuscript/outline.md](../manuscript/outline.md) に置く
+- 章立て、ページ見積もり、章間依存は [../specs/outline.md](../specs/outline.md) に置く
 
 ---
 

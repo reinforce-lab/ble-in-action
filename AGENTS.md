@@ -15,7 +15,7 @@
 - **扱う技術**: Nordic nRF52840 ＋ nRF Connect SDK 3.0（ファーム）、iOS Core Bluetooth（メイン）、Web Bluetooth、Android / Linux（概要）
 - **ねらい**: SDK に隠蔽された通信の実態を理解し、ファーム／アプリ／企画の各担当が「共通言語」で対話・デバッグできるようにする
 
-詳細な章立てと依存関係は [manuscript/outline.md](manuscript/outline.md)、執筆理念は [docs/book-constitution.md](docs/book-constitution.md) を参照。
+詳細な章立てと依存関係は [specs/outline.md](specs/outline.md)、執筆理念は [docs/book-constitution.md](docs/book-constitution.md) を参照。
 
 ---
 
@@ -48,7 +48,7 @@ make help                 # ヘルプ
 ```
 
 - **前提ツール**: `pandoc`(3.x) / `BasicTeX`(LuaLaTeX) / `pandoc-crossref` / `epubcheck`（任意）
-- **環境構築の手順**: [quickstart.md](quickstart.md) に集約（tlmgr で luatexja・haranoaji 等を導入）
+- **環境構築の手順**: [docs/build-environment.md](docs/build-environment.md) に集約（pandoc-crossref / tlmgr / luatexja / haranoaji 等）
 - LuaLaTeX の PATH（`/Library/TeX/texbin`）は Makefile に組み込み済み
 - 生成物 `output/` は `.gitignore` 対象
 
@@ -60,16 +60,15 @@ make help                 # ヘルプ
 manuscript/                 原稿本体
 ├── metadata.yml            書籍メタデータ（タイトル/著者/ISBN 等）
 ├── chapters.txt            章・節ファイルの掲載順マニフェスト（ここに登録した順で製本）
-├── outline.md              全体の章立て・ページ見積もり・依存関係
 ├── preface.md              はじめに
 ├── chapters/NN-name/       各章。1ファイル1節（X.Y-name.md）
 └── back-matter/            付録A（仕様書の読み方）、付録B（参考文献）
 build/
 ├── config/{pdf,epub}.yml   Pandoc defaults（フォーマット別設定）
 └── templates/              latex-preamble.tex / epub-styles.css / latex-review-spacing.tex
-docs/                       執筆ガイドライン（理念 / スタイル / 読者層別Note）
+docs/                       執筆ガイドライン・ビルド環境構築
 output/                     生成物（gitignore）
-specs/                      章ごとの仕様・過去のSpec Kit生成物
+specs/                      全体アウトライン・章ごとの仕様・過去のSpec Kit生成物
 hoge/                       旧ドラフト（Re:VIEW .re 形式）・参考PDF・図版素材のアーカイブ
 ```
 
@@ -125,11 +124,10 @@ hoge/                       旧ドラフト（Re:VIEW .re 形式）・参考PDF�
 
 - 現在の作業ブランチ: `review/v0.1`（メインは `main`）
 - 章ごとの仕様・過去のSpec Kit生成物は `specs/` に保管
-- `.github/copilot-instructions.md` は **自動生成で内容が古い**（`src/` `tests/` `pytest` 等はこのプロジェクトと無関係）。**本ファイル（AGENTS.md）を優先**すること
 
 ---
 
 ## 10. 出版前の確定待ち事項（プレースホルダー）
 
 - [manuscript/metadata.yml](manuscript/metadata.yml) の **確定タイトル・著者名・出版社・ISBN・刊行年** はプレースホルダー（`〈…〉` と `TODO` コメントで明示）。KDP 登録前に確定情報へ差し替える
-- GitHub リポジトリ URL は `https://github.com/reinforce-lab/ble-in-action` に統一済み（[preface.md](manuscript/preface.md) / [outline.md](manuscript/outline.md)）
+- GitHub リポジトリ URL は `https://github.com/reinforce-lab/ble-in-action` に統一済み（[preface.md](manuscript/preface.md) / [outline.md](specs/outline.md)）

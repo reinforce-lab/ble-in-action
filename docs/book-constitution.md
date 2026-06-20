@@ -114,7 +114,7 @@ BLEは標準仕様に基づく技術ですが、実際の開発ではSDK、OS、
 - **本書の理念と品質基準**: この文書。
 - **表記、用語、Markdown、Pandoc書式**: [writing-style-guide.md](writing-style-guide.md)。
 - **読者層別Note、読者層ごとの関心事、章別配慮マップ**: [writing-guidelines-reader-notes.md](writing-guidelines-reader-notes.md)。
-- **章立て、ページ見積もり、章間依存**: [../manuscript/outline.md](../manuscript/outline.md)。
+- **章立て、ページ見積もり、章間依存**: [../specs/outline.md](../specs/outline.md)。
 
 同じ内容を複数文書に重複して持たせない。
 詳細が必要な場合は、正本となる文書へリンクします。

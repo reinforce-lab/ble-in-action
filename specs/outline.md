@@ -132,14 +132,14 @@ BLE開発における各担当者（ファームウェア/アプリ/企画）が
 **想定ページ数**: 18〜23ページ  
 **前提章**: 序文  
 **ファイル**: `manuscript/chapters/01-what-is-ble/`  
-**詳細**: [manuscript/chapters/01-what-is-ble/outline.md](chapters/01-what-is-ble/outline.md) を参照
+**詳細**: [specs/004-chapter-01-what-is-ble/spec.md](004-chapter-01-what-is-ble/spec.md) を参照
 
 ### 第2章: BLEの基本概念と用語
 **概要**: セントラル/ペリフェラル、接続と広告、UUID、サービスとキャラクタリスティック、通信フロー概要  
 **想定ページ数**: 21〜28ページ  
 **前提章**: 第1章  
 **ファイル**: `manuscript/chapters/02-ble-basic/`  
-**詳細**: [manuscript/chapters/02-ble-basic/outline.md](chapters/02-ble-basic/outline.md) を参照
+**詳細**: [manuscript/chapters/02-ble-basic/outline.md](../manuscript/chapters/02-ble-basic/outline.md) を参照
 
 **Part 1合計**: 40-50ページ
 
@@ -154,14 +154,14 @@ BLE開発における各担当者（ファームウェア/アプリ/企画）が
 **想定ページ数**: 25-30ページ  
 **前提章**: 第2章  
 **ファイル**: `manuscript/chapters/03-ble-layer/`  
-**詳細**: [manuscript/chapters/03-ble-layer/outline.md](chapters/03-ble-layer/outline.md) を参照
+**詳細**: [manuscript/chapters/03-ble-layer/outline.md](../manuscript/chapters/03-ble-layer/outline.md) を参照
 
 ### 第4章: ATT・GATT・プロファイル
 **概要**: ATTプロトコル、GATTデータ構造、サービスとキャラクタリスティックの詳細、Read/Write/Notify/Indicate、標準プロファイル  
 **想定ページ数**: 28-33ページ  
 **前提章**: 第3章  
 **ファイル**: `manuscript/chapters/04-att-gatt/`  
-**詳細**: [manuscript/chapters/04-att-gatt/outline.md](chapters/04-att-gatt/outline.md) を参照
+**詳細**: [manuscript/chapters/04-att-gatt/outline.md](../manuscript/chapters/04-att-gatt/outline.md) を参照
 
 **Part 2合計**: 53-63ページ
 
@@ -176,28 +176,28 @@ BLE開発における各担当者（ファームウェア/アプリ/企画）が
 **想定ページ数**: 20-24ページ  
 **前提章**: 第2章  
 **ファイル**: `manuscript/chapters/05-nrf52840-setup/`  
-**詳細**: [manuscript/chapters/05-nrf52840-setup/outline.md](chapters/05-nrf52840-setup/outline.md) を参照
+**詳細**: [manuscript/chapters/05-nrf52840-setup/outline.md](../manuscript/chapters/05-nrf52840-setup/outline.md) を参照
 
 ### 第6章: ペリフェラル実装
 **概要**: 広告の開始、カスタムサービスとキャラクタリスティックの定義、Read/Write/Notifyの実装、接続管理  
 **想定ページ数**: 30-35ページ  
 **前提章**: 第4章、第5章  
 **ファイル**: `manuscript/chapters/06-peripheral-impl/`  
-**詳細**: [manuscript/chapters/06-peripheral-impl/outline.md](chapters/06-peripheral-impl/outline.md) を参照
+**詳細**: [manuscript/chapters/06-peripheral-impl/outline.md](../manuscript/chapters/06-peripheral-impl/outline.md) を参照
 
 ### 第7章: 低消費電力設計
 **概要**: スリープモード、広告間隔の最適化、接続間隔の調整、電流測定とプロファイリング、バッテリー駆動の実践  
 **想定ページ数**: 25-30ページ  
 **前提章**: 第6章  
 **ファイル**: `manuscript/chapters/07-low-power-design/`  
-**詳細**: [manuscript/chapters/07-low-power-design/outline.md](chapters/07-low-power-design/outline.md) を参照
+**詳細**: [manuscript/chapters/07-low-power-design/outline.md](../manuscript/chapters/07-low-power-design/outline.md) を参照
 
 ### 第8章: 外部チップ連携（4線IF・LTE統合）
 **概要**: UART/SPI接続、LTEチップ+nRF52840構成（2パターン）、OTA実装の考慮点、トラブルシューティング  
 **想定ページ数**: 28-33ページ  
 **前提章**: 第6章、第7章  
 **ファイル**: `manuscript/chapters/08-external-chips/`  
-**詳細**: [manuscript/chapters/08-external-chips/outline.md](chapters/08-external-chips/outline.md) を参照
+**詳細**: [manuscript/chapters/08-external-chips/outline.md](../manuscript/chapters/08-external-chips/outline.md) を参照
 
 **Part 3合計**: 103-122ページ
 
@@ -212,21 +212,21 @@ BLE開発における各担当者（ファームウェア/アプリ/企画）が
 **想定ページ数**: 35-40ページ  
 **前提章**: 第4章  
 **ファイル**: `manuscript/chapters/09-ios-core-bluetooth/`  
-**詳細**: [manuscript/chapters/09-ios-core-bluetooth/outline.md](chapters/09-ios-core-bluetooth/outline.md) を参照
+**詳細**: [manuscript/chapters/09-ios-core-bluetooth/outline.md](../manuscript/chapters/09-ios-core-bluetooth/outline.md) を参照
 
 ### 第10章: Web Bluetooth API
 **概要**: Web Bluetooth APIの概要、ブラウザ対応状況、デバイス選択UI、Promiseベースの非同期処理、Webアプリでのセキュリティ考慮  
 **想定ページ数**: 22-27ページ  
 **前提章**: 第4章  
 **ファイル**: `manuscript/chapters/10-web-bluetooth/`  
-**詳細**: [manuscript/chapters/10-web-bluetooth/outline.md](chapters/10-web-bluetooth/outline.md) を参照
+**詳細**: [manuscript/chapters/10-web-bluetooth/outline.md](../manuscript/chapters/10-web-bluetooth/outline.md) を参照
 
 ### 第11章: Android概要とLinux概要
 **概要**: Android BLE APIの構造（サンプルコード）、BlueZ on Linux（概要のみ）、各プラットフォームの特徴比較  
 **想定ページ数**: 18-22ページ  
 **前提章**: 第4章  
 **ファイル**: `manuscript/chapters/11-android-linux-ble/`  
-**詳細**: [manuscript/chapters/11-android-linux-ble/outline.md](chapters/11-android-linux-ble/outline.md) を参照
+**詳細**: [manuscript/chapters/11-android-linux-ble/outline.md](../manuscript/chapters/11-android-linux-ble/outline.md) を参照
 
 **Part 4合計**: 75-89ページ
 
@@ -241,21 +241,21 @@ BLE開発における各担当者（ファームウェア/アプリ/企画）が
 **想定ページ数**: 20-24ページ  
 **前提章**: 第6章、第9章  
 **ファイル**: `manuscript/chapters/12-beacon-impl/`  
-**詳細**: [manuscript/chapters/12-beacon-impl/outline.md](chapters/12-beacon-impl/outline.md) を参照
+**詳細**: [manuscript/chapters/12-beacon-impl/outline.md](../manuscript/chapters/12-beacon-impl/outline.md) を参照
 
 ### 第13章: 温度計実装
 **概要**: センサー（DHT22等）との接続、温度データのBLE送信、iOSアプリでのグラフ表示、Notificationの活用  
 **想定ページ数**: 22-27ページ  
 **前提章**: 第6章、第9章  
 **ファイル**: `manuscript/chapters/13-thermometer-impl/`  
-**詳細**: [manuscript/chapters/13-thermometer-impl/outline.md](chapters/13-thermometer-impl/outline.md) を参照
+**詳細**: [manuscript/chapters/13-thermometer-impl/outline.md](../manuscript/chapters/13-thermometer-impl/outline.md) を参照
 
 ### 第14章: OTA（DFU）実装
 **概要**: **重点解説** - Nordic DFUプロトコル、Bootloaderの仕組み、ファームウェア更新フロー、iOSアプリからのDFU実行、よくあるトラブルと解決法  
 **想定ページ数**: 30-36ページ  
 **前提章**: 第6章、第8章、第9章  
 **ファイル**: `manuscript/chapters/14-ota-dfu/`  
-**詳細**: [manuscript/chapters/14-ota-dfu/outline.md](chapters/14-ota-dfu/outline.md) を参照
+**詳細**: [manuscript/chapters/14-ota-dfu/outline.md](../manuscript/chapters/14-ota-dfu/outline.md) を参照
 
 **Part 5合計**: 72-87ページ
 
@@ -270,14 +270,14 @@ BLE開発における各担当者（ファームウェア/アプリ/企画）が
 **想定ページ数**: 25-30ページ  
 **前提章**: 第3章、第4章  
 **ファイル**: `manuscript/chapters/15-debugging/`  
-**詳細**: [manuscript/chapters/15-debugging/outline.md](chapters/15-debugging/outline.md) を参照
+**詳細**: [manuscript/chapters/15-debugging/outline.md](../manuscript/chapters/15-debugging/outline.md) を参照
 
 ### 第16章: よくある問題と解決法
 **概要**: 接続できない、データが送れない、電池が持たない、OTAが失敗する、プラットフォーム固有の問題、FAQ  
 **想定ページ数**: 22-27ページ  
 **前提章**: 第15章  
 **ファイル**: `manuscript/chapters/16-troubleshooting/`  
-**詳細**: [manuscript/chapters/16-troubleshooting/outline.md](chapters/16-troubleshooting/outline.md) を参照
+**詳細**: [manuscript/chapters/16-troubleshooting/outline.md](../manuscript/chapters/16-troubleshooting/outline.md) を参照
 
 **Part 6合計**: 47-57ページ
 
@@ -349,11 +349,11 @@ BLE開発における各担当者（ファームウェア/アプリ/企画）が
 
 ### 2026-02-22: v1.3 第2章サブ節アウトラインを chapter outline に移動
 - 第2章の詳細（2.1〜2.7節）を `manuscript/chapters/02-ble-basic/outline.md` に新規作成
-- `manuscript/outline.md` の第2章エントリを概要+参照リンクに簡略化
+- `specs/outline.md` の第2章エントリを概要+参照リンクに簡略化
 
-### 2026-02-22: v1.2 第1章サブ節アウトラインを chapter outline に移動
-- 第1章のサブ節詳細（1.1〜1.5）を `manuscript/chapters/01-what-is-ble/outline.md` に移動
-- `manuscript/outline.md` の第1章エントリを概要のみに簡略化
+### 2026-02-22: v1.2 第1章サブ節アウトラインを chapter spec に移動
+- 第1章のサブ節詳細（1.1〜1.5）を `specs/004-chapter-01-what-is-ble/spec.md` に移動
+- `specs/outline.md` の第1章エントリを概要のみに簡略化
 
 ### 2026-02-22: v1.1 第1章サブ節構成を追加
 - 第1章を5節（1.1〜1.5）に分割、各節のタイトル・概要・ページ数を定義
