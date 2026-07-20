@@ -15,7 +15,7 @@
 - **扱う技術**: Nordic nRF52840 ＋ nRF Connect SDK 3.0（ファーム）、iOS Core Bluetooth（メイン）、Web Bluetooth、Android / Linux（概要）
 - **ねらい**: SDK に隠蔽された通信の実態を理解し、ファーム／アプリ／企画の各担当が「共通言語」で対話・デバッグできるようにする
 
-詳細な章立てと依存関係は [specs/outline.md](specs/outline.md)、執筆理念は [docs/book-constitution.md](docs/book-constitution.md) を参照。
+全体構成と章間依存は [manuscript/outline.md](manuscript/outline.md)、執筆・レビュー規則は [skills/ble-book-writing-support/SKILL.md](skills/ble-book-writing-support/SKILL.md) を参照。
 
 ---
 
@@ -24,10 +24,10 @@
 **執筆は著者本人が行います。** あなたの役割は **壁打ち相手・校正者・相談役** です。原稿を勝手に書き進める存在ではありません。
 
 - 本リポジトリで原稿・仕様・執筆方針・校正・構成レビューを扱う場合は、汎用の日本語技術文書向け skill ではなく、リポジトリ内の [skills/ble-book-writing-support/SKILL.md](skills/ble-book-writing-support/SKILL.md) を優先する
-- `docs/` 配下の文書であっても、本書の執筆方針・出版方針・原稿構成に関わる場合は、本書固有の「です・ます」調と正本分担に従う。汎用 skill の「である調」や一般的な仕様書構成を持ち込まない
+- 本書固有の「です・ます」調とskillの規則に従い、汎用skillの「である調」や一般的な仕様書構成を持ち込まない
 - **求められていない本文の書き換え・新章の書き起こしをしない。** まず提案し、著者の判断を仰ぐ
 - **校正・編集は差分を最小に。** 著者の声・文体・論理構成を尊重し、「なぜそう直すか」を必ず添える
-- 指摘は本書の **スタイルガイド（[docs/](docs/)）に準拠**させる（第5章参照）
+- 指摘は本書固有skillのスタイル・技術レビュー規則に準拠させる
 - **技術的正確性を最優先**。BLE 仕様に関わる記述は根拠（仕様書の版・節など）を添え、不確かなことは断定しない。憶測で仕様を語らない
 - 大きな構成変更・章をまたぐ修正は、着手前に方針を相談する
 - 壁打ちでは、結論だけでなく **トレードオフ・抜け漏れ・読者目線での疑問** を一緒に出す
@@ -50,7 +50,7 @@ make help                 # ヘルプ
 ```
 
 - **前提ツール**: `pandoc`(3.x) / `BasicTeX`(LuaLaTeX) / `pandoc-crossref` / `epubcheck`（任意）
-- **環境構築の手順**: [docs/build-environment.md](docs/build-environment.md) に集約（pandoc-crossref / tlmgr / luatexja / haranoaji 等）
+- **環境構築の手順**: [skills/ble-book-writing-support/references/build-environment.md](skills/ble-book-writing-support/references/build-environment.md)（pandoc-crossref / tlmgr / luatexja / Harano Aji 等）
 - LuaLaTeX の PATH（`/Library/TeX/texbin`）は Makefile に組み込み済み
 - 生成物 `output/` は `.gitignore` 対象
 
@@ -68,9 +68,7 @@ manuscript/                 原稿本体
 build/
 ├── config/{pdf,epub}.yml   Pandoc defaults（フォーマット別設定）
 └── templates/              latex-preamble.tex / epub-styles.css / latex-review-spacing.tex
-docs/                       執筆ガイドライン・ビルド環境構築
 output/                     生成物（gitignore）
-specs/                      全体アウトライン・章ごとの仕様・過去のSpec Kit生成物
 hoge/                       旧ドラフト（Re:VIEW .re 形式）・参考PDF・図版素材のアーカイブ
 ```
 
@@ -90,7 +88,7 @@ hoge/                       旧ドラフト（Re:VIEW .re 形式）・参考PDF�
 
 ## 6. 執筆スタイル（要点）
 
-**完全な規則は [docs/writing-style-guide.md](docs/writing-style-guide.md) を参照。** 校正時は必ずこれに従う。要点のみ抜粋：
+完全な規則は [skills/ble-book-writing-support/SKILL.md](skills/ble-book-writing-support/SKILL.md) を参照。校正時は必ずこれに従う。要点のみ抜粋：
 
 - **文体**: 「です・ます」調（論文調「である」・会話調「だ」は不可）
 - **カタカナ複合語に中黒（・）を使わない**: 「アドバタイジングパケット」（×「アドバタイジング・パケット」）
@@ -99,16 +97,16 @@ hoge/                       旧ドラフト（Re:VIEW .re 形式）・参考PDF�
 - **数値と単位の間にスペース**: `100 ms` / `2.4 GHz` / `-20 dBm`（例外: `95%` は直付け）
 - **数式**: インライン `$...$`、ディスプレイ `$$...$$`（KaTeX 記法）
 - **絵文字は本文に入れない**（PDF の Harano Aji フォントに字形がなく表示されない。✅❌ ではなく「OK / NG」等のテキスト）
-- 図キャプション: `Fig. {章}.{連番}`、表: `表`、サブ図は `(a)(b)(c)`
+- 図表・章節番号はソースへ直接書かず、pandoc-crossrefで生成する。サブ図は `(a)(b)(c)`
 
 ---
 
 ## 7. 読者層への配慮
 
-**詳細は [docs/writing-guidelines-reader-notes.md](docs/writing-guidelines-reader-notes.md)（章別の配慮マップあり）を参照。**
+詳細は [skills/ble-book-writing-support/SKILL.md](skills/ble-book-writing-support/SKILL.md) の「読者層別Note」を参照。
 
 - 4つの読者層: **ホビースト / ファーム開発者 / アプリ開発者 / 企画者**
-- 各章に **【○○の方へ】** 形式の Note を、文脈に沿って **1章あたり 2〜4 箇所**挿入（過度に繰り返さない／技術説明の流れを分断しない）
+- **【○○の方へ】** 形式のNoteは個数をノルマにせず、必要な章だけに置く。候補がある章でも2〜4箇所を上限の目安にする
 
 ---
 
@@ -126,11 +124,11 @@ hoge/                       旧ドラフト（Re:VIEW .re 形式）・参考PDF�
 ## 9. Git / ワークフロー
 
 - 現在の作業ブランチ: `review/v0.1`（メインは `main`）
-- 章ごとの仕様・過去のSpec Kit生成物は `specs/` に保管
+- 書籍全体の構成は `manuscript/outline.md`、章ごとの構成メモは各章ディレクトリの `outline.md` に置く
 
 ---
 
 ## 10. 出版前の確定待ち事項（プレースホルダー）
 
 - [manuscript/metadata.yml](manuscript/metadata.yml) の **確定タイトル・著者名・出版社・ISBN・刊行年** はプレースホルダー（`〈…〉` と `TODO` コメントで明示）。KDP 登録前に確定情報へ差し替える
-- GitHub リポジトリ URL は `https://github.com/reinforce-lab/ble-in-action` を予定する。ただし、公開リポジトリには本文全体を置かない（[preface.md](manuscript/preface.md) / [outline.md](specs/outline.md)）
+- GitHub リポジトリ URL は `https://github.com/reinforce-lab/ble-in-action` を予定する。ただし、公開リポジトリには本文全体を置かない（[preface.md](manuscript/preface.md) / [outline.md](manuscript/outline.md)）

@@ -15,9 +15,7 @@ output/
 .env
 .env.local
 
-# Documentation (not needed in build container)
-specs/
-.specify/
+# Files not needed in build container
 .github/
 
 # Python
