@@ -21,7 +21,7 @@ FILE_SEC_LABELS = {
     "01-what-is-ble/1.1-starting-with-microbit.md": "microbit",
     "01-what-is-ble/1.2-ble-introduction.md": "ble-intro",
     "01-what-is-ble/1.3-ble-ecosystem.md": "ble-ecosystem",
-    "01-what-is-ble/1.4-ble-development-roles.md": "dev-roles",
+    "01-what-is-ble/1.3-development-styles.md": "dev-roles",
     "01-what-is-ble/1.5-summary.md": "ch1-summary",
     # Chapter 2
     "02-ble-basic/2.1-ble-overview.md": "ble-overview",
