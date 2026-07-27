@@ -128,6 +128,8 @@ hoge/                       旧ドラフト（Re:VIEW .re 形式）・参考PDF�
 |---|---|---|
 | Bluetooth SIG | `bluetooth.com`（`www.bluetooth.com`を含む） | Bluetooth仕様書、Assigned Numbers、プロファイル、Qualification、公式解説 |
 
+- Bluetoothのコア仕様を確認するときは、原則として [Bluetooth Core Specification v6.3](https://www.bluetooth.com/wp-content/uploads/Files/Specification/HTML/Core_v6.3/out/en/index-en.html) を基準にする。過去のバージョンに固有の挙動や変更経緯を扱う場合は、対象バージョンも併記して確認する
+
 - **参照禁止ドメイン**: `musen-connect.co.jp` は情報源として参照しない（取得・引用しない）
 - **原稿の外部送信・公開をしない**（明示の許可がない限り。外部サービスへの送信は公開と同じと考える）
 - **公開GitHubに本文全体を置かない**。公開対象はサンプル章、正誤表、サンプルコード、ビルド環境、図表の一部に限定する
