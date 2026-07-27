@@ -18,8 +18,11 @@ chapters/01-what-is-ble/1.1.3-nrf-connect.md
 chapters/01-what-is-ble/1.1.4-service-characteristics.md
 chapters/01-what-is-ble/1.1.5-section-terms.md
 chapters/01-what-is-ble/1.2-ble-ecosystem.md
-chapters/01-what-is-ble/1.2.1-accessory.md
-chapters/01-what-is-ble/1.2.2-appcessory.md
+chapters/01-what-is-ble/1.2.1-core-profile.md
+chapters/01-what-is-ble/1.2.2-accessory.md
+chapters/01-what-is-ble/1.2.3-appcessory.md
+chapters/01-what-is-ble/1.2.4-third-profile.md
+chapters/01-what-is-ble/1.2.5-ble-evolution.md
 chapters/01-what-is-ble/1.4-ble-development-roles.md
 chapters/01-what-is-ble/1.5-summary.md
 
