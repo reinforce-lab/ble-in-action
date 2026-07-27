@@ -29,7 +29,7 @@ chapters/01-what-is-ble/1.3.2-startup-development.md
 chapters/01-what-is-ble/1.3.3-enterprise-development.md
 chapters/01-what-is-ble/1.3.4-development-roles.md
 chapters/01-what-is-ble/1.3.5-team-collaboration.md
-chapters/01-what-is-ble/1.5-summary.md
+chapters/01-what-is-ble/1.4-summary.md
 
 # Chapter 2: BLEの基本概念と用語
 chapters/02-ble-basic/2.0-intro.md
