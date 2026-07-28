@@ -10,7 +10,7 @@
         <mxCell id="phoneLabel" value="スマートフォン" style="text;html=1;align=center;verticalAlign=middle;fontFamily=Hiragino Sans;fontSize=24;fontStyle=1;" vertex="1" parent="1">
           <mxGeometry x="170" y="80" width="470" height="45" as="geometry"/>
         </mxCell>
-        <mxCell id="deviceLabel" value="micro:bit" style="text;html=1;align=center;verticalAlign=middle;fontFamily=Hiragino Sans;fontSize=24;fontStyle=1;" vertex="1" parent="1">
+        <mxCell id="deviceLabel" value="周辺機器" style="text;html=1;align=center;verticalAlign=middle;fontFamily=Hiragino Sans;fontSize=24;fontStyle=1;" vertex="1" parent="1">
           <mxGeometry x="960" y="80" width="470" height="45" as="geometry"/>
         </mxCell>
         <mxCell id="hostBgL" value="Host" style="swimlane;html=1;startSize=42;rounded=1;whiteSpace=wrap;fontFamily=Hiragino Sans;fontSize=19;fontStyle=1;fillColor=#F0F9FF;strokeColor=#0284C7;strokeWidth=2;" vertex="1" parent="1">

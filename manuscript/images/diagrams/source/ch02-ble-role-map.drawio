@@ -10,7 +10,7 @@
         <mxCell id="phone" value="スマートフォン" style="swimlane;html=1;startSize=58;rounded=1;arcSize=8;whiteSpace=wrap;fontFamily=Hiragino Sans;fontSize=24;fontStyle=1;fillColor=#F8FAFC;strokeColor=#475569;strokeWidth=3;" vertex="1" parent="1">
           <mxGeometry x="110" y="120" width="520" height="680" as="geometry"/>
         </mxCell>
-        <mxCell id="microbit" value="micro:bit" style="swimlane;html=1;startSize=58;rounded=1;arcSize=8;whiteSpace=wrap;fontFamily=Hiragino Sans;fontSize=24;fontStyle=1;fillColor=#F8FAFC;strokeColor=#475569;strokeWidth=3;" vertex="1" parent="1">
+        <mxCell id="peripheralDevice" value="周辺機器" style="swimlane;html=1;startSize=58;rounded=1;arcSize=8;whiteSpace=wrap;fontFamily=Hiragino Sans;fontSize=24;fontStyle=1;fillColor=#F8FAFC;strokeColor=#475569;strokeWidth=3;" vertex="1" parent="1">
           <mxGeometry x="970" y="120" width="520" height="680" as="geometry"/>
         </mxCell>
         <mxCell id="appL" value="アプリケーション" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Hiragino Sans;fontSize=21;fontStyle=1;fillColor=#FFFFFF;strokeColor=#64748B;strokeWidth=2;" vertex="1" parent="1">
