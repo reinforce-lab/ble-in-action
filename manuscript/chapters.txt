@@ -36,9 +36,9 @@ chapters/02-ble-basic/2.0-intro.md
 chapters/02-ble-basic/2.1-ble-overview.md
 chapters/02-ble-basic/2.2-advertising-scanning.md
 chapters/02-ble-basic/2.3-connection.md
-chapters/02-ble-basic/2.4-uuid-gatt.md
-chapters/02-ble-basic/2.5-data-exchange.md
-chapters/02-ble-basic/2.6-pairing-bonding.md
+chapters/02-ble-basic/2.4-pairing-bonding.md
+chapters/02-ble-basic/2.5-packet-path.md
+chapters/02-ble-basic/2.6-data-exchange.md
 chapters/02-ble-basic/2.7-summary.md
 
 # Chapter 3: 物理層・リンク層・GAP

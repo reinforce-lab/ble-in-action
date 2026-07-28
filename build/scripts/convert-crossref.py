@@ -27,9 +27,9 @@ FILE_SEC_LABELS = {
     "02-ble-basic/2.1-ble-overview.md": "ble-overview",
     "02-ble-basic/2.2-advertising-scanning.md": "adv-scan",
     "02-ble-basic/2.3-connection.md": "connection",
-    "02-ble-basic/2.4-uuid-gatt.md": "uuid-gatt",
-    "02-ble-basic/2.5-data-exchange.md": "data-exchange",
-    "02-ble-basic/2.6-pairing-bonding.md": "pairing",
+    "02-ble-basic/2.4-pairing-bonding.md": "pairing",
+    "02-ble-basic/2.5-packet-path.md": "packet-path",
+    "02-ble-basic/2.6-data-exchange.md": "data-exchange",
     "02-ble-basic/2.7-summary.md": "ch2-summary",
     # Chapter 3
     "03-ble-layer/3.1-stack-overview.md": "stack-overview",
