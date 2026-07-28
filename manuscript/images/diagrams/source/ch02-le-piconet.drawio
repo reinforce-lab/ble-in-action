@@ -1,0 +1,34 @@
+<mxfile host="Electron" modified="2026-07-28T00:00:00.000Z" agent="Codex" version="31.0.2">
+  <diagram id="le-piconet" name="Page-1">
+    <mxGraphModel dx="1800" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1800" pageHeight="1000" background="#ffffff" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="title" value="電波が届く範囲で、2台が直接通信する" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Hiragino Sans;fontSize=34;fontStyle=1;fontColor=#1F2937;" vertex="1" parent="1">
+          <mxGeometry x="300" y="40" width="1200" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="radioRange" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#EFF6FF;fillOpacity=65;strokeColor=#2563EB;strokeWidth=4;dashed=1;dashPattern=12 8;" vertex="1" parent="1">
+          <mxGeometry x="190" y="145" width="1420" height="690" as="geometry"/>
+        </mxCell>
+        <mxCell id="rangeLabel" value="2.4 GHz帯の電波が届く範囲" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Hiragino Sans;fontSize=24;fontStyle=1;fillColor=#FFFFFF;strokeColor=#2563EB;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="610" y="155" width="580" height="58" as="geometry"/>
+        </mxCell>
+        <mxCell id="phone" value="スマートフォン&lt;br&gt;&lt;font style=&quot;font-size: 21px;&quot;&gt;Central&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Hiragino Sans;fontSize=29;fontStyle=1;fillColor=#E0F2FE;strokeColor=#0284C7;strokeWidth=4;arcSize=14;" vertex="1" parent="1">
+          <mxGeometry x="330" y="350" width="350" height="250" as="geometry"/>
+        </mxCell>
+        <mxCell id="device" value="周辺機器&lt;br&gt;&lt;font style=&quot;font-size: 21px;&quot;&gt;Peripheral&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Hiragino Sans;fontSize=29;fontStyle=1;fillColor=#DCFCE7;strokeColor=#16A34A;strokeWidth=4;arcSize=14;" vertex="1" parent="1">
+          <mxGeometry x="1120" y="350" width="350" height="250" as="geometry"/>
+        </mxCell>
+        <mxCell id="directLink" value="短いパケットを直接交換" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Hiragino Sans;fontSize=25;fontStyle=1;strokeColor=#334155;strokeWidth=6;endArrow=block;endFill=1;startArrow=block;startFill=1;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="phone" target="device">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="channelLabel" value="LEピコネット物理チャネル" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Hiragino Sans;fontSize=25;fontStyle=1;fillColor=#FFF7ED;strokeColor=#EA580C;strokeWidth=3;" vertex="1" parent="1">
+          <mxGeometry x="605" y="690" width="590" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="note" value="基地局や無線LANルーターは介在しません" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Hiragino Sans;fontSize=23;fontColor=#475569;" vertex="1" parent="1">
+          <mxGeometry x="500" y="870" width="800" height="55" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
