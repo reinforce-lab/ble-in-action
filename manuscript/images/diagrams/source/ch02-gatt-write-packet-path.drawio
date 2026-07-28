@@ -1,0 +1,62 @@
+<mxfile host="Electron" modified="2026-07-28T00:00:00.000Z" agent="Codex" version="31.0.2">
+  <diagram id="write-path" name="Page-1">
+    <mxGraphModel dx="1600" dy="1100" grid="1" gridSize="10" guides="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1100" background="#ffffff">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="title" value="Writeの値がファームウェアへ届くまで" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Hiragino Sans;fontSize=30;fontStyle=1;fontColor=#1F2937;" vertex="1" parent="1">
+          <mxGeometry x="260" y="20" width="1080" height="55" as="geometry"/>
+        </mxCell>
+        <mxCell id="phoneLabel" value="スマートフォン" style="text;html=1;align=center;verticalAlign=middle;fontFamily=Hiragino Sans;fontSize=24;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="170" y="80" width="470" height="45" as="geometry"/>
+        </mxCell>
+        <mxCell id="deviceLabel" value="micro:bit" style="text;html=1;align=center;verticalAlign=middle;fontFamily=Hiragino Sans;fontSize=24;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="960" y="80" width="470" height="45" as="geometry"/>
+        </mxCell>
+        <mxCell id="hostBgL" value="Host" style="swimlane;html=1;startSize=42;rounded=1;whiteSpace=wrap;fontFamily=Hiragino Sans;fontSize=19;fontStyle=1;fillColor=#F0F9FF;strokeColor=#0284C7;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="150" y="130" width="510" height="515" as="geometry"/>
+        </mxCell>
+        <mxCell id="ctrlBgL" value="Controller" style="swimlane;html=1;startSize=42;rounded=1;whiteSpace=wrap;fontFamily=Hiragino Sans;fontSize=19;fontStyle=1;fillColor=#F0FDF4;strokeColor=#16A34A;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="150" y="675" width="510" height="310" as="geometry"/>
+        </mxCell>
+        <mxCell id="hostBgR" value="Host" style="swimlane;html=1;startSize=42;rounded=1;whiteSpace=wrap;fontFamily=Hiragino Sans;fontSize=19;fontStyle=1;fillColor=#F0F9FF;strokeColor=#0284C7;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="940" y="130" width="510" height="515" as="geometry"/>
+        </mxCell>
+        <mxCell id="ctrlBgR" value="Controller" style="swimlane;html=1;startSize=42;rounded=1;whiteSpace=wrap;fontFamily=Hiragino Sans;fontSize=19;fontStyle=1;fillColor=#F0FDF4;strokeColor=#16A34A;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="940" y="675" width="510" height="310" as="geometry"/>
+        </mxCell>
+        <mxCell id="appL" value="Application&#xa;LEDへ 0x01 をWrite" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Hiragino Sans;fontSize=18;fontStyle=1;fillColor=#FFFFFF;strokeColor=#475569;strokeWidth=2;" vertex="1" parent="1"><mxGeometry x="235" y="185" width="340" height="70" as="geometry"/></mxCell>
+        <mxCell id="gattL" value="GATT&#xa;サービスとキャラクタリスティック" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Hiragino Sans;fontSize=18;fontStyle=1;fillColor=#DBEAFE;strokeColor=#2563EB;strokeWidth=2;" vertex="1" parent="1"><mxGeometry x="235" y="285" width="340" height="70" as="geometry"/></mxCell>
+        <mxCell id="attL" value="ATT&#xa;Handle ＋ Value (0x01)" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Hiragino Sans;fontSize=18;fontStyle=1;fillColor=#EDE9FE;strokeColor=#7C3AED;strokeWidth=2;" vertex="1" parent="1"><mxGeometry x="235" y="385" width="340" height="70" as="geometry"/></mxCell>
+        <mxCell id="l2capL" value="L2CAP&#xa;Channel ＋ ATT PDU" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Hiragino Sans;fontSize=18;fontStyle=1;fillColor=#FEF3C7;strokeColor=#D97706;strokeWidth=2;" vertex="1" parent="1"><mxGeometry x="235" y="485" width="340" height="70" as="geometry"/></mxCell>
+        <mxCell id="hciL" value="HCI&#xa;HostからControllerへ" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Hiragino Sans;fontSize=18;fontStyle=1;fillColor=#FFEDD5;strokeColor=#EA580C;strokeWidth=2;dashed=1;" vertex="1" parent="1"><mxGeometry x="235" y="575" width="340" height="58" as="geometry"/></mxCell>
+        <mxCell id="llL" value="Link Layer&#xa;Header ＋ L2CAP" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Hiragino Sans;fontSize=18;fontStyle=1;fillColor=#D1FAE5;strokeColor=#059669;strokeWidth=2;" vertex="1" parent="1"><mxGeometry x="235" y="735" width="340" height="70" as="geometry"/></mxCell>
+        <mxCell id="phyL" value="PHY&#xa;ビット列を無線信号へ" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Hiragino Sans;fontSize=18;fontStyle=1;fillColor=#CCFBF1;strokeColor=#0F766E;strokeWidth=2;" vertex="1" parent="1"><mxGeometry x="235" y="850" width="340" height="70" as="geometry"/></mxCell>
+        <mxCell id="fwR" value="Firmware&#xa;Writeコールバックで 0x01 を受信" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Hiragino Sans;fontSize=18;fontStyle=1;fillColor=#FFFFFF;strokeColor=#475569;strokeWidth=2;" vertex="1" parent="1"><mxGeometry x="1025" y="185" width="340" height="70" as="geometry"/></mxCell>
+        <mxCell id="gattR" value="GATT&#xa;LED制御キャラクタリスティック" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Hiragino Sans;fontSize=18;fontStyle=1;fillColor=#DBEAFE;strokeColor=#2563EB;strokeWidth=2;" vertex="1" parent="1"><mxGeometry x="1025" y="285" width="340" height="70" as="geometry"/></mxCell>
+        <mxCell id="attR" value="ATT&#xa;Handleから書き込み先を特定" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Hiragino Sans;fontSize=18;fontStyle=1;fillColor=#EDE9FE;strokeColor=#7C3AED;strokeWidth=2;" vertex="1" parent="1"><mxGeometry x="1025" y="385" width="340" height="70" as="geometry"/></mxCell>
+        <mxCell id="l2capR" value="L2CAP&#xa;ATTの固定チャンネルを識別" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Hiragino Sans;fontSize=18;fontStyle=1;fillColor=#FEF3C7;strokeColor=#D97706;strokeWidth=2;" vertex="1" parent="1"><mxGeometry x="1025" y="485" width="340" height="70" as="geometry"/></mxCell>
+        <mxCell id="hciR" value="HCI&#xa;ControllerからHostへ" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Hiragino Sans;fontSize=18;fontStyle=1;fillColor=#FFEDD5;strokeColor=#EA580C;strokeWidth=2;dashed=1;" vertex="1" parent="1"><mxGeometry x="1025" y="575" width="340" height="58" as="geometry"/></mxCell>
+        <mxCell id="llR" value="Link Layer&#xa;受信確認と再送を処理" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Hiragino Sans;fontSize=18;fontStyle=1;fillColor=#D1FAE5;strokeColor=#059669;strokeWidth=2;" vertex="1" parent="1"><mxGeometry x="1025" y="735" width="340" height="70" as="geometry"/></mxCell>
+        <mxCell id="phyR" value="PHY&#xa;無線信号からビット列へ" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Hiragino Sans;fontSize=18;fontStyle=1;fillColor=#CCFBF1;strokeColor=#0F766E;strokeWidth=2;" vertex="1" parent="1"><mxGeometry x="1025" y="850" width="340" height="70" as="geometry"/></mxCell>
+        <mxCell id="down1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#0F172A;strokeWidth=3;endArrow=block;endFill=1;" edge="1" parent="1" source="appL" target="gattL"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="down2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#0F172A;strokeWidth=3;endArrow=block;endFill=1;" edge="1" parent="1" source="gattL" target="attL"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="down3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#0F172A;strokeWidth=3;endArrow=block;endFill=1;" edge="1" parent="1" source="attL" target="l2capL"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="down4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#0F172A;strokeWidth=3;endArrow=block;endFill=1;" edge="1" parent="1" source="l2capL" target="hciL"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="down5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#0F172A;strokeWidth=3;endArrow=block;endFill=1;" edge="1" parent="1" source="hciL" target="llL"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="down6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#0F172A;strokeWidth=3;endArrow=block;endFill=1;" edge="1" parent="1" source="llL" target="phyL"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="up1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#0F172A;strokeWidth=3;endArrow=block;endFill=1;" edge="1" parent="1" source="phyR" target="llR"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="up2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#0F172A;strokeWidth=3;endArrow=block;endFill=1;" edge="1" parent="1" source="llR" target="hciR"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="up3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#0F172A;strokeWidth=3;endArrow=block;endFill=1;" edge="1" parent="1" source="hciR" target="l2capR"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="up4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#0F172A;strokeWidth=3;endArrow=block;endFill=1;" edge="1" parent="1" source="l2capR" target="attR"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="up5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#0F172A;strokeWidth=3;endArrow=block;endFill=1;" edge="1" parent="1" source="attR" target="gattR"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="up6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#0F172A;strokeWidth=3;endArrow=block;endFill=1;" edge="1" parent="1" source="gattR" target="fwR"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="radio" value="2.4 GHz帯の電波" style="edgeStyle=none;html=1;fontFamily=Hiragino Sans;fontSize=20;fontStyle=1;strokeColor=#DC2626;strokeWidth=5;endArrow=block;endFill=1;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="phyL" target="phyR"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="note1" value="APIへ渡した" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Hiragino Sans;fontSize=17;fontStyle=1;fillColor=#FFFFFF;strokeColor=#64748B;strokeWidth=2;" vertex="1" parent="1"><mxGeometry x="20" y="195" width="120" height="50" as="geometry"/></mxCell>
+        <mxCell id="note2" value="相手のControllerへ届いた" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Hiragino Sans;fontSize=17;fontStyle=1;fillColor=#FFFFFF;strokeColor=#64748B;strokeWidth=2;" vertex="1" parent="1"><mxGeometry x="1455" y="740" width="130" height="70" as="geometry"/></mxCell>
+        <mxCell id="note3" value="Firmwareが受け取った" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Hiragino Sans;fontSize=17;fontStyle=1;fillColor=#FFFFFF;strokeColor=#64748B;strokeWidth=2;" vertex="1" parent="1"><mxGeometry x="1455" y="195" width="130" height="60" as="geometry"/></mxCell>
+        <mxCell id="summary" value="「届いた」が指す位置は、層ごとに異なります" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Hiragino Sans;fontSize=21;fontStyle=1;fillColor=#FFF7ED;strokeColor=#EA580C;strokeWidth=2;" vertex="1" parent="1"><mxGeometry x="475" y="1020" width="650" height="55" as="geometry"/></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

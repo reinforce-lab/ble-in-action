@@ -1,0 +1,79 @@
+<mxfile host="Electron" modified="2026-07-28T00:00:00.000Z" agent="Codex" version="31.0.2">
+  <diagram id="role-map" name="Page-1">
+    <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="900" background="#ffffff" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="title" value="BLE通信に現れる三組の役割" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Hiragino Sans;fontSize=30;fontStyle=1;fontColor=#1F2937;" vertex="1" parent="1">
+          <mxGeometry x="300" y="30" width="1000" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="phone" value="スマートフォン" style="swimlane;html=1;startSize=58;rounded=1;arcSize=8;whiteSpace=wrap;fontFamily=Hiragino Sans;fontSize=24;fontStyle=1;fillColor=#F8FAFC;strokeColor=#475569;strokeWidth=3;" vertex="1" parent="1">
+          <mxGeometry x="110" y="120" width="520" height="680" as="geometry"/>
+        </mxCell>
+        <mxCell id="microbit" value="micro:bit" style="swimlane;html=1;startSize=58;rounded=1;arcSize=8;whiteSpace=wrap;fontFamily=Hiragino Sans;fontSize=24;fontStyle=1;fillColor=#F8FAFC;strokeColor=#475569;strokeWidth=3;" vertex="1" parent="1">
+          <mxGeometry x="970" y="120" width="520" height="680" as="geometry"/>
+        </mxCell>
+        <mxCell id="appL" value="アプリケーション" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Hiragino Sans;fontSize=21;fontStyle=1;fillColor=#FFFFFF;strokeColor=#64748B;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="180" y="205" width="380" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="hostL" value="" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Hiragino Sans;fontSize=20;fontStyle=1;fillColor=#E0F2FE;strokeColor=#0284C7;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="180" y="315" width="380" height="155" as="geometry"/>
+        </mxCell>
+        <mxCell id="hciL" value="HCI" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Hiragino Sans;fontSize=19;fontStyle=1;fillColor=#FEF3C7;strokeColor=#D97706;strokeWidth=2;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="180" y="495" width="380" height="48" as="geometry"/>
+        </mxCell>
+        <mxCell id="controllerL" value="" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Hiragino Sans;fontSize=20;fontStyle=1;fillColor=#DCFCE7;strokeColor=#16A34A;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="180" y="570" width="380" height="145" as="geometry"/>
+        </mxCell>
+        <mxCell id="fwR" value="ファームウェア" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Hiragino Sans;fontSize=21;fontStyle=1;fillColor=#FFFFFF;strokeColor=#64748B;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="205" width="380" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="hostR" value="" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Hiragino Sans;fontSize=20;fontStyle=1;fillColor=#E0F2FE;strokeColor=#0284C7;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="315" width="380" height="155" as="geometry"/>
+        </mxCell>
+        <mxCell id="hciR" value="HCI" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Hiragino Sans;fontSize=19;fontStyle=1;fillColor=#FEF3C7;strokeColor=#D97706;strokeWidth=2;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="495" width="380" height="48" as="geometry"/>
+        </mxCell>
+        <mxCell id="controllerR" value="" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Hiragino Sans;fontSize=20;fontStyle=1;fillColor=#DCFCE7;strokeColor=#16A34A;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="570" width="380" height="145" as="geometry"/>
+        </mxCell>
+        <mxCell id="gattClient" value="GATTクライアント" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Hiragino Sans;fontSize=19;fontStyle=1;fillColor=#DBEAFE;strokeColor=#2563EB;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="220" y="350" width="250" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="gattServer" value="GATTサーバー" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Hiragino Sans;fontSize=19;fontStyle=1;fillColor=#DBEAFE;strokeColor=#2563EB;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="1130" y="350" width="250" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="central" value="Central" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Hiragino Sans;fontSize=20;fontStyle=1;fillColor=#D1FAE5;strokeColor=#059669;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="250" y="610" width="190" height="58" as="geometry"/>
+        </mxCell>
+        <mxCell id="peripheral" value="Peripheral" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Hiragino Sans;fontSize=20;fontStyle=1;fillColor=#D1FAE5;strokeColor=#059669;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="1155" y="610" width="190" height="58" as="geometry"/>
+        </mxCell>
+        <mxCell id="hostTextL" value="Host" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;fontFamily=Hiragino Sans;fontSize=18;fontStyle=1;fontColor=#0369A1;" vertex="1" parent="1">
+          <mxGeometry x="205" y="318" width="120" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="hostTextR" value="Host" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;fontFamily=Hiragino Sans;fontSize=18;fontStyle=1;fontColor=#0369A1;" vertex="1" parent="1">
+          <mxGeometry x="1065" y="318" width="120" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="ctrlTextL" value="Controller" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;fontFamily=Hiragino Sans;fontSize=18;fontStyle=1;fontColor=#15803D;" vertex="1" parent="1">
+          <mxGeometry x="205" y="575" width="150" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="ctrlTextR" value="Controller" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;fontFamily=Hiragino Sans;fontSize=18;fontStyle=1;fontColor=#15803D;" vertex="1" parent="1">
+          <mxGeometry x="1065" y="575" width="150" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="gattEdge" value="データを操作する役割" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Hiragino Sans;fontSize=18;fontStyle=1;strokeColor=#2563EB;strokeWidth=4;endArrow=block;endFill=1;startArrow=block;startFill=1;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="gattClient" target="gattServer">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="llEdge" value="接続中のLink Layerの役割" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Hiragino Sans;fontSize=18;fontStyle=1;strokeColor=#059669;strokeWidth=4;endArrow=block;endFill=1;startArrow=block;startFill=1;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="central" target="peripheral">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="hostLabel" value="機器内部の責務" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Hiragino Sans;fontSize=18;fontStyle=1;fontColor=#475569;" vertex="1" parent="1">
+          <mxGeometry x="690" y="490" width="220" height="55" as="geometry"/>
+        </mxCell>
+        <mxCell id="note" value="三組は、通信の異なる位置を説明する役割です" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Hiragino Sans;fontSize=20;fontStyle=1;fillColor=#FFF7ED;strokeColor=#EA580C;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="510" y="815" width="580" height="55" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
