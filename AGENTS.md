@@ -69,10 +69,28 @@ build/
 ├── config/{pdf,epub}.yml   Pandoc defaults（フォーマット別設定）
 └── templates/              latex-preamble.tex / epub-styles.css / latex-review-spacing.tex
 output/                     生成物（gitignore）
+reference/                  Git管理外のローカル参考資料（仕様書・書籍PDF等）
 hoge/                       旧ドラフト（Re:VIEW .re 形式）・参考PDF・図版素材のアーカイブ
 ```
 
 > **`hoge/` は過去資産の保管庫**です。現行の製本対象ではありません。参考にはしても、ここを編集・削除しないこと。
+
+### ローカル参考資料
+
+`reference/` は、リポジトリへ含めない参考資料の置き場です。`.gitignore` の対象であり、原稿の製本対象にも含めません。次の資料を、BLEの技術確認に利用できます。
+
+| ファイル | 位置づけ |
+|---|---|
+| `reference/ble_developer_handbook.pdf` | Bluetooth 4.0の策定に参加したWorking Groupの副議長が執筆したBLE開発書。技術の背景、設計意図、初期BLEの理解に使う |
+| `reference/Core_v4.2.pdf` | Bluetooth Core Specification v4.2。4.2以前の仕様、当時の用語、後の版との差分を確認するときに使う |
+| `reference/Core_v6.3.pdf` | Bluetooth Core Specification v6.3。現在のコア仕様を確認する正本として使う |
+
+- コア仕様の確認は、原則としてCore v6.3を基準にする。HTML版が参照しやすい場合はBluetooth SIGのオンライン仕様書を使い、ページ単位の確認、オフライン作業、横断的な抽出にPDFが適する場合は`reference/Core_v6.3.pdf`を使う
+- 過去の仕様、用語、追加時期、4.2相当の基本機能を確認するときは`reference/Core_v4.2.pdf`を併用し、現在の要件と混同しない
+- `ble_developer_handbook.pdf`は、仕様策定時の背景や説明を理解するための参考資料として使う。規範的な要件を確定するときは、該当する版のコア仕様でも確認する
+- PDFのままでは検索や比較が難しい場合、テキスト抽出、ページ索引、章ごとの分割、検索用データなどの作業用ファイルを`reference/`配下へ生成してよい。元のPDFは上書きせず、たとえば`reference/derived/`へ、変換元と変換方法が分かる名前で保存する
+- 作業用ファイルはGitへ追加せず、引用や参考文献では作業用ファイルではなく元の書籍または仕様書を出典として示す
+- `reference/`内の資料を、著者の明示許可なく外部サービスへ送信しない
 
 ---
 
