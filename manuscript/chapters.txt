@@ -35,14 +35,18 @@ chapters/01-what-is-ble/1.4-summary.md
 chapters/02-ble-basic/2.0-intro.md
 chapters/02-ble-basic/2.1-ble-overview.md
 chapters/02-ble-basic/2.2-radio-bits.md
-chapters/02-ble-basic/2.3-communication-path.md
-chapters/02-ble-basic/2.3.1-advertising-scanning.md
-chapters/02-ble-basic/2.3.2-connection.md
-chapters/02-ble-basic/2.3.3-pairing-bonding.md
-chapters/02-ble-basic/2.4-gatt-data-path.md
-chapters/02-ble-basic/2.4.1-packet-path.md
-chapters/02-ble-basic/2.4.2-data-exchange.md
-chapters/02-ble-basic/2.5-summary.md
+chapters/02-ble-basic/2.3-advertising.md
+chapters/02-ble-basic/2.3.1-advertiser.md
+chapters/02-ble-basic/2.3.2-scanner.md
+chapters/02-ble-basic/2.3.3-advertising-example.md
+chapters/02-ble-basic/2.3.4-advertising-troubleshooting.md
+chapters/02-ble-basic/2.4-connection-security.md
+chapters/02-ble-basic/2.4.1-connection.md
+chapters/02-ble-basic/2.4.2-pairing-bonding.md
+chapters/02-ble-basic/2.5-gatt-data-path.md
+chapters/02-ble-basic/2.5.1-packet-path.md
+chapters/02-ble-basic/2.5.2-data-exchange.md
+chapters/02-ble-basic/2.6-summary.md
 
 # Chapter 3: 物理層・リンク層・GAP
 chapters/03-ble-layer/3.0-intro.md
@@ -138,8 +142,7 @@ chapters/12-beacon-impl/12.1-beacon-overview.md
 chapters/12-beacon-impl/12.2-nrf52840-beacon.md
 chapters/12-beacon-impl/12.3-ios-beacon-reception.md
 chapters/12-beacon-impl/12.4-android-beacon.md
-chapters/12-beacon-impl/12.5-eddystone-url.md
-chapters/12-beacon-impl/12.6-summary.md
+chapters/12-beacon-impl/12.5-summary.md
 
 # Chapter 13: 温度計実装
 chapters/13-thermometer-impl/13.0-intro.md

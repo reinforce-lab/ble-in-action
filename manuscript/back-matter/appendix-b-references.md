@@ -38,7 +38,12 @@
 
 | リソース | URL |
 |---|---|
-| Core Bluetooth ドキュメント | https://developer.apple.com/documentation/corebluetooth |
+| Core Bluetoothドキュメント（参照日: 2026-07-29） | https://developer.apple.com/documentation/corebluetooth |
+| Core Bluetooth Background Processing for iOS Apps（参照日: 2026-07-29） | https://developer.apple.com/library/archive/documentation/NetworkingInternetWeb/Conceptual/CoreBluetooth_concepts/CoreBluetoothBackgroundProcessingForIOSApps/PerformingTasksWhileYourAppIsInTheBackground.html |
+| scanForPeripherals(withServices:options:)（参照日: 2026-07-29） | https://developer.apple.com/documentation/corebluetooth/cbcentralmanager/scanforperipherals(withservices:options:) |
+| CBCentralManagerScanOptionAllowDuplicatesKey（参照日: 2026-07-29） | https://developer.apple.com/documentation/corebluetooth/cbcentralmanagerscanoptionallowduplicateskey |
+| centralManager(_:didDiscover:advertisementData:rssi:)（参照日: 2026-07-29） | https://developer.apple.com/documentation/corebluetooth/cbcentralmanagerdelegate/centralmanager(_:diddiscover:advertisementdata:rssi:) |
+| Getting Started with iBeacon, Version 1.0（参照日: 2026-07-29） | https://developer.apple.com/ibeacon/Getting-Started-with-iBeacon.pdf |
 | WWDC 2020: What's new in Core Bluetooth | https://developer.apple.com/videos/play/wwdc2020/10065/ |
 | WWDC 2017: What's New in Core Bluetooth | https://developer.apple.com/videos/play/wwdc2017/712/ |
 | Swift Charts ドキュメント | https://developer.apple.com/documentation/charts |
@@ -77,8 +82,10 @@
 
 | リソース | URL |
 |---|---|
-| iBeacon 仕様 (Apple) | https://developer.apple.com/ibeacon/ |
-| Eddystone 仕様 (Google) | https://github.com/google/eddystone/tree/master/protocol-specification |
+| iBeacon開発者ページ（Apple、参照日: 2026-07-29） | https://developer.apple.com/ibeacon/ |
+| Eddystone Protocol Specification（Google、アーカイブ済み、参照日: 2026-07-29） | https://github.com/google/eddystone/blob/master/protocol-specification.md |
+| Find Hub Network Accessory Specification Version 1.3（Google、参照日: 2026-07-29） | https://developers.google.com/nearby/fast-pair/specifications/extensions/fmdn |
+| Partner Integration Guide for Google's Find Hub Network（Google、参照日: 2026-07-29） | https://developers.google.com/nearby/fast-pair/landing-page-find-hub |
 
 
 ## OTA DFU
