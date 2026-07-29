@@ -1,0 +1,25 @@
+<mxfile host="app.diagrams.net" modified="2026-07-29T00:00:00.000Z" agent="Codex" version="24.7.17">
+  <diagram id="advertising-event" name="Page-1">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" page="1" pageScale="1" pageWidth="1200" pageHeight="700">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="send-title" value="送信" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontFamily=Helvetica;fontSize=28;fontStyle=1;" vertex="1" parent="1"><mxGeometry x="100" y="20" width="360" height="50" as="geometry"/></mxCell>
+        <mxCell id="wait-title" value="送信直後の受信" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontFamily=Helvetica;fontSize=28;fontStyle=1;" vertex="1" parent="1"><mxGeometry x="740" y="20" width="360" height="50" as="geometry"/></mxCell>
+        <mxCell id="send37" value="チャンネル37で送信" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=24;fillColor=#eaf2f8;strokeColor=#356a8a;strokeWidth=2;" vertex="1" parent="1"><mxGeometry x="100" y="100" width="360" height="85" as="geometry"/></mxCell>
+        <mxCell id="wait37" value="同じチャンネルで待つ&lt;br&gt;Scan Requestまたは接続要求" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=21;fillColor=#edf6ee;strokeColor=#4f7d52;strokeWidth=2;" vertex="1" parent="1"><mxGeometry x="740" y="100" width="360" height="85" as="geometry"/></mxCell>
+        <mxCell id="send38" value="チャンネル38で送信" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=24;fillColor=#eaf2f8;strokeColor=#356a8a;strokeWidth=2;" vertex="1" parent="1"><mxGeometry x="100" y="260" width="360" height="85" as="geometry"/></mxCell>
+        <mxCell id="wait38" value="同じチャンネルで待つ&lt;br&gt;Scan Requestまたは接続要求" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=21;fillColor=#edf6ee;strokeColor=#4f7d52;strokeWidth=2;" vertex="1" parent="1"><mxGeometry x="740" y="260" width="360" height="85" as="geometry"/></mxCell>
+        <mxCell id="send39" value="チャンネル39で送信" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=24;fillColor=#eaf2f8;strokeColor=#356a8a;strokeWidth=2;" vertex="1" parent="1"><mxGeometry x="100" y="420" width="360" height="85" as="geometry"/></mxCell>
+        <mxCell id="wait39" value="同じチャンネルで待つ&lt;br&gt;Scan Requestまたは接続要求" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=21;fillColor=#edf6ee;strokeColor=#4f7d52;strokeWidth=2;" vertex="1" parent="1"><mxGeometry x="740" y="420" width="360" height="85" as="geometry"/></mxCell>
+        <mxCell id="rest" value="次のAdvertising Eventまで休止" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=24;fillColor=#f4f4f4;strokeColor=#666666;strokeWidth=2;" vertex="1" parent="1"><mxGeometry x="420" y="590" width="360" height="85" as="geometry"/></mxCell>
+        <mxCell id="edge37" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="send37" target="wait37"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="edge38" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="send38" target="wait38"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="edge39" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="send39" target="wait39"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="next37" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="wait37" target="send38"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="next38" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="wait38" target="send39"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="next39" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="wait39" target="rest"><mxGeometry relative="1" as="geometry"/></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

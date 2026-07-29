@@ -1,0 +1,25 @@
+<mxfile host="app.diagrams.net" modified="2026-07-29T00:00:00.000Z" agent="Codex" version="24.7.17">
+  <diagram id="connection-establishment" name="Page-1">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" page="1" pageScale="1" pageWidth="1200" pageHeight="760">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="left-title" value="周辺機器" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontFamily=Helvetica;fontSize=28;fontStyle=1;" vertex="1" parent="1"><mxGeometry x="100" y="20" width="360" height="50" as="geometry"/></mxCell>
+        <mxCell id="right-title" value="スマートフォン" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontFamily=Helvetica;fontSize=28;fontStyle=1;" vertex="1" parent="1"><mxGeometry x="740" y="20" width="360" height="50" as="geometry"/></mxCell>
+        <mxCell id="adv" value="ADV_INDを送信&lt;br&gt;アドバタイザー" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=23;fillColor=#eaf2f8;strokeColor=#356a8a;strokeWidth=2;" vertex="1" parent="1"><mxGeometry x="100" y="100" width="360" height="100" as="geometry"/></mxCell>
+        <mxCell id="scan" value="ADV_INDを受信&lt;br&gt;スキャナー" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=23;fillColor=#eaf2f8;strokeColor=#356a8a;strokeWidth=2;" vertex="1" parent="1"><mxGeometry x="740" y="100" width="360" height="100" as="geometry"/></mxCell>
+        <mxCell id="adv-edge" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="adv" target="scan"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="peripheral" value="CONNECT_INDを受信&lt;br&gt;ペリフェラルへ移る" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=23;fillColor=#edf6ee;strokeColor=#4f7d52;strokeWidth=2;" vertex="1" parent="1"><mxGeometry x="100" y="310" width="360" height="110" as="geometry"/></mxCell>
+        <mxCell id="central" value="CONNECT_INDを送信&lt;br&gt;セントラルへ移る" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=23;fillColor=#edf6ee;strokeColor=#4f7d52;strokeWidth=2;" vertex="1" parent="1"><mxGeometry x="740" y="310" width="360" height="110" as="geometry"/></mxCell>
+        <mxCell id="connect-edge" value="接続要求" style="edgeStyle=orthogonalEdgeStyle;html=1;fontFamily=Helvetica;fontSize=20;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="central" target="peripheral"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="peripheral-data" value="最初のData PDUを受信&lt;br&gt;Data PDUで応答" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=23;fillColor=#fff4df;strokeColor=#9a6b20;strokeWidth=2;" vertex="1" parent="1"><mxGeometry x="100" y="550" width="360" height="110" as="geometry"/></mxCell>
+        <mxCell id="central-data" value="最初のData PDUを送信&lt;br&gt;応答を受信" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=23;fillColor=#fff4df;strokeColor=#9a6b20;strokeWidth=2;" vertex="1" parent="1"><mxGeometry x="740" y="550" width="360" height="110" as="geometry"/></mxCell>
+        <mxCell id="data-edge" value="最初の接続イベント" style="edgeStyle=orthogonalEdgeStyle;html=1;fontFamily=Helvetica;fontSize=19;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="central-data" target="peripheral-data"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="left-time-1" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;dashed=1;strokeWidth=2;endArrow=none;" edge="1" parent="1" source="adv" target="peripheral"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="left-time-2" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;dashed=1;strokeWidth=2;endArrow=none;" edge="1" parent="1" source="peripheral" target="peripheral-data"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="right-time-1" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;dashed=1;strokeWidth=2;endArrow=none;" edge="1" parent="1" source="scan" target="central"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="right-time-2" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;dashed=1;strokeWidth=2;endArrow=none;" edge="1" parent="1" source="central" target="central-data"><mxGeometry relative="1" as="geometry"/></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
