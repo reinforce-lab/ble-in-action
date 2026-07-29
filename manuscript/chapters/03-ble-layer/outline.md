@@ -28,6 +28,8 @@ GATT → ATT → L2CAP → HCI → Link Layer → PHY
 
 読者は、Legacy Advertising、LE 1M PHY、通常のACL接続、ATT/GATTによるRead、Write、Notify、Indicateを知っている前提です。
 
+基本経路を拡張する機能へ進む前に、3.2節でphysical channel、physical link、logical transport、logical link、L2CAP channelの関係を整理します。レイヤー構造とは別の視点で、GATT通信とLegacy Advertisingが通る通信路を並べます。後続の各機能は、この地図のどこを変更または追加するかという差分で説明します。
+
 ## 構成の軸
 
 ### より多くのデータを短時間で送る
@@ -61,7 +63,7 @@ LE 2M PHYとLE Coded PHYは、同じPHYの追加でも目的が反対です。�
 
 ### 接続しない通信を拡張する
 
-Legacy Advertisingを基準に、接続しない通信がどのように拡張されたかを扱います。
+Legacy Advertisingを基準に、接続しない通信がどのように拡張されたかを扱います。Legacy Advertisingだけでもビーコンは作れますが、ビーコンなど接続しない利用場面が広がる中で、データ量、利用チャンネル、送信時刻を共有する方法などに新しい要求が生じた、という順で導入します。
 
 - Extended Advertising
 - Periodic Advertising

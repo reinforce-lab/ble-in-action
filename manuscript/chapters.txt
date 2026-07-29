@@ -47,12 +47,13 @@ chapters/02-ble-basic/2.5-summary.md
 # Chapter 3: 物理層・リンク層・GAP
 chapters/03-ble-layer/3.0-intro.md
 chapters/03-ble-layer/3.1-stack-overview.md
-chapters/03-ble-layer/3.2-physical-layer.md
-chapters/03-ble-layer/3.3-link-layer-state-machine.md
-chapters/03-ble-layer/3.4-advertising-packet.md
-chapters/03-ble-layer/3.5-connection-establishment.md
-chapters/03-ble-layer/3.6-gap.md
-chapters/03-ble-layer/3.7-summary.md
+chapters/03-ble-layer/3.2-communication-path-map.md
+chapters/03-ble-layer/3.3-physical-layer.md
+chapters/03-ble-layer/3.4-link-layer-state-machine.md
+chapters/03-ble-layer/3.5-advertising-packet.md
+chapters/03-ble-layer/3.6-connection-establishment.md
+chapters/03-ble-layer/3.7-gap.md
+chapters/03-ble-layer/3.8-summary.md
 
 # Chapter 4: ATT・GATT・プロファイル
 chapters/04-att-gatt/4.0-intro.md

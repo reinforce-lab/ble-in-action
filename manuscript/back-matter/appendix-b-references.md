@@ -9,10 +9,18 @@
 
 | 仕様書 | URL |
 |---|---|
-| Bluetooth Core Specification 5.4 | https://www.bluetooth.com/specifications/specs/core-specification-5-4/ |
+| Bluetooth Core Specification 6.3 | https://www.bluetooth.com/wp-content/uploads/Files/Specification/HTML/Core_v6.3/out/en/index-en.html |
 | GATT Specification Supplement (GSS) | https://www.bluetooth.com/specifications/specs/gatt-specification-supplement/ |
 | Assigned Numbers | https://www.bluetooth.com/specifications/assigned-numbers/ |
 | Heart Rate Profile 1.0 | https://www.bluetooth.com/specifications/specs/heart-rate-profile-1-0/ |
+| Understanding Bluetooth Range（参照日: 2026-07-29） | https://www.bluetooth.com/learn-about-bluetooth/key-attributes/range/ |
+| 3 Common Myths About Bluetooth Technology（参照日: 2026-07-29） | https://www.bluetooth.com/blog/3-common-mythsabout-bluetooth/ |
+
+### 日本の法令
+
+| 文書 | 発行主体 | URL |
+|---|---|---|
+| 無線設備規則（昭和二十五年電波監理委員会規則第十八号） | e-Gov法令検索 | https://laws.e-gov.go.jp/law/325M50080000018 |
 
 
 ## nRF Connect SDK / Zephyr RTOS

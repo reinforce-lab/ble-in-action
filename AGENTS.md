@@ -145,6 +145,8 @@ hoge/                       旧ドラフト（Re:VIEW .re 形式）・参考PDF�
 | 発行主体 | ドメイン | 使用目的 |
 |---|---|---|
 | Bluetooth SIG | `bluetooth.com`（`www.bluetooth.com`を含む） | Bluetooth仕様書、Assigned Numbers、プロファイル、Qualification、公式解説 |
+| 総務省 | `soumu.go.jp`、`tele.soumu.go.jp`（各サブドメインを含む） | 日本の電波利用制度、無線設備の技術基準、技術基準適合証明・工事設計認証の公式資料 |
+| デジタル庁・e-Gov | `e-gov.go.jp`、`elaws.e-gov.go.jp`（各サブドメインを含む） | 電波法、無線設備規則、関係省令・告示の現行条文 |
 
 - Bluetoothのコア仕様を確認するときは、原則として [Bluetooth Core Specification v6.3](https://www.bluetooth.com/wp-content/uploads/Files/Specification/HTML/Core_v6.3/out/en/index-en.html) を基準にする。過去のバージョンに固有の挙動や変更経緯を扱う場合は、対象バージョンも併記して確認する
 
