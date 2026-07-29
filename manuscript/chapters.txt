@@ -34,14 +34,15 @@ chapters/01-what-is-ble/1.4-summary.md
 # Chapter 2: BLEの基本概念と用語
 chapters/02-ble-basic/2.0-intro.md
 chapters/02-ble-basic/2.1-ble-overview.md
-chapters/02-ble-basic/2.2-communication-path.md
-chapters/02-ble-basic/2.2.1-advertising-scanning.md
-chapters/02-ble-basic/2.2.2-connection.md
-chapters/02-ble-basic/2.2.3-pairing-bonding.md
-chapters/02-ble-basic/2.3-gatt-data-path.md
-chapters/02-ble-basic/2.3.1-packet-path.md
-chapters/02-ble-basic/2.3.2-data-exchange.md
-chapters/02-ble-basic/2.4-summary.md
+chapters/02-ble-basic/2.2-radio-bits.md
+chapters/02-ble-basic/2.3-communication-path.md
+chapters/02-ble-basic/2.3.1-advertising-scanning.md
+chapters/02-ble-basic/2.3.2-connection.md
+chapters/02-ble-basic/2.3.3-pairing-bonding.md
+chapters/02-ble-basic/2.4-gatt-data-path.md
+chapters/02-ble-basic/2.4.1-packet-path.md
+chapters/02-ble-basic/2.4.2-data-exchange.md
+chapters/02-ble-basic/2.5-summary.md
 
 # Chapter 3: 物理層・リンク層・GAP
 chapters/03-ble-layer/3.0-intro.md
