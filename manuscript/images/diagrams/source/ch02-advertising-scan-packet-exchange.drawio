@@ -1,0 +1,85 @@
+<mxfile host="Electron" modified="2026-07-29T00:00:00.000Z" agent="Codex" version="31.0.2">
+  <diagram id="advertising-scan-packet-exchange" name="Page-1">
+    <mxGraphModel dx="1600" dy="1100" grid="1" gridSize="10" guides="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1100" background="#ffffff">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <mxCell id="title" value="アドバタイジングをスキャンするときのパケット交換" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Hiragino Sans;fontSize=30;fontStyle=1;fontColor=#1F2937;" vertex="1" parent="1">
+          <mxGeometry x="150" y="25" width="1300" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="scope" value="Legacy Advertising。パケットは、受信したアドバタイジングパケットと同じプライマリーチャンネルで交換します。" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Hiragino Sans;fontSize=19;fontColor=#475569;" vertex="1" parent="1">
+          <mxGeometry x="180" y="75" width="1240" height="42" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="active-panel" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#64748B;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="90" y="135" width="1420" height="590" as="geometry"/>
+        </mxCell>
+        <mxCell id="active-title" value="アクティブスキャン：追加情報を問い合わせる" style="text;html=1;align=left;verticalAlign=middle;fontFamily=Hiragino Sans;fontSize=23;fontStyle=1;fontColor=#1F2937;" vertex="1" parent="1">
+          <mxGeometry x="130" y="150" width="800" height="42" as="geometry"/>
+        </mxCell>
+        <mxCell id="time-label" value="時間" style="text;html=1;align=center;verticalAlign=middle;fontFamily=Hiragino Sans;fontSize=17;fontStyle=1;fontColor=#475569;" vertex="1" parent="1">
+          <mxGeometry x="125" y="213" width="80" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="time-arrow" value="" style="endArrow=block;html=1;strokeColor=#64748B;strokeWidth=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="165" y="245" as="sourcePoint"/><mxPoint x="165" y="675" as="targetPoint"/></mxGeometry>
+        </mxCell>
+
+        <mxCell id="adv-role" value="アドバタイザー" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Hiragino Sans;fontSize=22;fontStyle=1;fillColor=#DBEAFE;strokeColor=#1D4ED8;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="285" y="205" width="300" height="62" as="geometry"/>
+        </mxCell>
+        <mxCell id="scan-role" value="スキャナー" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Hiragino Sans;fontSize=22;fontStyle=1;fillColor=#ECFDF5;strokeColor=#15803D;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="1015" y="205" width="300" height="62" as="geometry"/>
+        </mxCell>
+        <mxCell id="adv-life" value="" style="endArrow=none;html=1;dashed=1;dashPattern=8 8;strokeColor=#1D4ED8;strokeWidth=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="435" y="267" as="sourcePoint"/><mxPoint x="435" y="685" as="targetPoint"/></mxGeometry>
+        </mxCell>
+        <mxCell id="scan-life" value="" style="endArrow=none;html=1;dashed=1;dashPattern=8 8;strokeColor=#15803D;strokeWidth=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="1165" y="267" as="sourcePoint"/><mxPoint x="1165" y="685" as="targetPoint"/></mxGeometry>
+        </mxCell>
+
+        <mxCell id="adv-packet" value="ADV_IND または ADV_SCAN_IND&#xa;Advertising Data" style="endArrow=block;html=1;strokeColor=#1D4ED8;strokeWidth=4;fontFamily=Hiragino Sans;fontSize=20;fontStyle=1;labelBackgroundColor=#F8FAFC;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="435" y="325" as="sourcePoint"/><mxPoint x="1165" y="325" as="targetPoint"/></mxGeometry>
+        </mxCell>
+        <mxCell id="ifs-1" value="T_IFS&#xa;無線の送受信を切り替える間隔" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Hiragino Sans;fontSize=17;fillColor=#FFFFFF;strokeColor=#94A3B8;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="640" y="355" width="320" height="58" as="geometry"/>
+        </mxCell>
+        <mxCell id="scan-request" value="SCAN_REQ&#xa;問い合わせる相手とスキャナーのアドレス" style="endArrow=block;html=1;strokeColor=#15803D;strokeWidth=4;fontFamily=Hiragino Sans;fontSize=20;fontStyle=1;labelBackgroundColor=#F8FAFC;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="1165" y="455" as="sourcePoint"/><mxPoint x="435" y="455" as="targetPoint"/></mxGeometry>
+        </mxCell>
+        <mxCell id="ifs-2" value="T_IFS&#xa;無線の送受信を切り替える間隔" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Hiragino Sans;fontSize=17;fillColor=#FFFFFF;strokeColor=#94A3B8;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="640" y="485" width="320" height="58" as="geometry"/>
+        </mxCell>
+        <mxCell id="scan-response" value="SCAN_RSP&#xa;Scan Response Data" style="endArrow=block;html=1;strokeColor=#C2410C;strokeWidth=4;fontFamily=Hiragino Sans;fontSize=20;fontStyle=1;labelBackgroundColor=#F8FAFC;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="435" y="585" as="sourcePoint"/><mxPoint x="1165" y="585" as="targetPoint"/></mxGeometry>
+        </mxCell>
+        <mxCell id="active-note" value="追加情報を得るには、三つのパケットを順に受信・送信できる必要があります。" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Hiragino Sans;fontSize=19;fontStyle=1;fillColor=#FFF7ED;strokeColor=#C2410C;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="510" y="635" width="840" height="58" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="passive-panel" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#64748B;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="90" y="755" width="1420" height="250" as="geometry"/>
+        </mxCell>
+        <mxCell id="passive-title" value="パッシブスキャン：受信するだけ" style="text;html=1;align=left;verticalAlign=middle;fontFamily=Hiragino Sans;fontSize=23;fontStyle=1;fontColor=#1F2937;" vertex="1" parent="1">
+          <mxGeometry x="130" y="770" width="700" height="42" as="geometry"/>
+        </mxCell>
+        <mxCell id="passive-adv-role" value="アドバタイザー" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Hiragino Sans;fontSize=20;fontStyle=1;fillColor=#DBEAFE;strokeColor=#1D4ED8;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="285" y="825" width="300" height="56" as="geometry"/>
+        </mxCell>
+        <mxCell id="passive-scan-role" value="スキャナー" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Hiragino Sans;fontSize=20;fontStyle=1;fillColor=#ECFDF5;strokeColor=#15803D;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="1015" y="825" width="300" height="56" as="geometry"/>
+        </mxCell>
+        <mxCell id="passive-packet" value="アドバタイジングパケット&#xa;Advertising Data" style="endArrow=block;html=1;strokeColor=#1D4ED8;strokeWidth=4;fontFamily=Hiragino Sans;fontSize=20;fontStyle=1;labelBackgroundColor=#F8FAFC;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="435" y="930" as="sourcePoint"/><mxPoint x="1165" y="930" as="targetPoint"/></mxGeometry>
+        </mxCell>
+        <mxCell id="passive-note" value="SCAN_REQを送らないため、SCAN_RSPも返りません。" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Hiragino Sans;fontSize=18;fontStyle=1;fillColor=#FFFFFF;strokeColor=#64748B;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="1080" y="958" width="380" height="36" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="conclusion" value="設計の要点：発見と候補の絞り込みに必須の情報は、最初のAdvertising Dataへ入れます。" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Hiragino Sans;fontSize=21;fontStyle=1;fillColor=#FEF3C7;strokeColor=#A16207;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="270" y="1025" width="1060" height="52" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
