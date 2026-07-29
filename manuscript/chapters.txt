@@ -40,13 +40,16 @@ chapters/02-ble-basic/2.3.1-advertiser.md
 chapters/02-ble-basic/2.3.2-scanner.md
 chapters/02-ble-basic/2.3.3-advertising-example.md
 chapters/02-ble-basic/2.3.4-advertising-troubleshooting.md
-chapters/02-ble-basic/2.4-connection-security.md
-chapters/02-ble-basic/2.4.1-connection.md
-chapters/02-ble-basic/2.4.2-pairing-bonding.md
-chapters/02-ble-basic/2.5-gatt-data-path.md
-chapters/02-ble-basic/2.5.1-packet-path.md
-chapters/02-ble-basic/2.5.2-data-exchange.md
-chapters/02-ble-basic/2.6-summary.md
+chapters/02-ble-basic/2.4-connection.md
+chapters/02-ble-basic/2.4.1-connection-establishment.md
+chapters/02-ble-basic/2.4.2-connection-events.md
+chapters/02-ble-basic/2.4.3-connection-parameters.md
+chapters/02-ble-basic/2.4.4-connection-lifecycle.md
+chapters/02-ble-basic/2.5-security.md
+chapters/02-ble-basic/2.6-gatt-data-path.md
+chapters/02-ble-basic/2.6.1-packet-path.md
+chapters/02-ble-basic/2.6.2-data-exchange.md
+chapters/02-ble-basic/2.7-summary.md
 
 # Chapter 3: 物理層・リンク層・GAP
 chapters/03-ble-layer/3.0-intro.md
