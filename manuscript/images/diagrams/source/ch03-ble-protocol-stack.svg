@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1120" viewBox="0 0 1200 1120">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#566573"/>
+    </marker>
+    <style>
+      .label { font-family: "Hiragino Sans", "Noto Sans CJK JP", sans-serif; fill: #17202a; text-anchor: middle; }
+      .title { font-size: 30px; font-weight: 600; }
+      .main { font-size: 25px; font-weight: 600; }
+      .sub { font-size: 19px; }
+      .group { font-size: 24px; font-weight: 600; }
+      .box { stroke: #34495e; stroke-width: 2; rx: 14; }
+      .flow { stroke: #566573; stroke-width: 3; marker-end: url(#arrow); }
+      .gap-line { stroke: #b7950b; stroke-width: 3; stroke-dasharray: 10 8; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="1120" fill="#ffffff"/>
+  <text x="600" y="48" class="label title">BLEプロトコルスタック</text>
+
+  <rect x="270" y="78" width="660" height="88" class="box" fill="#fdebd0"/>
+  <text x="600" y="132" class="label main">Application / Profile</text>
+
+  <rect x="220" y="202" width="760" height="472" rx="22" fill="#f8fbfd" stroke="#5dade2" stroke-width="3"/>
+  <text x="600" y="240" class="label group">Host</text>
+
+  <rect x="290" y="268" width="620" height="92" class="box" fill="#d6eaf8"/>
+  <text x="600" y="306" class="label main">GATT</text>
+  <text x="600" y="336" class="label sub">サービスとキャラクタリスティック</text>
+
+  <rect x="290" y="386" width="290" height="112" class="box" fill="#d6eaf8"/>
+  <text x="435" y="430" class="label main">ATT</text>
+  <text x="435" y="463" class="label sub">アトリビュート操作</text>
+
+  <rect x="620" y="386" width="290" height="112" class="box" fill="#d6eaf8"/>
+  <text x="765" y="430" class="label main">SMP</text>
+  <text x="765" y="463" class="label sub">ペアリングと鍵</text>
+
+  <rect x="290" y="524" width="620" height="112" class="box" fill="#d6eaf8"/>
+  <text x="600" y="568" class="label main">L2CAP</text>
+  <text x="600" y="601" class="label sub">チャンネルによる多重化</text>
+
+  <rect x="270" y="710" width="660" height="104" class="box" fill="#e8daef"/>
+  <text x="600" y="754" class="label main">HCI</text>
+  <text x="600" y="787" class="label sub">Host / Controller境界</text>
+
+  <rect x="220" y="850" width="760" height="232" rx="22" fill="#f7fcf9" stroke="#58d68d" stroke-width="3"/>
+  <text x="600" y="888" class="label group">Controller</text>
+
+  <rect x="290" y="916" width="620" height="66" class="box" fill="#d5f5e3"/>
+  <text x="600" y="957" class="label main">Link Layer</text>
+
+  <rect x="290" y="1000" width="620" height="58" class="box" fill="#d5f5e3"/>
+  <text x="600" y="1037" class="label main">PHY</text>
+
+  <line x1="600" y1="166" x2="600" y2="258" class="flow"/>
+  <line x1="540" y1="360" x2="455" y2="378" class="flow"/>
+  <line x1="435" y1="498" x2="520" y2="516" class="flow"/>
+  <line x1="765" y1="498" x2="680" y2="516" class="flow"/>
+  <line x1="600" y1="636" x2="600" y2="700" class="flow"/>
+  <line x1="600" y1="814" x2="600" y2="906" class="flow"/>
+  <line x1="600" y1="982" x2="600" y2="990" class="flow"/>
+
+  <rect x="24" y="294" width="166" height="302" rx="18" fill="#fcf3cf" stroke="#d4ac0d" stroke-width="3" stroke-dasharray="10 8"/>
+  <text x="107" y="345" class="label main">GAP</text>
+  <text x="107" y="391" class="label sub">発見</text>
+  <text x="107" y="427" class="label sub">接続</text>
+  <text x="107" y="463" class="label sub">セキュリティ</text>
+  <text x="107" y="515" class="label sub">複数の構成要素を</text>
+  <text x="107" y="547" class="label sub">使う振る舞い</text>
+
+  <line x1="190" y1="346" x2="280" y2="320" class="gap-line"/>
+  <line x1="190" y1="430" x2="280" y2="442" class="gap-line"/>
+  <line x1="190" y1="522" x2="280" y2="948" class="gap-line"/>
+</svg>

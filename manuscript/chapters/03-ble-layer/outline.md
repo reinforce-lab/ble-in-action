@@ -36,13 +36,13 @@ GATT → ATT → L2CAP → HCI → Link Layer → PHY
 
 この違いを保つため、第2章と同じGATT WriteやLegacy Advertisingを例に使っても、動作を最初から説明し直しません。第3章では、同じデータがGATTではキャラクタリスティックへの操作、ATTではハンドルを持つPDU、L2CAPではCIDで識別されるチャンネルのデータ、HCIではConnection Handleに対応するACL Data、Link Layerでは接続イベントで交換するData PDUとして見えることを対応づけます。
 
-## 拡張を読むために通信路の地図を精密にする
+## 仕様書の構成から通信路の詳細へ進む
 
-基本経路を拡張する機能へ進む前に、二種類の地図を重ねます。
+基本経路を拡張する機能へ進む前に、3.1節でBLEプロトコルスタックの全体構造を示します。PHY、Link Layer、HCI、L2CAP、SMP、ATT、GATTの役割、HostとControllerの境界、GAPが複数の構成要素を使うことを説明します。各構成要素がCore SpecificationのどのVolumeとPartにあるかも示し、読者が仕様書から必要な情報を探せるようにします。
 
-一つは、PHY、Link Layer、HCI、L2CAP、SMP、ATT、GATTという、処理の責務を分けるレイヤーの地図です。HostとControllerがHCIを境に分かれる理由、一つのBluetooth SoCへ収まっていても仕様上の責務が分かれること、GAPは単独の伝送レイヤーではなく複数の層を使う振る舞いの定義であることを示します。
+続く3.2節では、レイヤーの説明から、データを運ぶ通信路の説明へ進みます。physical channel、physical link、logical transport、logical link、L2CAP channelは、レイヤーの別名ではありません。接続中のGATT通信とLegacy Advertisingを並べ、どこまで同じ仕組みを使い、どこから異なる通信路になるかを示します。
 
-もう一つは、physical channel、physical link、logical transport、logical link、L2CAP channelという、データがどのような性質の通信路を通るかを示す地図です。これらはレイヤーの別名ではありません。接続中のGATT通信とLegacy Advertisingを並べ、どこまで同じ仕組みを使い、どこから異なる通信路になるかを示します。
+3.1節は仕様書に登場する構成要素と役割、3.2節は構成要素を通ってデータが運ばれるときの通信関係と伝送特性を担当します。同じGATT Writeを例にしても、前者ではプロトコルスタック上の担当、後者ではlogical transportやlogical linkとの対応を説明します。
 
 | 見る対象 | 接続中の基本的なGATT通信 |
 |---|---|

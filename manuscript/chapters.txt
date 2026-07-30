@@ -53,14 +53,15 @@ chapters/02-ble-basic/2.7-device-lifecycle.md
 
 # Chapter 3: BLEの通信アーキテクチャ
 chapters/03-ble-layer/3.0-intro.md
-chapters/03-ble-layer/3.1-communication-architecture.md
-chapters/03-ble-layer/3.2-throughput.md
-chapters/03-ble-layer/3.3-range-and-reliability.md
-chapters/03-ble-layer/3.4-connectionless-communication.md
-chapters/03-ble-layer/3.5-position-and-distance.md
-chapters/03-ble-layer/3.6-isochronous-communication.md
-chapters/03-ble-layer/3.7-capability-selection.md
-chapters/03-ble-layer/3.8-summary.md
+chapters/03-ble-layer/3.1-protocol-stack.md
+chapters/03-ble-layer/3.2-communication-architecture.md
+chapters/03-ble-layer/3.3-throughput.md
+chapters/03-ble-layer/3.4-range-and-reliability.md
+chapters/03-ble-layer/3.5-connectionless-communication.md
+chapters/03-ble-layer/3.6-position-and-distance.md
+chapters/03-ble-layer/3.7-isochronous-communication.md
+chapters/03-ble-layer/3.8-capability-selection.md
+chapters/03-ble-layer/3.9-summary.md
 
 # Chapter 4: ATT・GATT・プロファイル
 chapters/04-att-gatt/4.0-intro.md
