@@ -51,15 +51,15 @@ chapters/02-ble-basic/2.6.1-packet-path.md
 chapters/02-ble-basic/2.6.2-data-exchange.md
 chapters/02-ble-basic/2.7-device-lifecycle.md
 
-# Chapter 3: 物理層・リンク層・GAP
+# Chapter 3: BLEの通信アーキテクチャ
 chapters/03-ble-layer/3.0-intro.md
-chapters/03-ble-layer/3.1-stack-overview.md
-chapters/03-ble-layer/3.2-communication-path-map.md
-chapters/03-ble-layer/3.3-physical-layer.md
-chapters/03-ble-layer/3.4-link-layer-state-machine.md
-chapters/03-ble-layer/3.5-advertising-packet.md
-chapters/03-ble-layer/3.6-connection-establishment.md
-chapters/03-ble-layer/3.7-gap.md
+chapters/03-ble-layer/3.1-communication-architecture.md
+chapters/03-ble-layer/3.2-throughput.md
+chapters/03-ble-layer/3.3-range-and-reliability.md
+chapters/03-ble-layer/3.4-connectionless-communication.md
+chapters/03-ble-layer/3.5-position-and-distance.md
+chapters/03-ble-layer/3.6-isochronous-communication.md
+chapters/03-ble-layer/3.7-capability-selection.md
 chapters/03-ble-layer/3.8-summary.md
 
 # Chapter 4: ATT・GATT・プロファイル
