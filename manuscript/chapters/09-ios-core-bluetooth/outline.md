@@ -1,50 +1,22 @@
-# 第9章 アウトライン: iOSアプリからBLEデバイスを操作する — Core Bluetooth
+# 第9章「iOSからBLEデバイスを使う」執筆方針
 
-## 章の目的
+## この章の役割
 
-iOSがBluetooth LEを扱うしくみを内部アーキテクチャから理解し、
-CBCentralManager を中心としたAPIを使って、スキャン・接続・サービス発見・
-読み書き・Notify受信の一連のフローを実装できるようにする。
-またバックグラウンドモードの制約と正しい使い方を示す。
+第6章から第8章で作ったセンサー付きライトを、Core Bluetoothから利用します。iOSを本書の詳しいクライアント基準実装とし、OS APIで見える状態を第2章から第4章の通信へ対応づけます。
 
-## 対象読者の前提
+## 節構成
 
-- 第4章（ATT/GATT）を読了済み
-- Swift の基本文法を理解している
-- nRF52840 側のペリフェラル実装（第6章）が完成していること
+### 9.0 iOSアプリから同じ製品仕様を読む
+### 9.1 Core Bluetoothのオブジェクトと状態遷移
+### 9.2 権限と`CBCentralManager`を準備する
+### 9.3 デバイスを発見して接続する
+### 9.4 ServiceとCharacteristicを探索する
+### 9.5 状態を読み、設定とコマンドを書き込む
+### 9.6 Notify／Indicateを購読する
+### 9.7 切断、再接続、キャッシュを扱う
+### 9.8 バックグラウンド動作と製品要件
+### 9.9 一連のクライアント実装を確認する
 
-## セクション構成
+## 既存原稿の移行元
 
-| セクション | タイトル | ページ目安 |
-|---|---|---|
-| 9.1 | Core Bluetooth フレームワーク概要 | 4-5p |
-| 9.2 | CBCentralManager の初期化と状態管理 | 4-5p |
-| 9.3 | デバイスのスキャンと発見 | 5-6p |
-| 9.4 | サービスとキャラクタリスティクスの発見 | 5-6p |
-| 9.5 | Read / Write の実装 | 5-6p |
-| 9.6 | Notify の受信 | 4-5p |
-| 9.7 | バックグラウンドモードと電力消費 | 4-5p |
-| 9.8 | まとめと第10章への橋渡し | 2-3p |
-
-**合計: 33〜41ページ**
-
-## キーコンセプト
-
-- BTServer デーモンと IPC アーキテクチャ
-- CBCentralManager / CBPeripheral / CBService / CBCharacteristic
-- デリゲートパターン（CBCentralManagerDelegate / CBPeripheralDelegate）
-- CBUUID の 16bit 短縮形と 128bit カスタム UUID
-- ATT_MTU = 23 バイト（ペイロード 20 バイト）の制約
-- Notify vs Indicate の違い、Subscription 管理
-- バックグラウンドスキャン周期 12 分制限
-
-## ファイルリスト
-
-- `9.1-framework-overview.md`
-- `9.2-centralmanager.md`
-- `9.3-scanning.md`
-- `9.4-service-discovery.md`
-- `9.5-read-write.md`
-- `9.6-notify.md`
-- `9.7-background.md`
-- `9.8-summary.md`
+現行第9章に加え、旧第13章の受信、パース、表示部分を題材として利用できます。非公開の内部デーモン挙動ではなく、公開APIの契約を説明の基準にします。
