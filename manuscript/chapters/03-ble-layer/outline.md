@@ -28,7 +28,32 @@ GATT → ATT → L2CAP → HCI → Link Layer → PHY
 
 読者は、Legacy Advertising、LE 1M PHY、通常のACL接続、ATT/GATTによるRead、Write、Notify、Indicateを知っている前提です。
 
-基本経路を拡張する機能へ進む前に、3.2節でphysical channel、physical link、logical transport、logical link、L2CAP channelの関係を整理します。レイヤー構造とは別の視点で、GATT通信とLegacy Advertisingが通る通信路を並べます。後続の各機能は、この地図のどこを変更または追加するかという差分で説明します。
+## 第2章との理解の深さを分ける
+
+第2章では、読者が通信を迷わず追うために、GATT、ATT、L2CAP、HCI、Link Layer、PHYをデータが通る場所の地図として示しました。それぞれの名前は経路上の道標であり、仕様書のレイヤー構造を体系的に説明したものではありません。
+
+第3章では、同じ通信をBluetooth Core Specificationがどのような責務と通信路へ分解しているかを読み直します。第2章が「一つの値がどこを通るか」を追う章なら、第3章は「各位置が仕様上どの単位として定義され、どの情報がPDUへ現れ、どの実装が責任を持つか」を判断できるようにする章です。
+
+この違いを保つため、第2章と同じGATT WriteやLegacy Advertisingを例に使っても、動作を最初から説明し直しません。第3章では、同じデータがGATTではキャラクタリスティックへの操作、ATTではハンドルを持つPDU、L2CAPではCIDで識別されるチャンネルのデータ、HCIではConnection Handleに対応するACL Data、Link Layerでは接続イベントで交換するData PDUとして見えることを対応づけます。
+
+## 拡張を読むために通信路の地図を精密にする
+
+基本経路を拡張する機能へ進む前に、二種類の地図を重ねます。
+
+一つは、PHY、Link Layer、HCI、L2CAP、SMP、ATT、GATTという、処理の責務を分けるレイヤーの地図です。HostとControllerがHCIを境に分かれる理由、一つのBluetooth SoCへ収まっていても仕様上の責務が分かれること、GAPは単独の伝送レイヤーではなく複数の層を使う振る舞いの定義であることを示します。
+
+もう一つは、physical channel、physical link、logical transport、logical link、L2CAP channelという、データがどのような性質の通信路を通るかを示す地図です。これらはレイヤーの別名ではありません。接続中のGATT通信とLegacy Advertisingを並べ、どこまで同じ仕組みを使い、どこから異なる通信路になるかを示します。
+
+| 見る対象 | 接続中の基本的なGATT通信 |
+|---|---|
+| 上位プロトコルの振り分け | ATTのL2CAP固定チャンネル |
+| 運ぶ情報の種類 | LE-U logical link |
+| データを運ぶ性質 | LE ACL logical transport |
+| 二台の関係 | LE active physical link |
+| パケットを交換する場 | LE piconet physical channel |
+| 実際に使う周波数 | 接続イベントごとに選ばれるPHY channel |
+
+この精密な地図を先に持つことで、LE 2MとLE CodedはPHYの選択、Data Length ExtensionはLink Layerで運べるデータ長の拡張、Extended AdvertisingはAdvertising Physical Channel上の運び方の拡張、Isochronous Channelsは通常のLE ACLとは異なる論理トランスポートの追加、として位置づけられます。後続の各機能は、この地図のどこを変更または追加するかという差分で説明します。
 
 ## 構成の軸
 
@@ -105,6 +130,12 @@ LC3の詳細、CIS/BISのパケット構造、オーディオサービスの状�
 
 レイヤー構造は捨てません。ただし、章の順序には使わず、機能の位置を確認する地図として使います。
 
+現在のレイヤー構造を、最初から自明だった分類として説明しません。初期のBLE設計ではL2CAPではなく、Attribute Protocolとシグナリングを多重化する制約の大きいProtocol Adaptation Layerが検討されていました。L2CAPの追加は、実装の再利用、分割と再構成、将来の拡張性を得る一方で、メモリーと消費電力の負担を増やす選択でした。設計グループ内で意見が分かれた後、コストを定量化した検討を経てL2CAPが採用されています。
+
+ATTとGATTの分離にも、仕様を明確にするための設計判断があります。Attributeの概念は当初、コア仕様外のワーキンググループで作られ、コア仕様へ統合するときに、抽象的なプロトコルであるATTと、その使い方を定める汎用プロファイルであるGATTへ分けられました。実際の通信では密接に組み合わさる二つを仕様上分離した理由を知ると、ATT PDUとGATT Procedureを同じものとして扱わずに読めます。
+
+こうした成立経緯は、現行仕様の要件を置き換える根拠には使いません。Bluetooth Core Specification v6.3を規範的な根拠とし、`Bluetooth Low Energy: The Developer's Handbook`は、仕様の分類だけからは見えにくい設計上の選択とトレードオフを理解する補助資料として使います。
+
 各機能では、必要に応じて次の点を示します。
 
 - 基本経路のどの層を変更または追加するか
@@ -149,6 +180,7 @@ Channel SoundingやLE Audioは、GATTとは別のデータ経路や無線手順�
 
 - Bluetooth SIG, Bluetooth Core Specification v6.3
   <https://www.bluetooth.com/wp-content/uploads/Files/Specification/HTML/Core_v6.3/out/en/index-en.html>
+- Robin Heydon, *Bluetooth Low Energy: The Developer's Handbook*, Chapter 9 “Logical Link Control and Adaptation Protocol” and Chapter 10 “Attributes”
 - Apple, “Measuring distance between devices using Channel Sounding”
   <https://developer.apple.com/documentation/corebluetooth/measuring-distance-between-devices-using-channel-sounding>
 - Apple, WWDC26 “Find your accessory with Bluetooth Channel Sounding”
