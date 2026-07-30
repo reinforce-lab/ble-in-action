@@ -82,13 +82,13 @@ chapters/04-att-gatt/4.8-profile-contract.md
 chapters/04-att-gatt/4.9-summary.md
 
 # Chapter 5: nRF52840開発環境
-chapters/05-nrf52840-development/5.0-intro.md
-chapters/05-nrf52840-development/5.1-overview.md
-chapters/05-nrf52840-development/5.2-sdk-setup.md
-chapters/05-nrf52840-development/5.3-board-setup.md
-chapters/05-nrf52840-development/5.4-hello-ble.md
-chapters/05-nrf52840-development/5.5-project-structure.md
-chapters/05-nrf52840-development/5.6-summary.md
+chapters/05-embedded-ble-development/5.0-intro.md
+chapters/05-embedded-ble-development/5.1-overview.md
+chapters/05-embedded-ble-development/5.2-sdk-setup.md
+chapters/05-embedded-ble-development/5.3-board-setup.md
+chapters/05-embedded-ble-development/5.4-hello-ble.md
+chapters/05-embedded-ble-development/5.5-project-structure.md
+chapters/05-embedded-ble-development/5.6-summary.md
 
 # Chapter 6: ペリフェラル実装
 chapters/06-gatt-peripheral/6.0-intro.md
@@ -101,60 +101,60 @@ chapters/06-gatt-peripheral/6.6-connection.md
 chapters/06-gatt-peripheral/6.7-summary.md
 
 # Chapter 7: 低消費電力設計
-chapters/08-power-performance/7.0-intro.md
-chapters/08-power-performance/7.1-power-basics.md
-chapters/08-power-performance/7.2-sleep-mode.md
-chapters/08-power-performance/7.3-adv-interval.md
-chapters/08-power-performance/7.4-conn-interval.md
-chapters/08-power-performance/7.5-ppk2-measurement.md
-chapters/08-power-performance/7.6-battery-design.md
-chapters/08-power-performance/7.7-summary.md
+chapters/08-evaluation-power-performance/7.0-intro.md
+chapters/08-evaluation-power-performance/7.1-power-basics.md
+chapters/08-evaluation-power-performance/7.2-sleep-mode.md
+chapters/08-evaluation-power-performance/7.3-adv-interval.md
+chapters/08-evaluation-power-performance/7.4-conn-interval.md
+chapters/08-evaluation-power-performance/7.5-ppk2-measurement.md
+chapters/08-evaluation-power-performance/7.6-battery-design.md
+chapters/08-evaluation-power-performance/7.7-summary.md
 
 # Chapter 8: 外部チップ連携
-chapters/15-multichip-gateway/8.0-intro.md
-chapters/15-multichip-gateway/8.1-overview.md
-chapters/15-multichip-gateway/8.2-sensor-integration.md
-chapters/15-multichip-gateway/8.3-hci-interface.md
-chapters/15-multichip-gateway/8.4-lte-ble-integration.md
-chapters/15-multichip-gateway/8.5-power-pitfalls.md
-chapters/15-multichip-gateway/8.6-summary.md
+chapters/09-multichip-gateway/8.0-intro.md
+chapters/09-multichip-gateway/8.1-overview.md
+chapters/09-multichip-gateway/8.2-sensor-integration.md
+chapters/09-multichip-gateway/8.3-hci-interface.md
+chapters/09-multichip-gateway/8.4-lte-ble-integration.md
+chapters/09-multichip-gateway/8.5-power-pitfalls.md
+chapters/09-multichip-gateway/8.6-summary.md
 
 # Chapter 9: iOS Core Bluetooth
-chapters/09-ios-core-bluetooth/9.0-intro.md
-chapters/09-ios-core-bluetooth/9.1-framework-overview.md
-chapters/09-ios-core-bluetooth/9.2-centralmanager.md
-chapters/09-ios-core-bluetooth/9.3-scanning.md
-chapters/09-ios-core-bluetooth/9.4-service-discovery.md
-chapters/09-ios-core-bluetooth/9.5-read-write.md
-chapters/09-ios-core-bluetooth/9.6-notify.md
-chapters/09-ios-core-bluetooth/9.7-background.md
-chapters/09-ios-core-bluetooth/9.8-summary.md
+chapters/10-ios-core-bluetooth/9.0-intro.md
+chapters/10-ios-core-bluetooth/9.1-framework-overview.md
+chapters/10-ios-core-bluetooth/9.2-centralmanager.md
+chapters/10-ios-core-bluetooth/9.3-scanning.md
+chapters/10-ios-core-bluetooth/9.4-service-discovery.md
+chapters/10-ios-core-bluetooth/9.5-read-write.md
+chapters/10-ios-core-bluetooth/9.6-notify.md
+chapters/10-ios-core-bluetooth/9.7-background.md
+chapters/10-ios-core-bluetooth/9.8-summary.md
 
 # Chapter 10: Web Bluetooth API
-chapters/10-web-bluetooth/10.0-intro.md
-chapters/10-web-bluetooth/10.1-overview.md
-chapters/10-web-bluetooth/10.2-request-device.md
-chapters/10-web-bluetooth/10.3-connect-gatt.md
-chapters/10-web-bluetooth/10.4-read-write.md
-chapters/10-web-bluetooth/10.5-notify.md
-chapters/10-web-bluetooth/10.6-limitations-summary.md
+chapters/11-web-bluetooth/10.0-intro.md
+chapters/11-web-bluetooth/10.1-overview.md
+chapters/11-web-bluetooth/10.2-request-device.md
+chapters/11-web-bluetooth/10.3-connect-gatt.md
+chapters/11-web-bluetooth/10.4-read-write.md
+chapters/11-web-bluetooth/10.5-notify.md
+chapters/11-web-bluetooth/10.6-limitations-summary.md
 
 # Chapter 11: Android/Linux BLE
-chapters/11-android-linux-ble/11.0-intro.md
-chapters/11-android-linux-ble/11.1-android-overview.md
-chapters/11-android-linux-ble/11.2-android-scan-connect.md
-chapters/11-android-linux-ble/11.3-android-gatt-issues.md
-chapters/11-android-linux-ble/11.4-linux-bluez.md
-chapters/11-android-linux-ble/11.5-python-bleak.md
-chapters/11-android-linux-ble/11.6-platform-comparison.md
+chapters/12-android-linux-ble/11.0-intro.md
+chapters/12-android-linux-ble/11.1-android-overview.md
+chapters/12-android-linux-ble/11.2-android-scan-connect.md
+chapters/12-android-linux-ble/11.3-android-gatt-issues.md
+chapters/12-android-linux-ble/11.4-linux-bluez.md
+chapters/12-android-linux-ble/11.5-python-bleak.md
+chapters/12-android-linux-ble/11.6-platform-comparison.md
 
 # Chapter 12: ビーコン実装
-chapters/12-beacon-broadcast/12.0-intro.md
-chapters/12-beacon-broadcast/12.1-beacon-overview.md
-chapters/12-beacon-broadcast/12.2-nrf52840-beacon.md
-chapters/12-beacon-broadcast/12.3-ios-beacon-reception.md
-chapters/12-beacon-broadcast/12.4-android-beacon.md
-chapters/12-beacon-broadcast/12.5-summary.md
+chapters/13-beacon-broadcast/12.0-intro.md
+chapters/13-beacon-broadcast/12.1-beacon-overview.md
+chapters/13-beacon-broadcast/12.2-nrf52840-beacon.md
+chapters/13-beacon-broadcast/12.3-ios-beacon-reception.md
+chapters/13-beacon-broadcast/12.4-android-beacon.md
+chapters/13-beacon-broadcast/12.5-summary.md
 
 # Chapter 13: 温度計実装
 chapters/07-device-logic/13.0-intro.md
@@ -166,14 +166,14 @@ chapters/07-device-logic/13.5-ios-chart.md
 chapters/07-device-logic/13.6-summary.md
 
 # Chapter 14: OTA DFU実装
-chapters/14-firmware-update/14.0-intro.md
-chapters/14-firmware-update/14.1-dfu-overview.md
-chapters/14-firmware-update/14.2-mcuboot-config.md
-chapters/14-firmware-update/14.3-dfu-package.md
-chapters/14-firmware-update/14.4-smp-protocol.md
-chapters/14-firmware-update/14.5-ios-dfu.md
-chapters/14-firmware-update/14.6-troubleshooting.md
-chapters/14-firmware-update/14.7-summary.md
+chapters/15-firmware-update/14.0-intro.md
+chapters/15-firmware-update/14.1-dfu-overview.md
+chapters/15-firmware-update/14.2-mcuboot-config.md
+chapters/15-firmware-update/14.3-dfu-package.md
+chapters/15-firmware-update/14.4-smp-protocol.md
+chapters/15-firmware-update/14.5-ios-dfu.md
+chapters/15-firmware-update/14.6-troubleshooting.md
+chapters/15-firmware-update/14.7-summary.md
 
 # Chapter 15: パケットキャプチャとデバッグ
 chapters/16-debugging-troubleshooting/15.0-intro.md
