@@ -49,7 +49,7 @@ chapters/02-ble-basic/2.5-security.md
 chapters/02-ble-basic/2.6-gatt-data-path.md
 chapters/02-ble-basic/2.6.1-packet-path.md
 chapters/02-ble-basic/2.6.2-data-exchange.md
-chapters/02-ble-basic/2.7-summary.md
+chapters/02-ble-basic/2.7-device-lifecycle.md
 
 # Chapter 3: 物理層・リンク層・GAP
 chapters/03-ble-layer/3.0-intro.md
