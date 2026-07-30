@@ -65,13 +65,15 @@ chapters/03-ble-layer/3.9-summary.md
 
 # Chapter 4: ATT・GATT・プロファイル
 chapters/04-att-gatt/4.0-intro.md
-chapters/04-att-gatt/4.1-att-gatt-overview.md
-chapters/04-att-gatt/4.2-attribute-structure.md
-chapters/04-att-gatt/4.3-att-commands.md
-chapters/04-att-gatt/4.4-gatt-hierarchy.md
-chapters/04-att-gatt/4.5-descriptors.md
-chapters/04-att-gatt/4.6-profiles.md
-chapters/04-att-gatt/4.7-summary.md
+chapters/04-att-gatt/4.1-model-product-with-gatt.md
+chapters/04-att-gatt/4.2-att-table.md
+chapters/04-att-gatt/4.3-data-operations.md
+chapters/04-att-gatt/4.4-value-format.md
+chapters/04-att-gatt/4.5-large-data.md
+chapters/04-att-gatt/4.6-access-control.md
+chapters/04-att-gatt/4.7-discovery-and-evolution.md
+chapters/04-att-gatt/4.8-profile-contract.md
+chapters/04-att-gatt/4.9-summary.md
 
 # Chapter 5: nRF52840開発環境
 chapters/05-nrf52840-setup/5.0-intro.md

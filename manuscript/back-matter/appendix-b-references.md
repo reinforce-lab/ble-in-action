@@ -16,6 +16,12 @@
 | Understanding Bluetooth Range（参照日: 2026-07-29） | https://www.bluetooth.com/learn-about-bluetooth/key-attributes/range/ |
 | 3 Common Myths About Bluetooth Technology（参照日: 2026-07-29） | https://www.bluetooth.com/blog/3-common-mythsabout-bluetooth/ |
 
+### Connectivity Standards Alliance
+
+| 仕様書 | URL |
+|---|---|
+| Matter Core Specification 1.4（参照日: 2026-07-30） | https://csa-iot.org/wp-content/uploads/2024/11/24-27349-006_Matter-1.4-Core-Specification.pdf |
+
 ### 日本の法令
 
 | 文書 | 発行主体 | URL |
