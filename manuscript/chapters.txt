@@ -92,39 +92,42 @@ chapters/05-embedded-ble-development/5.6-decision-flow.md
 chapters/05-embedded-ble-development/5.7-ble-mcu-evolution.md
 chapters/05-embedded-ble-development/5.8-nrf52840.md
 chapters/05-embedded-ble-development/5.9-development-environment.md
-chapters/05-embedded-ble-development/5.10-hello-world.md
-chapters/05-embedded-ble-development/5.11-first-advertising.md
 
-# Chapter 6: ペリフェラル実装
-chapters/06-gatt-peripheral/6.0-intro.md
-chapters/06-gatt-peripheral/6.1-connectable-adv.md
-chapters/06-gatt-peripheral/6.2-custom-service.md
-chapters/06-gatt-peripheral/6.3-read-characteristic.md
-chapters/06-gatt-peripheral/6.4-write-characteristic.md
-chapters/06-gatt-peripheral/6.5-notify.md
-chapters/06-gatt-peripheral/6.6-connection.md
-chapters/06-gatt-peripheral/6.7-summary.md
+# Chapter 6: nRF52でBLEデバイスを開発する
+chapters/06-nrf52-development/6.0-intro.md
+chapters/06-nrf52-development/6.1-hello-world.md
+chapters/06-nrf52-development/6.2-first-advertising.md
+chapters/06-nrf52-development/6.3-connectable-adv.md
+chapters/06-nrf52-development/6.4-custom-service.md
+chapters/06-nrf52-development/6.5-read-characteristic.md
+chapters/06-nrf52-development/6.6-write-characteristic.md
+chapters/06-nrf52-development/6.7-notify.md
+chapters/06-nrf52-development/6.8-connection.md
+chapters/06-nrf52-development/6.9-summary.md
 
-# Chapter 7: 低消費電力設計
-chapters/08-evaluation-power-performance/7.0-intro.md
-chapters/08-evaluation-power-performance/7.1-power-basics.md
-chapters/08-evaluation-power-performance/7.2-sleep-mode.md
-chapters/08-evaluation-power-performance/7.3-adv-interval.md
-chapters/08-evaluation-power-performance/7.4-conn-interval.md
-chapters/08-evaluation-power-performance/7.5-ppk2-measurement.md
-chapters/08-evaluation-power-performance/7.6-battery-design.md
-chapters/08-evaluation-power-performance/7.7-summary.md
+# Chapter 7: IOと省電力な製品ロジック
+chapters/07-io-power-management/7.0-intro.md
+chapters/07-io-power-management/7.1-power-basics.md
+chapters/07-io-power-management/7.2-sleep-mode.md
+chapters/07-io-power-management/7.3-adv-interval.md
+chapters/07-io-power-management/7.4-conn-interval.md
+chapters/07-io-power-management/7.5-ppk2-measurement.md
+chapters/07-io-power-management/7.6-battery-design.md
+chapters/07-io-power-management/7.7-summary.md
 
-# Chapter 8: 外部チップ連携
-chapters/09-multichip-gateway/8.0-intro.md
-chapters/09-multichip-gateway/8.1-overview.md
-chapters/09-multichip-gateway/8.2-sensor-integration.md
-chapters/09-multichip-gateway/8.3-hci-interface.md
-chapters/09-multichip-gateway/8.4-lte-ble-integration.md
-chapters/09-multichip-gateway/8.5-power-pitfalls.md
-chapters/09-multichip-gateway/8.6-summary.md
+# Chapter 8: ファームウェア更新
+chapters/08-firmware-update/8.0-intro.md
+chapters/08-firmware-update/8.1-overview.md
+chapters/08-firmware-update/8.2-sensor-integration.md
+chapters/08-firmware-update/8.3-hci-interface.md
+chapters/08-firmware-update/8.4-lte-ble-integration.md
+chapters/08-firmware-update/8.5-power-pitfalls.md
+chapters/08-firmware-update/8.6-summary.md
 
-# Chapter 9: iOS Core Bluetooth
+# Chapter 9: 測定・評価・デバッグ
+# outlineのみ作成済み。本文は後で移行する。
+
+# Chapter 10移行元: iOS Core Bluetooth
 chapters/10-ios-core-bluetooth/9.0-intro.md
 chapters/10-ios-core-bluetooth/9.1-framework-overview.md
 chapters/10-ios-core-bluetooth/9.2-centralmanager.md
@@ -162,13 +165,13 @@ chapters/13-beacon-broadcast/12.4-android-beacon.md
 chapters/13-beacon-broadcast/12.5-summary.md
 
 # Chapter 13: 温度計実装
-chapters/07-device-logic/13.0-intro.md
-chapters/07-device-logic/13.1-system-architecture.md
-chapters/07-device-logic/13.2-firmware-sensor.md
-chapters/07-device-logic/13.3-firmware-gatt.md
-chapters/07-device-logic/13.4-ios-ble-receive.md
-chapters/07-device-logic/13.5-ios-chart.md
-chapters/07-device-logic/13.6-summary.md
+chapters/07-io-power-management/13.0-intro.md
+chapters/07-io-power-management/13.1-system-architecture.md
+chapters/07-io-power-management/13.2-firmware-sensor.md
+chapters/07-io-power-management/13.3-firmware-gatt.md
+chapters/07-io-power-management/13.4-ios-ble-receive.md
+chapters/07-io-power-management/13.5-ios-chart.md
+chapters/07-io-power-management/13.6-summary.md
 
 # Chapter 14: OTA DFU実装
 chapters/15-firmware-update/14.0-intro.md
