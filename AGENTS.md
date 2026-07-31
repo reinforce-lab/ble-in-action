@@ -149,6 +149,18 @@ hoge/                       旧ドラフト（Re:VIEW .re 形式）・参考PDF�
 | Google | `developers.google.com`、`developer.android.com`（各サブドメインを含む） | Googleの開発者向け資料、AndroidフレームワークとAPI、Google Play services、Nearby関連の公式資料 |
 | Google（Eddystone） | `github.com/google/eddystone`（当該リポジトリに限定） | Eddystoneの公開プロトコル仕様、各フレーム形式、設定サービス、公式サンプル。アーカイブ済み資料であることを明記して使う |
 | Connectivity Standards Alliance | `csa-iot.org`（`www.csa-iot.org`を含む） | Matter仕様書、Interaction Model、Data Model、Attributes、Commands、Events、公式解説 |
+| Texas Instruments | `ti.com`（`www.ti.com`を含む） | SimpleLink、CC13xx／CC26xxなどのBLE対応MCU、SDK、開発ツール、公式製品情報 |
+| Silicon Labs | `silabs.com`（`www.silabs.com`を含む） | EFR32、BGシリーズ、Bluetooth SDK、開発ツール、会社・製品情報 |
+| Renesas Electronics | `renesas.com`（`www.renesas.com`を含む） | DA14xxx、RAなどのBLE対応製品、旧Dialog Semiconductor製品、SDK、会社情報 |
+| Nordic Semiconductor | `nordicsemi.com`（`www.nordicsemi.com`を含む） | nRFシリーズ、nRF Connect SDK、開発ボード、公式製品・技術情報 |
+| Espressif Systems | `espressif.com`、`docs.espressif.com`（各サブドメインを含む） | ESP32シリーズ、ESP-IDF、Wi-Fi／BLE複合SoC、公式製品・技術情報 |
+| STMicroelectronics | `st.com`（`www.st.com`を含む） | STM32WB／WBAなどのBLE対応MCU、SDK、開発ボード、公式製品情報 |
+| NXP Semiconductors | `nxp.com`（`www.nxp.com`を含む） | KW、K32W、MCX WなどのBLE対応MCU、SDK、開発ボード、公式製品情報 |
+| Infineon Technologies | `infineon.com`（`www.infineon.com`を含む） | PSoC、AIROC、旧Cypress製品、BLE／Wi-Fi対応製品、SDK、会社情報 |
+| Microchip Technology | `microchip.com`（`www.microchip.com`を含む） | WBZ、PIC32CX-BZなどのBLE対応MCU／モジュール、SDK、公式製品情報 |
+| onsemi | `onsemi.com`（`www.onsemi.com`を含む） | RSL10、RSL15などのBLE対応MCU／SoC、SDK、公式製品情報 |
+| Telink Semiconductor | `telink-semi.com`（`www.telink-semi.com`を含む） | TLSR、TL32などのBLE／マルチプロトコルSoC、SDK、公式製品情報 |
+| Federal Communications Commission | `fcc.gov`（`www.fcc.gov`を含む） | 米国の無線機器認証、モジュール認証、意図的／非意図的放射源の適合要件、FCC ID・表示に関する公式資料 |
 | 総務省 | `soumu.go.jp`、`tele.soumu.go.jp`（各サブドメインを含む） | 日本の電波利用制度、無線設備の技術基準、技術基準適合証明・工事設計認証の公式資料 |
 | デジタル庁・e-Gov | `e-gov.go.jp`、`elaws.e-gov.go.jp`（各サブドメインを含む） | 電波法、無線設備規則、関係省令・告示の現行条文 |
 

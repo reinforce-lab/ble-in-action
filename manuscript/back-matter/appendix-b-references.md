@@ -13,6 +13,10 @@
 | GATT Specification Supplement (GSS) | https://www.bluetooth.com/specifications/specs/gatt-specification-supplement/ |
 | Assigned Numbers | https://www.bluetooth.com/specifications/assigned-numbers/ |
 | Heart Rate Profile 1.0 | https://www.bluetooth.com/specifications/specs/heart-rate-profile-1-0/ |
+| Qualification Program Reference Document（QPRD）v5 | https://www.bluetooth.com/wp-content/uploads/Files/Specification/HTML/QPRD/out/en/index-en.html |
+| Qualify Your Product（参照日: 2026-07-31） | https://www.bluetooth.com/develop-with-bluetooth/qualify/ |
+| Enforcement Program（参照日: 2026-07-31） | https://www.bluetooth.com/develop-with-bluetooth/qualification-enforcement-program/ |
+| Bluetooth Brand Guide（参照日: 2026-07-31） | https://www.bluetooth.com/develop-with-bluetooth/marketing-branding/ |
 | Understanding Bluetooth Range（参照日: 2026-07-29） | https://www.bluetooth.com/learn-about-bluetooth/key-attributes/range/ |
 | 3 Common Myths About Bluetooth Technology（参照日: 2026-07-29） | https://www.bluetooth.com/blog/3-common-mythsabout-bluetooth/ |
 
@@ -26,7 +30,10 @@
 
 | 文書 | 発行主体 | URL |
 |---|---|---|
+| 電波法（昭和二十五年法律第百三十一号） | e-Gov法令検索 | https://laws.e-gov.go.jp/law/325AC0000000131 |
 | 無線設備規則（昭和二十五年電波監理委員会規則第十八号） | e-Gov法令検索 | https://laws.e-gov.go.jp/law/325M50080000018 |
+| 特定無線設備の技術基準適合証明等に関する規則 | e-Gov法令検索 | https://laws.e-gov.go.jp/law/356M50001000037 |
+| KDB 996369: Module Integration Guide | Federal Communications Commission | https://apps.fcc.gov/oetcf/kdb/forms/FTSSearchResultPage.cfm?id=44637&switch=P |
 
 
 ## nRF Connect SDK / Zephyr RTOS
@@ -34,6 +41,12 @@
 | リソース | URL |
 |---|---|
 | nRF Connect SDK ドキュメント | https://developer.nordicsemi.com/nRF_Connect_SDK/doc/latest/ |
+| Installing the nRF Connect SDK through Visual Studio Code（参照日: 2026-07-31） | https://docs.nordicsemi.com/bundle/nrf-connect-vscode/page/get_started/install.html |
+| nRF52 Series（参照日: 2026-07-31） | https://docs.nordicsemi.com/bundle/struct_nrf52/page/struct/nrf52.html |
+| nRF52840（参照日: 2026-07-31） | https://www.nordicsemi.com/Products/nRF52840 |
+| nRF5340（参照日: 2026-07-31） | https://www.nordicsemi.com/Products/nRF5340 |
+| nRF54L15（参照日: 2026-07-31） | https://www.nordicsemi.com/Products/nRF54L15 |
+| nRF54H20（参照日: 2026-07-31） | https://www.nordicsemi.com/Products/nRF54H20 |
 | Zephyr Project ドキュメント | https://docs.zephyrproject.org/latest/ |
 | Zephyr BLE サンプル集 | https://docs.zephyrproject.org/latest/samples/bluetooth/ |
 | Nordic Semiconductor DevZone（Q&Aフォーラム） | https://devzone.nordicsemi.com/ |
@@ -132,4 +145,4 @@
 | Reddit r/embedded | https://www.reddit.com/r/embedded/ |
 
 
-*本書中のリンクは2025年時点のものです。URLは変更になる場合があります。*
+*本書中のリンクには各項目に記した参照日時点のものが含まれます。URLは変更になる場合があります。*

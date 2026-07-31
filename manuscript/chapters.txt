@@ -81,14 +81,19 @@ chapters/04-att-gatt/4.7-discovery-and-evolution.md
 chapters/04-att-gatt/4.8-profile-contract.md
 chapters/04-att-gatt/4.9-summary.md
 
-# Chapter 5: nRF52840開発環境
+# Chapter 5: 組み込みBLE開発とnRF Connect SDK
 chapters/05-embedded-ble-development/5.0-intro.md
-chapters/05-embedded-ble-development/5.1-overview.md
-chapters/05-embedded-ble-development/5.2-sdk-setup.md
-chapters/05-embedded-ble-development/5.3-board-setup.md
-chapters/05-embedded-ble-development/5.4-hello-ble.md
-chapters/05-embedded-ble-development/5.5-project-structure.md
-chapters/05-embedded-ble-development/5.6-summary.md
+chapters/05-embedded-ble-development/5.1-existing-or-new.md
+chapters/05-embedded-ble-development/5.2-product-architectures.md
+chapters/05-embedded-ble-development/5.3-boundaries.md
+chapters/05-embedded-ble-development/5.4-bluetooth-qualification.md
+chapters/05-embedded-ble-development/5.5-radio-regulations.md
+chapters/05-embedded-ble-development/5.6-decision-flow.md
+chapters/05-embedded-ble-development/5.7-ble-mcu-evolution.md
+chapters/05-embedded-ble-development/5.8-nrf52840.md
+chapters/05-embedded-ble-development/5.9-development-environment.md
+chapters/05-embedded-ble-development/5.10-hello-world.md
+chapters/05-embedded-ble-development/5.11-first-advertising.md
 
 # Chapter 6: ペリフェラル実装
 chapters/06-gatt-peripheral/6.0-intro.md
