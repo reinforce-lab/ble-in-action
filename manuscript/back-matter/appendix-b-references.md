@@ -51,6 +51,7 @@
 | Zephyr BLE サンプル集 | https://docs.zephyrproject.org/latest/samples/bluetooth/ |
 | Nordic Semiconductor DevZone（Q&Aフォーラム） | https://devzone.nordicsemi.com/ |
 | nRF Connect SDK GitHub | https://github.com/nrfconnect/sdk-nrf |
+| nRF Util Wireshark external capture plugins（参照日: 2026-07-31） | https://docs.nordicsemi.com/r/bundle/nrfutil/page/guides/wireshark_plugins.html |
 
 
 ## Apple / iOS
@@ -122,9 +123,11 @@
 | ツール | URL |
 |---|---|
 | nRF Sniffer for Bluetooth LE | https://infocenter.nordicsemi.com/topic/ug_sniffer_ble/UG/sniffer_ble/intro.html |
+| nRF Sniffer for Bluetooth LE製品ページ（参照日: 2026-07-31） | https://www.nordicsemi.com/Products/Development-tools/nRF-Sniffer-for-Bluetooth-LE |
 | Wireshark | https://www.wireshark.org/ |
 | Wireshark BLE Dissector ドキュメント | https://wiki.wireshark.org/Bluetooth |
 | nRF Power Profiler Kit II (PPK2) | https://www.nordicsemi.com/Products/Development-hardware/Power-Profiler-Kit-2 |
+| Power Profiler Kit II Get Started（参照日: 2026-07-31） | https://www.nordicsemi.com/Products/Development-hardware/Power-Profiler-Kit-2/GetStarted |
 
 
 ## 参考書籍
