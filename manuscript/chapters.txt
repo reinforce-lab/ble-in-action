@@ -140,10 +140,11 @@ chapters/08-ios-core-bluetooth/8.1-framework-overview.md
 chapters/08-ios-core-bluetooth/8.2-centralmanager.md
 chapters/08-ios-core-bluetooth/8.3-scanning.md
 chapters/08-ios-core-bluetooth/8.4-service-discovery.md
-chapters/08-ios-core-bluetooth/8.5-read-write.md
-chapters/08-ios-core-bluetooth/8.6-notify.md
-chapters/08-ios-core-bluetooth/8.7-background.md
-chapters/08-ios-core-bluetooth/8.8-summary.md
+chapters/08-ios-core-bluetooth/8.5-value-format.md
+chapters/08-ios-core-bluetooth/8.6-read-write.md
+chapters/08-ios-core-bluetooth/8.7-notify.md
+chapters/08-ios-core-bluetooth/8.8-reconnect-cache.md
+chapters/08-ios-core-bluetooth/8.9-background-e2e.md
 
 # Chapter 9: Web Bluetooth API
 chapters/09-web-bluetooth/9.0-intro.md

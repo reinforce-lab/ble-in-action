@@ -63,6 +63,10 @@
 | scanForPeripherals(withServices:options:)（参照日: 2026-07-29） | https://developer.apple.com/documentation/corebluetooth/cbcentralmanager/scanforperipherals(withservices:options:) |
 | CBCentralManagerScanOptionAllowDuplicatesKey（参照日: 2026-07-29） | https://developer.apple.com/documentation/corebluetooth/cbcentralmanagerscanoptionallowduplicateskey |
 | centralManager(_:didDiscover:advertisementData:rssi:)（参照日: 2026-07-29） | https://developer.apple.com/documentation/corebluetooth/cbcentralmanagerdelegate/centralmanager(_:diddiscover:advertisementdata:rssi:) |
+| CBManager.state（参照日: 2026-08-01） | https://developer.apple.com/documentation/corebluetooth/cbmanager/state |
+| maximumWriteValueLength(for:)（参照日: 2026-08-01） | https://developer.apple.com/documentation/corebluetooth/cbperipheral/maximumwritevaluelength(for:) |
+| canSendWriteWithoutResponse（参照日: 2026-08-01） | https://developer.apple.com/documentation/corebluetooth/cbperipheral/cansendwritewithoutresponse |
+| Central Manager State Restoration Options（参照日: 2026-08-01） | https://developer.apple.com/documentation/corebluetooth/central-manager-state-restoration-options |
 | Getting Started with iBeacon, Version 1.0（参照日: 2026-07-29） | https://developer.apple.com/ibeacon/Getting-Started-with-iBeacon.pdf |
 | WWDC 2020: What's new in Core Bluetooth | https://developer.apple.com/videos/play/wwdc2020/10065/ |
 | WWDC 2017: What's New in Core Bluetooth | https://developer.apple.com/videos/play/wwdc2017/712/ |
