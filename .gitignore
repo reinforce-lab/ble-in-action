@@ -17,6 +17,7 @@ output/
 # Pandoc temporary files
 *.tmp
 *.bak
+tmp/
 
 # Local editor settings
 .vscode/

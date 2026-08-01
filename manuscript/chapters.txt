@@ -156,8 +156,17 @@ chapters/09-android-linux-web/9.5-python-bleak.md
 chapters/09-android-linux-web/9.6-web-bluetooth.md
 chapters/09-android-linux-web/9.7-platform-comparison.md
 
-# Chapter 10: BLE製品のセキュリティと所有権
-# outlineのみ作成済み。本文は後で執筆する。
+# Chapter 10: BLE製品を安全に運用し、問題を切り分ける
+chapters/10-security-ownership/10.0-intro.md
+chapters/10-security-ownership/10.1-product-boundaries.md
+chapters/10-security-ownership/10.2-security-requirements.md
+chapters/10-security-ownership/10.3-ownership-lifecycle.md
+chapters/10-security-ownership/10.4-ota-transaction.md
+chapters/10-security-ownership/10.5-update-recovery.md
+chapters/10-security-ownership/10.6-observability.md
+chapters/10-security-ownership/10.7-connection-troubleshooting.md
+chapters/10-security-ownership/10.8-gatt-troubleshooting.md
+chapters/10-security-ownership/10.9-reproduction-verification.md
 
 # Back Matter
 back-matter/appendix-a-ble-spec.md
