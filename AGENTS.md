@@ -10,7 +10,7 @@
 - **書籍名**: 『Bluetooth Low Energy開発実践』（英題 *BLE In Action*）
 - **形態**: 日本語の技術書。**Amazon KDP で 紙（ペーパーバック）＋ 電子書籍（Kindle）** として出版予定。電子書籍は KDP Select への登録を視野に入れる
 - **製本**: Pandoc で Markdown → EPUB / PDF（LuaLaTeX, jlreq, B5）に変換
-- **規模**: 序文 ＋ 全14章 ＋ 付録。想定 410〜495 ページ
+- **規模**: 序文 ＋ 全12章 ＋ 付録。想定 410〜495 ページ
 - **対象読者**: 組み込み（ファーム）開発者 / モバイルアプリ開発者 / 企画・PM / ホビイスト
 - **扱う技術**: Nordic nRF52840 ＋ nRF Connect SDK 3.0（ファーム）、iOS Core Bluetooth（メイン）、Web Bluetooth、Android / Linux（概要）
 - **ねらい**: SDK に隠蔽された通信の実態を理解し、ファーム／アプリ／企画の各担当が「共通言語」で対話・デバッグできるようにする

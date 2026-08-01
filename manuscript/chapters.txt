@@ -9,11 +9,6 @@ preface.md
 
 # Main Content
 #
-# 第5章以降は章構成の移行中です。現在は既存本文を製本できるよう、
-# 新しい章ディレクトリ内の移行元原稿を旧掲載順で登録しています。
-# 各章の本文を新outlineへ移行するときに、章見出し、ファイル名、
-# この掲載順を同じ変更で切り替えます。
-
 # Chapter 1: BLEとは何か
 chapters/01-what-is-ble/1.0-intro.md
 chapters/01-what-is-ble/1.1-microbit-intro.md
@@ -105,77 +100,78 @@ chapters/06-nrf52-development/6.7-notify.md
 chapters/06-nrf52-development/6.8-connection.md
 chapters/06-nrf52-development/6.9-summary.md
 
-# Chapter 7: IOと省電力な製品ロジック
-chapters/07-io-power-management/7.0-intro.md
-chapters/07-io-power-management/7.1-gpio-devicetree.md
-chapters/07-io-power-management/7.2-i2c-spi-sensor.md
-chapters/07-io-power-management/7.3-interrupt-workqueue.md
-chapters/07-io-power-management/7.4-gatt-state-sync.md
-chapters/07-io-power-management/7.5-command-state.md
-chapters/07-io-power-management/7.6-event-driven-power.md
-chapters/07-io-power-management/7.7-system-on-off.md
-chapters/07-io-power-management/7.8-product-state.md
+# Chapter 7: nRF52を製品として仕上げる
+chapters/07-nrf52-product-development/7.0-intro.md
+chapters/07-nrf52-product-development/7.1-io-devicetree.md
+chapters/07-nrf52-product-development/7.1.1-gpio-devicetree.md
+chapters/07-nrf52-product-development/7.1.2-i2c-spi-sensor.md
+chapters/07-nrf52-product-development/7.2-interrupt-workqueue.md
+chapters/07-nrf52-product-development/7.3-io-gatt-sync.md
+chapters/07-nrf52-product-development/7.3.1-gatt-state-sync.md
+chapters/07-nrf52-product-development/7.3.2-command-state.md
+chapters/07-nrf52-product-development/7.4-power-state.md
+chapters/07-nrf52-product-development/7.4.1-event-driven-power.md
+chapters/07-nrf52-product-development/7.4.2-system-on-off.md
+chapters/07-nrf52-product-development/7.4.3-product-state.md
+chapters/07-nrf52-product-development/7.5-firmware-update.md
+chapters/07-nrf52-product-development/7.5.1-image-slots.md
+chapters/07-nrf52-product-development/7.5.2-signing-version.md
+chapters/07-nrf52-product-development/7.5.3-mcuboot-build.md
+chapters/07-nrf52-product-development/7.5.4-smp-ble.md
+chapters/07-nrf52-product-development/7.5.5-confirm-revert.md
+chapters/07-nrf52-product-development/7.6-remote-update.md
+chapters/07-nrf52-product-development/7.6.1-nrf91-remote-update.md
+chapters/07-nrf52-product-development/7.6.2-multi-image.md
+chapters/07-nrf52-product-development/7.6.3-lifecycle.md
+chapters/07-nrf52-product-development/7.7-measurement.md
+chapters/07-nrf52-product-development/7.7.1-requirements-timing.md
+chapters/07-nrf52-product-development/7.7.2-communication-performance.md
+chapters/07-nrf52-product-development/7.7.3-ppk2.md
+chapters/07-nrf52-product-development/7.7.4-power-estimate.md
+chapters/07-nrf52-product-development/7.8-debugging.md
+chapters/07-nrf52-product-development/7.8.1-packet-debugging.md
+chapters/07-nrf52-product-development/7.8.2-system-events.md
+chapters/07-nrf52-product-development/7.8.3-timeline-correlation.md
+chapters/07-nrf52-product-development/7.9-remeasure.md
 
-# Chapter 8: ファームウェア更新
-chapters/08-firmware-update/8.0-intro.md
-chapters/08-firmware-update/8.1-image-slots.md
-chapters/08-firmware-update/8.2-signing-version.md
-chapters/08-firmware-update/8.3-mcuboot-build.md
-chapters/08-firmware-update/8.4-smp-ble.md
-chapters/08-firmware-update/8.5-confirm-revert.md
-chapters/08-firmware-update/8.6-nrf91-remote-update.md
-chapters/08-firmware-update/8.7-multi-image.md
-chapters/08-firmware-update/8.8-lifecycle.md
+# Chapter 8: iOS Core Bluetooth
+chapters/08-ios-core-bluetooth/8.0-intro.md
+chapters/08-ios-core-bluetooth/8.1-framework-overview.md
+chapters/08-ios-core-bluetooth/8.2-centralmanager.md
+chapters/08-ios-core-bluetooth/8.3-scanning.md
+chapters/08-ios-core-bluetooth/8.4-service-discovery.md
+chapters/08-ios-core-bluetooth/8.5-read-write.md
+chapters/08-ios-core-bluetooth/8.6-notify.md
+chapters/08-ios-core-bluetooth/8.7-background.md
+chapters/08-ios-core-bluetooth/8.8-summary.md
 
-# Chapter 9: 測定・評価・デバッグ
-chapters/09-evaluation-debugging/9.0-intro.md
-chapters/09-evaluation-debugging/9.1-requirements-timing.md
-chapters/09-evaluation-debugging/9.2-communication-performance.md
-chapters/09-evaluation-debugging/9.3-ppk2.md
-chapters/09-evaluation-debugging/9.4-power-estimate.md
-chapters/09-evaluation-debugging/9.5-packet-debugging.md
-chapters/09-evaluation-debugging/9.6-system-events.md
-chapters/09-evaluation-debugging/9.7-timeline-correlation.md
-chapters/09-evaluation-debugging/9.8-remeasure.md
+# Chapter 9: Web Bluetooth API
+chapters/09-web-bluetooth/9.0-intro.md
+chapters/09-web-bluetooth/9.1-overview.md
+chapters/09-web-bluetooth/9.2-request-device.md
+chapters/09-web-bluetooth/9.3-connect-gatt.md
+chapters/09-web-bluetooth/9.4-read-write.md
+chapters/09-web-bluetooth/9.5-notify.md
+chapters/09-web-bluetooth/9.6-limitations-summary.md
 
-# Chapter 10: iOS Core Bluetooth
-chapters/10-ios-core-bluetooth/9.0-intro.md
-chapters/10-ios-core-bluetooth/9.1-framework-overview.md
-chapters/10-ios-core-bluetooth/9.2-centralmanager.md
-chapters/10-ios-core-bluetooth/9.3-scanning.md
-chapters/10-ios-core-bluetooth/9.4-service-discovery.md
-chapters/10-ios-core-bluetooth/9.5-read-write.md
-chapters/10-ios-core-bluetooth/9.6-notify.md
-chapters/10-ios-core-bluetooth/9.7-background.md
-chapters/10-ios-core-bluetooth/9.8-summary.md
+# Chapter 10: Android/Linux BLE
+chapters/10-android-linux-ble/10.0-intro.md
+chapters/10-android-linux-ble/10.1-android-overview.md
+chapters/10-android-linux-ble/10.2-android-scan-connect.md
+chapters/10-android-linux-ble/10.3-android-gatt-issues.md
+chapters/10-android-linux-ble/10.4-linux-bluez.md
+chapters/10-android-linux-ble/10.5-python-bleak.md
+chapters/10-android-linux-ble/10.6-platform-comparison.md
 
-# Chapter 11: Web Bluetooth API
-chapters/11-web-bluetooth/10.0-intro.md
-chapters/11-web-bluetooth/10.1-overview.md
-chapters/11-web-bluetooth/10.2-request-device.md
-chapters/11-web-bluetooth/10.3-connect-gatt.md
-chapters/11-web-bluetooth/10.4-read-write.md
-chapters/11-web-bluetooth/10.5-notify.md
-chapters/11-web-bluetooth/10.6-limitations-summary.md
+# Chapter 11: ビーコン実装
+chapters/11-beacon-broadcast/11.0-intro.md
+chapters/11-beacon-broadcast/11.1-beacon-overview.md
+chapters/11-beacon-broadcast/11.2-nrf52840-beacon.md
+chapters/11-beacon-broadcast/11.3-ios-beacon-reception.md
+chapters/11-beacon-broadcast/11.4-android-beacon.md
+chapters/11-beacon-broadcast/11.5-summary.md
 
-# Chapter 12: Android/Linux BLE
-chapters/12-android-linux-ble/11.0-intro.md
-chapters/12-android-linux-ble/11.1-android-overview.md
-chapters/12-android-linux-ble/11.2-android-scan-connect.md
-chapters/12-android-linux-ble/11.3-android-gatt-issues.md
-chapters/12-android-linux-ble/11.4-linux-bluez.md
-chapters/12-android-linux-ble/11.5-python-bleak.md
-chapters/12-android-linux-ble/11.6-platform-comparison.md
-
-# Chapter 13: ビーコン実装
-chapters/13-beacon-broadcast/12.0-intro.md
-chapters/13-beacon-broadcast/12.1-beacon-overview.md
-chapters/13-beacon-broadcast/12.2-nrf52840-beacon.md
-chapters/13-beacon-broadcast/12.3-ios-beacon-reception.md
-chapters/13-beacon-broadcast/12.4-android-beacon.md
-chapters/13-beacon-broadcast/12.5-summary.md
-
-# Chapter 14: BLE製品のセキュリティと所有権
+# Chapter 12: BLE製品のセキュリティと所有権
 # outlineのみ作成済み。本文は後で執筆する。
 
 # Back Matter
