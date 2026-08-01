@@ -17,7 +17,7 @@ lang: ja
 # Publisher Information (プレースホルダー)
 publisher: "〈出版社名 / 個人出版〉"      # TODO: KDP登録時に確定
 isbn: "〈ISBN〉"                          # TODO: 紙版で必要なら取得
-rights: "© 2026 Akihiro Uehara. All rights reserved."
+rights: "© 2026 Akihiro Uehara. CC BY-NC-ND 4.0 with additional permission for LLM-assisted development."
 
 # Content Description
 abstract: |

@@ -8,14 +8,14 @@
 ## 1. プロジェクト概要
 
 - **書籍名**: 『Bluetooth Low Energy開発実践』（英題 *BLE In Action*）
-- **形態**: 日本語の技術書。**Amazon KDP で 紙（ペーパーバック）＋ 電子書籍（Kindle）** として出版予定。電子書籍は KDP Select への登録を視野に入れる
+- **形態**: 日本語の技術書。本文をGitHubで公開し、**Amazon KDPで紙（ペーパーバック）＋電子書籍（Kindle）**としても出版予定。KDP Selectには登録しない
 - **製本**: Pandoc で Markdown → EPUB / PDF（LuaLaTeX, jlreq, B5）に変換
 - **規模**: 序文 ＋ 全10章 ＋ 付録。想定 410〜495 ページ
 - **対象読者**: 組み込み（ファーム）開発者 / モバイルアプリ開発者 / 企画・PM / ホビイスト
 - **扱う技術**: Nordic nRF52840 ＋ nRF Connect SDK 3.0（ファーム）、iOS Core Bluetooth（メイン）、Web Bluetooth、Android / Linux（概要）
 - **ねらい**: SDK に隠蔽された通信の実態を理解し、ファーム／アプリ／企画の各担当が「共通言語」で対話・デバッグできるようにする
 
-全体構成と章間依存は [manuscript/outline.md](manuscript/outline.md)、執筆・レビュー規則は [skills/ble-book-writing-support/SKILL.md](skills/ble-book-writing-support/SKILL.md) を参照。
+全体構成と章間依存は [manuscript/outline.md](manuscript/outline.md)、執筆・レビュー規則は [skills/ble-book-writing-support/SKILL.md](skills/ble-book-writing-support/SKILL.md)、出版・公開方針は [docs/publication-policy.md](docs/publication-policy.md) を参照。
 
 ---
 
@@ -163,13 +163,19 @@ hoge/                       旧ドラフト（Re:VIEW .re 形式）・参考PDF�
 | Federal Communications Commission | `fcc.gov`（`www.fcc.gov`を含む） | 米国の無線機器認証、モジュール認証、意図的／非意図的放射源の適合要件、FCC ID・表示に関する公式資料 |
 | 総務省 | `soumu.go.jp`、`tele.soumu.go.jp`（各サブドメインを含む） | 日本の電波利用制度、無線設備の技術基準、技術基準適合証明・工事設計認証の公式資料 |
 | デジタル庁・e-Gov | `e-gov.go.jp`、`elaws.e-gov.go.jp`（各サブドメインを含む） | 電波法、無線設備規則、関係省令・告示の現行条文 |
+| Amazon Kindle Direct Publishing | `kdp.amazon.com`（各サブドメインを含む） | Kindle電子書籍、ペーパーバック、ISBN、KDP Select、印刷・流通・ロイヤリティーに関する公式資料 |
+| Amazon.co.jp | `amazon.co.jp`（`www.amazon.co.jp`を含む） | 著者既刊の商品ページ、Amazon.co.jp上の商品表示、販売形態の確認 |
+| Creative Commons | `creativecommons.org`（各サブドメインを含む） | Creative Commonsライセンス、AI利用に関する公式FAQ、CC Signalsの検討状況 |
+| Responsible AI Licenses | `licenses.ai`（`www.licenses.ai`を含む） | RAIL／OpenRAILライセンスの対象、利用制限、既存ライセンスとしての適合性確認 |
+| World Wide Web Consortium | `w3.org`（`www.w3.org`を含む） | Text and Data Mining Reservation Protocolなど、AI・TDM利用意思を機械可読に示す標準の確認 |
+| Really Simple Licensing | `rslstandard.org`（`www.rslstandard.org`を含む） | AIクローラー、学習、推論に対する機械可読な利用条件・対価指定方式の確認 |
 
 - Bluetoothのコア仕様を確認するときは、原則として [Bluetooth Core Specification v6.3](https://www.bluetooth.com/wp-content/uploads/Files/Specification/HTML/Core_v6.3/out/en/index-en.html) を基準にする。過去のバージョンに固有の挙動や変更経緯を扱う場合は、対象バージョンも併記して確認する
 
 - **参照禁止ドメイン**: `musen-connect.co.jp` は情報源として参照しない（取得・引用しない）
 - **原稿の外部送信・公開をしない**（明示の許可がない限り。外部サービスへの送信は公開と同じと考える）
-- **公開GitHubに本文全体を置かない**。公開対象はサンプル章、正誤表、サンプルコード、ビルド環境、図表の一部に限定する
-- **出典の明記**: 引用・サンプルコードの参照元・仕様書の版は必ず示す。仕様書／SDK コードの転載は出典必須。本書のコードは MIT ライセンス前提
+- **公開GitHubで本文全体を提供する**。本文はCC BY-NC-ND 4.0とCC+追加許諾、著者作成のサンプルコードはMIT Licenseを適用する。正式な条件はリポジトリ直下のライセンス文書を参照する
+- **出典の明記**: 引用・サンプルコードの参照元・仕様書の版は必ず示す。仕様書／SDKコードの転載は出典必須。第三者の著作物へ本書のライセンスを適用しない
 - **コミット／プッシュは著者の指示があってから**行う（無断で git 操作しない）
 - 破壊的操作（ファイル削除・大幅な上書き）の前に対象を確認し、想定と違えば手を止めて報告する
 
@@ -185,4 +191,4 @@ hoge/                       旧ドラフト（Re:VIEW .re 形式）・参考PDF�
 ## 10. 出版前の確定待ち事項（プレースホルダー）
 
 - [manuscript/metadata.yml](manuscript/metadata.yml) の **確定タイトル・著者名・出版社・ISBN・刊行年** はプレースホルダー（`〈…〉` と `TODO` コメントで明示）。KDP 登録前に確定情報へ差し替える
-- GitHub リポジトリ URL は `https://github.com/reinforce-lab/ble-in-action` を予定する。ただし、公開リポジトリには本文全体を置かない（[preface.md](manuscript/preface.md) / [outline.md](manuscript/outline.md)）
+- GitHubリポジトリURLは `https://github.com/reinforce-lab/ble-in-action` を予定する。公開範囲とライセンスは [docs/publication-policy.md](docs/publication-policy.md) とリポジトリ直下のライセンス文書を正本とする
