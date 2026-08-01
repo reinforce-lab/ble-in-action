@@ -146,33 +146,25 @@ chapters/08-ios-core-bluetooth/8.7-notify.md
 chapters/08-ios-core-bluetooth/8.8-reconnect-cache.md
 chapters/08-ios-core-bluetooth/8.9-background-e2e.md
 
-# Chapter 9: Web Bluetooth API
-chapters/09-web-bluetooth/9.0-intro.md
-chapters/09-web-bluetooth/9.1-overview.md
-chapters/09-web-bluetooth/9.2-request-device.md
-chapters/09-web-bluetooth/9.3-connect-gatt.md
-chapters/09-web-bluetooth/9.4-read-write.md
-chapters/09-web-bluetooth/9.5-notify.md
-chapters/09-web-bluetooth/9.6-limitations-summary.md
+# Chapter 9: Android/Linux/Web BLE
+chapters/09-android-linux-web/9.0-intro.md
+chapters/09-android-linux-web/9.1-android-overview.md
+chapters/09-android-linux-web/9.2-android-scan-connect.md
+chapters/09-android-linux-web/9.3-android-gatt-issues.md
+chapters/09-android-linux-web/9.4-linux-bluez.md
+chapters/09-android-linux-web/9.5-python-bleak.md
+chapters/09-android-linux-web/9.6-web-bluetooth.md
+chapters/09-android-linux-web/9.7-platform-comparison.md
 
-# Chapter 10: Android/Linux BLE
-chapters/10-android-linux-ble/10.0-intro.md
-chapters/10-android-linux-ble/10.1-android-overview.md
-chapters/10-android-linux-ble/10.2-android-scan-connect.md
-chapters/10-android-linux-ble/10.3-android-gatt-issues.md
-chapters/10-android-linux-ble/10.4-linux-bluez.md
-chapters/10-android-linux-ble/10.5-python-bleak.md
-chapters/10-android-linux-ble/10.6-platform-comparison.md
+# Chapter 10: ビーコン実装
+chapters/10-beacon-broadcast/10.0-intro.md
+chapters/10-beacon-broadcast/10.1-beacon-overview.md
+chapters/10-beacon-broadcast/10.2-nrf52840-beacon.md
+chapters/10-beacon-broadcast/10.3-ios-beacon-reception.md
+chapters/10-beacon-broadcast/10.4-android-beacon.md
+chapters/10-beacon-broadcast/10.5-summary.md
 
-# Chapter 11: ビーコン実装
-chapters/11-beacon-broadcast/11.0-intro.md
-chapters/11-beacon-broadcast/11.1-beacon-overview.md
-chapters/11-beacon-broadcast/11.2-nrf52840-beacon.md
-chapters/11-beacon-broadcast/11.3-ios-beacon-reception.md
-chapters/11-beacon-broadcast/11.4-android-beacon.md
-chapters/11-beacon-broadcast/11.5-summary.md
-
-# Chapter 12: BLE製品のセキュリティと所有権
+# Chapter 11: BLE製品のセキュリティと所有権
 # outlineのみ作成済み。本文は後で執筆する。
 
 # Back Matter

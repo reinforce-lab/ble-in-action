@@ -392,7 +392,7 @@ Handleを指定したWrite Request／Notification
 - 第6章では、本章で設計したサービスをnRF Connect SDKのGATT定義、Read／Writeコールバック、Notifyとして実装します。
 - 第7章では、Notify周期、Readによるポーリング、接続維持、データ量が消費電力へ与える影響を扱います。
 - 第8章では、Core Bluetoothのサービス探索、Read、Write、Notify APIを、本章のGATT設計と対応づけます。
-- 第9章と第10章では、同じGATTインターフェースをWeb Bluetooth、Android、Linuxから扱う際の差を確認します。
+- 第9章では、同じGATTインターフェースをAndroid、Linux、Web Bluetoothから扱う際の差を確認します。
 - 第7章では、センサー値、設定、状態、エラーを一つの製品へ統合し、チャンク、ACK、再開、互換性の設計をOTAへ適用します。さらに、ATT Request、Response、Notification、CCCD、サービス探索をパケットから確認し、症状を本章で定義した契約へ戻して切り分けます。
 
 ## 執筆時の判断基準

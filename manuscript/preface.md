@@ -28,9 +28,9 @@ BLEの技術は発展が早く、今年は難しくても来年には可能に�
 
 **Part 3「組み込みBLEデバイスを開発する」（[@sec:ch5]〜[@sec:ch7]）** は、Nordic nRF52840を使ったペリフェラルデバイスの実装です。[@sec:ch5]で製品構成と開発環境を整理し、[@sec:ch6]でカスタムサービスの定義からRead、Write、Notifyの実装までを行います。[@sec:ch7]ではIO、省電力、ファームウェア更新、測定、デバッグを結び、製品として仕上げます。
 
-**Part 4「BLEデバイスを利用する」（[@sec:ch8]〜[@sec:ch10]）** は、BLEセントラル側のアプリケーション実装です。[@sec:ch8]ではiOS Core Bluetoothを中心に、スキャンから接続、データのやり取りまでを詳しく解説します。[@sec:ch9]ではWeb Bluetooth APIによるブラウザーからのBLE操作を、[@sec:ch10]ではAndroidとLinuxにおけるBLE開発の概要を紹介します。
+**Part 4「BLEデバイスを利用する」（[@sec:ch8]〜[@sec:ch9]）** は、BLEセントラル側のアプリケーション実装です。[@sec:ch8]ではiOS Core Bluetoothを中心に、スキャンから接続、データのやり取りまでを詳しく解説します。[@sec:ch9]では、同じGATTインターフェースをAndroid、Linux、Webから利用するときのAPIと制約の違いを紹介します。
 
-**Part 5「異なる製品パターンを選ぶ」（[@sec:ch11]〜[@sec:ch12]）** は、接続型以外のBLE利用と、製品の所有権を扱います。[@sec:ch11]ではiBeacon形式を含むビーコンとブロードキャストを実装し、[@sec:ch12]ではPairing、Bonding、認証、認可を製品仕様へ結びます。
+**Part 5「異なる製品パターンを選ぶ」（[@sec:ch10]〜[@sec:ch11]）** は、接続型以外のBLE利用と、製品の所有権を扱います。[@sec:ch10]ではiBeacon形式を含むビーコンとブロードキャストを実装し、[@sec:ch11]ではPairing、Bonding、認証、認可を製品仕様へ結びます。
 
 **付録** では、Bluetooth SIG仕様書の読み方と参考文献を収録しています。
 

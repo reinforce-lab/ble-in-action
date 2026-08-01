@@ -6,7 +6,7 @@
 
 iOSから見えるのは、Bluetooth ControllerやATT PDUそのものではなく、`CBCentralManager`、`CBPeripheral`、`CBService`、`CBCharacteristic`と非同期のDelegate Callbackです。本章では、これらのAPIがGAP、ATT、GATTのどの処理に対応し、どの部分をOSが隠しているかを示します。API呼び出しが成功したことと、製品上の操作が完了したことも区別します。
 
-iOSを本書の詳しいクライアント基準実装とします。第9章と第10章では、同じ製品仕様をWeb、Android、Linuxから利用し、本章との差分を中心に説明します。
+iOSを本書の詳しいクライアント基準実装とします。第9章では、同じ製品仕様をAndroid、Linux、Webから利用し、本章との差分を中心に説明します。
 
 ## 読了時の到達点
 
@@ -220,11 +220,11 @@ Disconnecting／Recovering
 
 第4章のATT／GATT説明を繰り返しません。Core Bluetoothが公開するAPIと隠蔽する処理の境界が必要な箇所だけ参照します。nRF52840側のコードも再掲せず、UUID、Value Format、操作の順序、エラー、Request IDという両者の契約を比較します。
 
-## 第9章・第10章との境界
+## 第9章との境界
 
 - 第8章は、iOSを使ってクライアント実装を詳しく組み立てます。
-- 第9章は、同じGATT契約をWeb Bluetoothから使い、ユーザー操作、権限、対応環境の違いを扱います。
-- 第10章は、Androidの権限とGATT操作、Linux／BlueZ／Bleakによる操作と試験を、本章との差分として扱います。
+- 第9章は、Androidの権限とGATT操作、Linux／BlueZ／Bleakによる操作と試験を、本章との差分として扱います。
+- Web Bluetoothは第9章の一部とし、ユーザー操作、対応環境、採用用途の違いに絞ります。
 
 Web、Android、Linuxでも共通するパース処理、状態・設定・コマンド・イベントの意味は本章を基準とし、後続章で重複させません。
 
