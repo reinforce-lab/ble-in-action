@@ -163,7 +163,7 @@ Channel SoundingやLE Audioは、GATTとは別のデータ経路や無線手順�
 - 第6章では、nRF Connect SDKでPHY、Data Length、接続パラメーターなどを設定するとき、本章の性能上の意味を参照します。
 - 第7章では、高速PHY、Coded PHY、アドバタイジング方式、接続イベントが消費電力へ与える影響を参照します。
 - 第8章では、iOSから利用できる機能とOSが隠す機能を区別し、Channel Sounding APIを実装面から扱います。
-- 第11章では、Legacy Advertisingと拡張された非接続通信の違いを参照します。
+- 第6章ではLegacy Advertisingによる非接続送信を実装し、第9章では受信側のプラットフォーム差を確認します。
 - 第7章では、OTA転送速度をATT MTU、Data Length、PHY、バッファーの組み合わせとして扱い、パケットキャプチャーからPHY、PDU、再送、データ長、接続イベントを読み解きます。
 
 ## 執筆時の判断基準

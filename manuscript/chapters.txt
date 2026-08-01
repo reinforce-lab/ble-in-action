@@ -156,15 +156,7 @@ chapters/09-android-linux-web/9.5-python-bleak.md
 chapters/09-android-linux-web/9.6-web-bluetooth.md
 chapters/09-android-linux-web/9.7-platform-comparison.md
 
-# Chapter 10: ビーコン実装
-chapters/10-beacon-broadcast/10.0-intro.md
-chapters/10-beacon-broadcast/10.1-beacon-overview.md
-chapters/10-beacon-broadcast/10.2-nrf52840-beacon.md
-chapters/10-beacon-broadcast/10.3-ios-beacon-reception.md
-chapters/10-beacon-broadcast/10.4-android-beacon.md
-chapters/10-beacon-broadcast/10.5-summary.md
-
-# Chapter 11: BLE製品のセキュリティと所有権
+# Chapter 10: BLE製品のセキュリティと所有権
 # outlineのみ作成済み。本文は後で執筆する。
 
 # Back Matter
